@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Troy Public Library — Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Top utility bar -->
+  <div class="topbar">
+    <div class="container">
+      <span>Today’s hours 9 am – 6 pm</span>
+      <a href="#" aria-label="Open catalog">Catalog</a>
+      <a href="#" aria-label="Open my account">My Account</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="row">
+        <div class="brand" aria-label="Troy Public Library">
+          <!-- Replace with your logo -->
+          <img src="tpl_logo.jpg" alt="Troy Public Library logo" />
+        </div>
+
+        <button class="menu-toggle" aria-label="Open menu">☰</button>
+
+        <div class="search" role="search">
+          <div class="field">
+            <label for="site-search" class="sr-only">Search the website</label>
+            <input id="site-search" type="search" placeholder="Search the website" />
+            <span class="icon" aria-hidden="true">🔎</span>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="is-active" href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Library Services</a>
+          <a href="#">Calendar</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- Hero -->
+      <section class="hero" aria-label="Welcome">
+        <div class="welcome">
+          <h1>Welcome to Troy Public Library</h1>
+          <p>
+            The mission of the Troy Public Library is to connect our community to
+            materials, experiences, and welcoming spaces that spark curiosity, inspire joy,
+            and support lifelong learning.
+          </p>
+
+          <div class="quick-actions" aria-label="Quick actions">
+            <a class="btn btn-primary" href="#">Events &amp; Programs</a>
+            <a class="btn btn-primary" href="#">Library Services</a>
+            <a class="btn btn-primary" href="#">My Account</a>
+          </div>
+
+          <h2 class="section-title">Upcoming Events &amp; Programs</h2>
+
+          <div class="grid-2" aria-label="Upcoming events">
+            <article class="card">
+              <h3>Story time for toddlers</h3>
+              <div class="date">Wed: January 28th 11–12PM</div>
+              <div class="divider"></div>
+              <div class="sub">Kids activity</div>
+              <a class="link" href="#">View full calendar &gt;</a>
+            </article>
+
+            <article class="card">
+              <h3>Book Club</h3>
+              <div class="date">Thurs: February 12th 5–6PM</div>
+              <div class="divider"></div>
+              <div class="sub">Come join us at book club</div>
+              <a class="link" href="#">View full calendar &gt;</a>
+            </article>
+          </div>
+        </div>
+
+        <!-- Right column (image + hours panel) -->
+        <div class="hero-media">
+          <figure class="library-photo">
+            <!-- Replace with your real library photo -->
+            <img src="pic.jpg" alt="Photo of Troy Public Library building" />
+          </figure>
+
+          <aside class="panel" aria-label="Hours and location">
+            <h2>We’re open today until 6 PM</h2>
+
+            <div class="row">
+              <span aria-hidden="true">🕒</span>
+              <div>
+                <div class="meta">Today’s Hours: 9 AM – 6 PM</div>
+              </div>
+            </div>
+
+            <div class="row">
+              <span aria-hidden="true">📍</span>
+              <div>
+                <div class="meta">100 2nd St. Troy, NY 12180</div>
+              </div>
+            </div>
+
+            <a class="small-link" href="#">View all Hours &gt;</a>
+
+            <h2 style="margin-top:16px;">Library News</h2>
+            <ul class="news-list" aria-label="News">
+              <li class="news-item">
+                <span aria-hidden="true">📅</span>
+                <div>
+                  <div class="title">Library will be closed on MLK Day</div>
+                  <div class="desc">The library will be closed on January 19th</div>
+                </div>
+              </li>
+              <li class="news-item">
+                <span aria-hidden="true">📅</span>
+                <div>
+                  <div class="title">More words</div>
+                  <div class="desc">Even more words</div>
+                </div>
+              </li>
+              <li class="news-item">
+                <span aria-hidden="true">📅</span>
+                <div>
+                  <div class="title">Random Stuff</div>
+                  <div class="desc">Even more words</div>
+                </div>
+              </li>
+            </ul>
+
+            <a class="small-link" href="#" style="margin-top:10px; display:inline-block;">View all news &gt;</a>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="services" aria-label="Library services">
+        <h2 class="section-title">Library Services</h2>
+        <div class="service-pills">
+          <a class="pill" href="#">Research Services</a>
+          <a class="pill" href="#">Electronic Resources</a>
+          <a class="pill" href="#">Genealogy and Local History</a>
+          <a class="pill" href="#">Tax Forms</a>
+        </div>
+      </section>
+
+      <!-- New Books -->
+      <section class="books" aria-label="New books">
+        <h2 class="section-title">New Books</h2>
+        <div class="book-grid">
+          <!-- Replace with real book cover images -->
+          <div class="book"><img src="Exit-Strategy.jpg" alt="New book cover 1" /></div>
+          <div class="book"><img src="Coming-up-short.jpg" alt="New book cover 2" /></div>
+          <div class="book"><img src="crucial-years.jpg" alt="New book cover 3" /></div>
+          <div class="book"><img src="Big-Kids-Bigger-Feelings.jpg" alt="New book cover 4" /></div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      Troy Public Library — 100 Second Street, Troy, New York 12180 — 518.274.7071 —
+      Copyright © 2026 All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- Small helper for screen-reader-only label -->
+  <style>
+    .sr-only{
+      position:absolute !important;
+      width:1px; height:1px;
+      padding:0; margin:-1px;
+      overflow:hidden; clip:rect(0,0,0,0);
+      white-space:nowrap; border:0;
+    }
+  </style>
+</body>
+</html>
