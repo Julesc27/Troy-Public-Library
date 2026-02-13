@@ -38,17 +38,16 @@ h1 {
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Each slide */
 .fadingSlides {
   display: none;
   width: 100%;
 }
 
-/* The banner image */
+/* banner images */
 .fadingSlides img {
   width: 100%;
-  height: 380px;              /* forces consistent height */
-  object-fit: cover;          /* crops nicely even if image is square */
+  height: 380px;              
+  object-fit: cover;         
   display: block;
 }
 
@@ -100,6 +99,30 @@ h1 {
   background-color: #1f2a44;
 }
 
+/* ---------- Banner ----------*/
+
+.Banner {
+  max-width: 950px;
+  margin: 0 auto;
+
+  border-radius: 16px;
+  overflow: hidden;
+
+  height: 350px;              /* controls banner height */
+  background: #111;
+
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+.Banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* fills the banner nicely */
+  object-position: center;    /* keeps it centered */
+  display: block;             /* removes weird spacing under image */
+}
+
+
 
 /* ---------- Hotbar ---------- */
 
@@ -123,7 +146,7 @@ h1 {
   font-weight: 600;
 }
 
-/* Make links look clean */
+/* links */
 .hotbar-item a {
   text-decoration: none;
   color: white;
@@ -138,9 +161,9 @@ h1 {
 }
 
 
-/* ---------- Calendar Placeholder ---------- */
+/* ---------- Calendar Styling ---------- */
 
-.Week-Calendar {
+.Calendar {
   max-width: 950px;
   margin: 35px auto;
   background: white;
@@ -148,7 +171,13 @@ h1 {
   padding: 25px;
   min-height: 250px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers horizontally */
+  justify-content: center; /* centers vertically (optional) */
 }
+
 
 
 /* ---------- Responsive ---------- */
