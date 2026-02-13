@@ -5,7 +5,7 @@ let today = new Date();
 
 
 /*
-  This function accepts a date and an announcement. If you do not have an announcement leave the announcement section blank, like this --> ""
+  This function accepts a date and an announcement. If you do not have an announcement leave the announcement section blank, like this: ""
 */
 
 setHours(today, "");
