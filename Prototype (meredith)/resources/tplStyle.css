@@ -174,9 +174,213 @@ h1 {
 
   display: flex;
   flex-direction: column;
-  align-items: center;   /* centers horizontally */
-  justify-content: center; /* centers vertically (optional) */
+  align-items: center; 
+  justify-content: center;
+
 }
+
+/* ---------- Library Services Page ---------- */
+
+.services {
+  max-width: 950px;
+  margin: 35px auto;
+  background: white;
+  border-radius: 16px;
+  padding: 28px 30px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.services h3 {
+  margin: 0;
+  padding: 18px 16px;
+  border-radius: 14px;
+
+  background: #f7f7f7;
+  color: #1f2a44;
+  font-size: 1.15rem;
+  font-weight: 700;
+
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.06);
+  transition: 0.2s;
+
+  cursor: pointer;
+}
+
+.services h3 a {
+  display: block;
+  padding: 18px 16px;
+  text-decoration: none;
+  color: #1f2a44;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+
+/* Hover effect */
+.services h3:hover {
+  transform: translateY(-2px);
+  background: #e0e9fc;
+}
+
+
+
+/* ---------- Library Card Page ---------- */
+
+.libraryCard {
+  max-width: 950px;
+  margin: 35px auto;
+  background: white;
+  border-radius: 16px;
+  padding: 28px 30px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+  line-height: 1.6;
+}
+
+.libraryCardInformation {
+  margin: 0;
+}
+
+/* Title */
+.libraryCard h3.libraryCardInformation {
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+  color: #1f2a44;
+}
+
+/* Paragraph */
+.libraryCard p.libraryCardInformation {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Apply Online link */
+.applyOnline {
+  margin: 0;
+  text-align: center;
+}
+
+.applyOnline a {
+  display: inline-block;
+  background: #1f2a44;
+  color: white;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.applyOnline a:hover {
+  background: #2b3a5f;
+  transform: translateY(-1px);
+}
+
+.childLibraryCard {
+  list-style-type: square;
+}
+
+/* ---------- Homepage Styling ---------*/
+
+/* ---------- Quick Links ---------- */
+
+.QuickLinks {
+  max-width: 950px;
+  margin: 35px auto 15px auto;
+  padding: 0 10px;
+
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.QuickLinks h2 {
+  margin: 0;
+}
+
+.QuickLinks a {
+  display: inline-block;
+  text-decoration: none;
+  background: #1f2a44;
+  color: white;
+
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.QuickLinks a:hover {
+  background: #2b3a5f;
+  transform: translateY(-2px);
+}
+
+
+/* ---------- Books Section ---------- */
+
+.Books {
+  max-width: 950px;
+  margin: 35px auto 45px auto;
+  background: white;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.Books h3 {
+  margin: 0 0 18px 0;
+  text-align: center;
+  color: #1f2a44;
+  font-size: 1.4rem;
+}
+
+/* Holds the book cards horizontally */
+.bookRow {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap; /* lets them wrap nicely on smaller screens */
+}
+
+.book {
+  width: 210px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.2s;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.book:hover {
+  transform: translateY(-3px);
+}
+
+.book img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.bookDescription {
+  margin: 0;
+  padding: 14px 14px 16px 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1f2a44;
+  line-height: 1.4;
+}
+
+
+
 
 
 
