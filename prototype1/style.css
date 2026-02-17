@@ -106,37 +106,60 @@ button{ font-family:inherit; }
   cursor:pointer;
 }
 
-/* search */
+/* =========================
+   HEADER SEARCH – PROMINENT
+   ========================= */
+
 .search{
-  flex:1;
+  flex: 1.2;                     /* give it more real estate */
   display:flex;
   align-items:center;
-  gap:10px;
+  justify-content:center;        /* centers between logo + nav */
 }
+
 .search .field{
   position:relative;
   width:100%;
-  max-width:460px;
+  max-width:760px;               /* MUCH wider */
 }
+
 .search input{
   width:100%;
-  padding:12px 44px 12px 14px;
+  padding:18px 64px 18px 22px;   /* tall + spacious */
+  font-size:1.15rem;             /* clearly larger text */
+  font-weight:600;
+
   border-radius:999px;
-  border:1px solid rgba(27,31,52,.16);
-  background:var(--ice);
+  border:2px solid rgba(55,64,108,.45);
+  background:#fff;
+
+  box-shadow:
+    0 12px 26px rgba(27,31,52,.14),
+    inset 0 1px 0 rgba(255,255,255,.9);
+
   outline:none;
 }
-.search input:focus{
-  border-color:rgba(55,64,108,.55);
-  box-shadow:0 0 0 4px rgba(55,64,108,.12);
+
+.search input::placeholder{
+  color:rgba(27,31,52,.65);
 }
+
+.search input:focus{
+  border-color:var(--slate);
+  box-shadow:
+    0 0 0 4px rgba(55,64,108,.18),
+    0 14px 28px rgba(27,31,52,.18);
+}
+
 .search .icon{
   position:absolute;
-  right:12px;
+  right:20px;
   top:50%;
   transform:translateY(-50%);
-  opacity:.75;
+  font-size:1.25rem;             /* icon scales with input */
+  opacity:.9;
 }
+
 
 /* nav links */
 .nav{
