@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Troy Public Library — Catalog</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span>Today’s hours 9 am – 6 pm</span>
+      <a href="catalog.html" aria-label="Open catalog">Catalog</a>
+      <a href="#" aria-label="Open my account">My Account</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="row">
+        <div class="brand" aria-label="Troy Public Library">
+          <img src="../../tpl_logo.jpg" alt="Troy Public Library logo" />
+        </div>
+
+        <button class="menu-toggle" aria-label="Open menu">☰</button>
+
+        <div class="search" role="search">
+          <div class="field">
+            <label for="catalog-search" class="sr-only">Search the catalog or site</label>
+            <input id="catalog-search" type="search" placeholder="Search the catalog (title, author, subject) — press Enter" />
+            <span class="icon" aria-hidden="true">🔎</span>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="../index.html">Home</a>
+          <a href="../about/about.html">About</a>
+          <a href="../services/services.html">Library Services</a>
+          <a class="is-active" href="catalog.html">Catalog</a>
+          <a href="../events/events.html">Calendar</a>
+          <a href="../contact/contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero" aria-label="Catalog hero">
+        <div class="welcome">
+          <h1>Library Catalog</h1>
+          <p>Search the library catalog (Koha OPAC). Use Advanced Search for filters like format, year, or location.</p>
+
+          <div class="quick-actions" aria-label="Catalog quick actions">
+            <a class="btn btn-primary" href="#search-results">Search</a>
+            <a class="btn btn-ghost" href="#">Advanced Search</a>
+            <a class="btn btn-ghost" href="#">My Account (Koha)</a>
+          </div>
+
+          <h2 class="section-title">Highlighted Collections</h2>
+          <div class="grid-2">
+            <article class="card">
+              <h3>New Books</h3>
+              <p>See recently added titles. Curated lists and staff picks appear here.</p>
+              <a class="link" href="#new-books">Browse New Books &gt;</a>
+            </article>
+
+            <article class="card">
+              <h3>Digital Collections</h3>
+              <p>Libby, Hoopla, Kanopy — e-books, audiobooks, movies, and more.</p>
+              <a class="link" href="#digital">Learn about digital resources &gt;</a>
+            </article>
+          </div>
+
+          <h2 id="search-results" class="section-title">Search Results (placeholder)</h2>
+          <div class="card">
+            <p>This area will show results from Koha / site index. For integration, connect this search box to the Koha API or site search endpoint.</p>
+          </div>
+        </div>
+
+        <aside class="hero-media panel" aria-label="Catalog help">
+          <h2>Quick Catalog Links</h2>
+          <div class="row"><strong>Direct OPAC:</strong> <div class="meta"> <a href="#" aria-label="Open Koha OPAC">Open Koha OPAC</a></div></div>
+          <div class="row"><strong>My Account:</strong> <div class="meta"><a href="#" aria-label="Koha login">Log in to Koha</a></div></div>
+          <div class="row"><strong>Suggest an Item:</strong> <div class="meta"><a href="#">Suggest an item</a></div></div>
+          <div style="margin-top:12px;">
+            <h3 style="margin:8px 0 6px;">Digital Collections</h3>
+            <p style="margin:0 0 8px;">Libby • Hoopla • Kanopy — borrow instantly with your library card.</p>
+            <a class="small-link" href="#digital">Explore digital collections &gt;</a>
+          </div>
+        </aside>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      Troy Public Library — 100 Second Street, Troy, New York 12180 — 518.274.7071 — Copyright © 2026.
+    </div>
+  </footer>
+
+  <style>.sr-only{position:absolute !important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}</style>
+</body>
+</html>

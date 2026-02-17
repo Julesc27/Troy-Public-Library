@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troy Public Library - Your community resource for learning and discovery</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <!-- Alert Banner -->
+    <div class="alert-banner">
+        Feb. 16: <a href="#closings">Library closed</a>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div>100 2nd Street, Troy NY 12180</div>
+            <div class="top-bar-links">
+                <a href="#translate">Translate</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-text">
+                    <h1>Troy Public Library</h1>
+                    <p>Your community resource for learning and discovery</p>
+                </div>
+            </div>
+            <div class="header-search">
+                <form action="/search" method="get" class="site-search-form">
+                    <input type="text" name="q" placeholder="Search our website..." aria-label="Search website">
+                    <button type="submit" aria-label="Search">🔍</button>
+                </form>
+            </div>
+            <div class="header-actions">
+                <a href="#account" class="btn btn-outline">My Account</a>
+                <a href="#card" class="btn btn-primary">Get a Card</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick Access Bar -->
+    <div class="quick-access-bar">
+        <div class="quick-access-container">
+            <a href="https://catalog.sals.edu" class="quick-access-btn catalog-btn" target="_blank">
+                <span class="icon">📚</span>
+                <div>
+                    <strong>Search Catalog</strong>
+                    <small>Find books, movies & more</small>
+                </div>
+            </a>
+            <a href="#calendar" class="quick-access-btn">
+                <span class="icon">📅</span>
+                <div>
+                    <strong>Events Calendar</strong>
+                    <small>Browse upcoming programs</small>
+                </div>
+            </a>
+            <a href="#hours" class="quick-access-btn">
+                <span class="icon">🕐</span>
+                <div>
+                    <strong>Hours & Location</strong>
+                    <small>Mon-Thu: 9am-9pm</small>
+                </div>
+            </a>
+            <a href="#card" class="quick-access-btn">
+                <span class="icon">💳</span>
+                <div>
+                    <strong>Get a Library Card</strong>
+                    <small>Free for all residents</small>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li>
+                    <a href="#services">Services</a>
+                    <div class="dropdown">
+                        <a href="#card">Get Library Card</a>
+                        <a href="#account">My Account</a>
+                        <a href="#accessibility">Accessibility</a>
+                        <a href="#museum">Museum Passes</a>
+                        <a href="#meeting">Meeting Rooms</a>
+                        <a href="#print">Print, Copy, Scan</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="https://catalog.sals.edu" target="_blank">Catalog</a>
+                </li>
+                <li>
+                    <a href="#events">Events & Programs</a>
+                    <div class="dropdown">
+                        <a href="#calendar">📅 Events Calendar</a>
+                        <a href="#this-week">This Week's Events</a>
+                        <a href="#kids">Kids Programs</a>
+                        <a href="#teens">Teen Programs</a>
+                        <a href="#adults">Adult Programs</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                    <div class="dropdown">
+                        <a href="#hours">Hours & Location</a>
+                        <a href="#contact">Contact Us</a>
+                        <a href="#board">Library Board</a>
+                        <a href="#employment">Jobs & Volunteering</a>
+                        <a href="#donate">Support the Library</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Image -->
+    <section class="hero-image">
+        <img src="../pic.jpg" alt="Troy Public Library Building">
+        <div class="hero-overlay">
+            <h2>Welcome to Troy Public Library</h2>
+            <p>A historic landmark serving our community since 1897</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <main class="main-content">
+            <!-- Upcoming Events -->
+            <section>
+                <div class="section-header">
+                    <h2>Upcoming events</h2>
+                    <a href="#calendar">Search the calendar →</a>
+                </div>
+
+                <div class="event-tabs">
+                    <button class="event-tab active">ALL</button>
+                    <button class="event-tab">ADULTS</button>
+                    <button class="event-tab">TEENS</button>
+                    <button class="event-tab">KIDS</button>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">18</span>
+                        <span class="month">Feb</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Story Time for Kids</h3>
+                        <p>Join us for an interactive reading session with songs and activities!</p>
+                        <div class="event-meta">
+                            <span>10:00 AM - 11:00 AM</span>
+                            <span>Children's Room</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">19</span>
+                        <span class="month">Feb</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Tech Help Tuesday</h3>
+                        <p>Get one-on-one assistance with your devices and tech questions.</p>
+                        <div class="event-meta">
+                            <span>2:00 PM - 4:00 PM</span>
+                            <span>Computer Lab</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">21</span>
+                        <span class="month">Feb</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Book Club Discussion</h3>
+                        <p>This month: "The Midnight Library" by Matt Haig</p>
+                        <div class="event-meta">
+                            <span>6:30 PM - 8:00 PM</span>
+                            <span>Meeting Room</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- News & Stories -->
+            <section style="margin-top: 3rem;">
+                <div class="section-header">
+                    <h2>News & stories</h2>
+                    <a href="#news">See more news →</a>
+                </div>
+
+                <div class="news-card">
+                    <h3><a href="#">New additions to Library of Things collection</a></h3>
+                    <p>Libraries are full of surprises! Discover the new additions to the Library of Things collection, which features a variety of physical objects available for checkout with your Troy library card.</p>
+                </div>
+
+                <div class="news-card">
+                    <h3><a href="#">Winter Reading Challenge</a></h3>
+                    <p>Cozy up with a good book this winter! Join our reading challenge and log your books for a chance to win prizes. Perfect for all ages and reading levels.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3>📅 Upcoming Events</h3>
+                <div style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #D8E1E9;">
+                    <strong style="color: #7392B7; display: block; margin-bottom: 0.25rem;">Story Time</strong>
+                    <small style="color: #666;">Tuesday, Feb 18 • 10:00 AM</small>
+                </div>
+                <div style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #D8E1E9;">
+                    <strong style="color: #7392B7; display: block; margin-bottom: 0.25rem;">Tech Help</strong>
+                    <small style="color: #666;">Wednesday, Feb 19 • 2:00 PM</small>
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <strong style="color: #7392B7; display: block; margin-bottom: 0.25rem;">Book Club</strong>
+                    <small style="color: #666;">Friday, Feb 21 • 6:30 PM</small>
+                </div>
+                <a href="#calendar" style="color: #7392B7; font-weight: 600; text-decoration: none;">View Full Calendar →</a>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Digital Library</h3>
+                <ul>
+                    <li><a href="#libby">📱 Libby (eBooks & Audiobooks)</a></li>
+                    <li><a href="#hoopla">🎵 Hoopla (Music & Movies)</a></li>
+                    <li><a href="#kanopy">🎬 Kanopy (Streaming)</a></li>
+                    <li><a href="#databases">🔍 Research Databases</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Quick Links</h3>
+                <div class="quick-links">
+                    <a href="https://catalog.sals.edu" class="quick-link" target="_blank">Search Catalog</a>
+                    <a href="#account" class="quick-link">My Account</a>
+                    <a href="#museum" class="quick-link">Museum Passes</a>
+                    <a href="#contact" class="quick-link">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="sidebar-section" style="background: #759EB8; color: white;">
+                <h3 style="color: white;">📍 Visit Us</h3>
+                <p style="color: white; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+                    <strong>Troy Public Library</strong><br>
+                    100 2nd Street<br>
+                    Troy, NY 12180<br>
+                    (518) 274-7071
+                </p>
+                <div style="background: rgba(255,255,255,0.15); padding: 1rem; border-radius: 4px; margin-bottom: 1rem;">
+                    <strong style="display: block; margin-bottom: 0.5rem; font-size: 1.05rem;">Library Hours</strong>
+                    <div style="font-size: 0.9rem; line-height: 1.8;">
+                        Mon-Thu: 9am-9pm<br>
+                        Fri: 9am-6pm<br>
+                        Sat: 9am-5pm<br>
+                        Sun: 12pm-5pm
+                    </div>
+                </div>
+                <a href="#directions" style="display: inline-block; color: white; background: rgba(255,255,255,0.2); padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600;">Get Directions →</a>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Library Services</h4>
+                <ul>
+                    <li><a href="#card">Get Library Card</a></li>
+                    <li><a href="#accessibility">Accessibility Services</a></li>
+                    <li><a href="#museum">Museum Passes</a></li>
+                    <li><a href="#tax">Tax Form Help</a></li>
+                    <li><a href="#it">IT Support</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#catalog">Library Catalog</a></li>
+                    <li><a href="#genealogy">Genealogy & Local History</a></li>
+                    <li><a href="#recommends">TPL Recommends</a></li>
+                    <li><a href="#borrowing">Borrowing Policies</a></li>
+                    <li><a href="#suggest">Suggest an Item</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#hours">Locations & Hours</a></li>
+                    <li><a href="#board">Library Board</a></li>
+                    <li><a href="#updates">Important Updates</a></li>
+                    <li><a href="#employment">Jobs & Volunteering</a></li>
+                    <li><a href="#donate">Donate</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#staff">Staff Emails</a></li>
+                    <li><a href="#important">Important Contacts</a></li>
+                    <li><a href="#map">Google Maps</a></li>
+                    <li><a href="#social">Social Media</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Troy Public Library. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Troy Public Library — Contact</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span>Today’s hours 9 am – 6 pm</span>
+      <a href="../catalog/catalog.html">Catalog</a>
+      <a href="#" aria-label="Open my account">My Account</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="row">
+        <div class="brand"><img src="../../tpl_logo.jpg" alt="Troy Public Library logo" /></div>
+        <button class="menu-toggle" aria-label="Open menu">☰</button>
+        <div class="search" role="search">
+          <div class="field">
+            <label for="site-search-5" class="sr-only">Search the website</label>
+            <input id="site-search-5" type="search" placeholder="Search the website" />
+            <span class="icon" aria-hidden="true">🔎</span>
+          </div>
+        </div>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="../index.html">Home</a>
+          <a href="../about/about.html">About</a>
+          <a href="../services/services.html">Library Services</a>
+          <a href="../catalog/catalog.html">Catalog</a>
+          <a href="../events/events.html">Calendar</a>
+          <a class="is-active" href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero" aria-label="Contact hero">
+        <div class="welcome">
+          <h1>Contact & Help</h1>
+          <p>Questions? Reach out — phone, email, or use the form below. For program questions use the event page contact.</p>
+
+          <div class="grid-2">
+            <div class="card">
+              <h3>Contact Info</h3>
+              <p><strong>Address:</strong> 100 Second Street, Troy, NY 12180</p>
+              <p><strong>Phone:</strong> 518.274.7071</p>
+              <p><strong>Email:</strong> <a href="mailto:info@troylibrary.org">info@troylibrary.org</a></p>
+              <p><strong>Hours:</strong> Mon–Fri: 9 AM – 6 PM</p>
+            </div>
+
+            <div class="card" aria-label="Contact form">
+              <h3>Send us a message</h3>
+              <form action="#" method="post">
+                <label for="name">Name</label><br/>
+                <input id="name" name="name" type="text" required style="width:100%;padding:8px;margin:6px 0 10px;border-radius:8px;border:1px solid rgba(27,31,52,.12)" />
+
+                <label for="email">Email</label><br/>
+                <input id="email" name="email" type="email" required style="width:100%;padding:8px;margin:6px 0 10px;border-radius:8px;border:1px solid rgba(27,31,52,.12)" />
+
+                <label for="message">Message</label><br/>
+                <textarea id="message" name="message" rows="5" required style="width:100%;padding:8px;margin:6px 0 10px;border-radius:8px;border:1px solid rgba(27,31,52,.12)"></textarea>
+
+                <button class="btn btn-primary" type="submit">Send message</button>
+              </form>
+            </div>
+          </div>
+
+          <h2 class="section-title">Visit Us</h2>
+          <div class="card">
+            <p>Map placeholder. Replace with an embedded Google Map or static map image.</p>
+          </div>
+        </div>
+
+        <aside class="hero-media panel" aria-label="Contact sidebar">
+          <h2>Online Help</h2>
+          <p><strong>Ask a Librarian:</strong> Email, phone, or live chat if available.</p>
+          <a class="small-link" href="#">Ask a librarian &gt;</a>
+        </aside>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      Troy Public Library — 100 Second Street, Troy, New York 12180 — 518.274.7071 — Copyright © 2026.
+    </div>
+  </footer>
+
+  <style>.sr-only{position:absolute !important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}</style>
+</body>
+</html>
