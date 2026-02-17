@@ -303,7 +303,7 @@ h1 {
   margin: 0;
 }
 
-.QuickLinks a {
+.button {
   display: inline-block;
   text-decoration: none;
   background: #1f2a44;
@@ -315,7 +315,7 @@ h1 {
   transition: 0.2s;
 }
 
-.QuickLinks a:hover {
+.button {
   background: #2b3a5f;
   transform: translateY(-2px);
 }
@@ -379,20 +379,234 @@ h1 {
   line-height: 1.4;
 }
 
+/* ---------- Catalog Page ---------- */
+
+.catalog {
+  max-width: 950px;
+  margin: 35px auto 45px auto;
+  background: white;
+  border-radius: 16px;
+  padding: 28px 30px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Keeps the catalog button centered */
+.catalog h3 {
+  margin: 0 0 25px 0;
+  text-align: center;
+}
+
+/* Collection cards layout */
+.digitalCollections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* Individual collection card */
+.Collection {
+  background: #f7f7f7;
+  border-radius: 16px;
+  padding: 20px 18px;
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.06);
+  transition: 0.2s;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.Collection:hover {
+  transform: translateY(-2px);
+  background: #eef1f7;
+}
+
+.Collection h3 {
+  margin: 0 0 10px 0;
+  text-align: left;
+  color: #1f2a44;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.explanation {
+  margin: 0;
+  color: #333;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+/* ---------- Contact Us Page ---------- */
+
+.staffEmails,
+.employment,
+.LibraryBoard {
+  max-width: 950px;
+  margin: 35px auto;
+  background: white;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.staffEmails h4 {
+  margin: 0 0 14px 0;
+  color: #1f2a44;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+/* Email list */
+.email-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.email-list li {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Employment section */
+.employmentList {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.employment h4 {
+  margin: 0 0 14px 0;
+  color: #1f2a44;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.employmentList li {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Library Board section */
+.LibraryBoard h3 {
+  margin: 0;
+  text-align: center;
+  color: #1f2a44;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
 
 
 
+/* ---------- Google Map ---------- */
+
+.googleMap {
+  max-width: 950px;
+  margin: 35px auto 45px auto;
+  background: white;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.googleMap iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+  border-radius: 14px;
+  display: block;
+}
 
 
-/* ---------- Responsive ---------- */
+/* ---------- Mobile Responsive (ALL pages) ---------- */
 
 @media (max-width: 900px) {
+
+  /* Global spacing */
+  body {
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    margin: 18px 0 12px 0;
+  }
+
+  /* Hotbar */
   .Hotbar {
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 12px;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 18px;
+  }
+
+  .hotbar-item {
+    font-size: 1rem;
+  }
+
+  /* Banner */
+  .Banner {
+    height: 240px;
+  }
+
+  .Banner-slideshow {
+    max-width: 100%;
   }
 
   .fadingSlides img {
-    height: 280px;
+    height: 240px;
+  }
+
+  /* Calendar section */
+  .Calendar {
+    padding: 18px;
+  }
+
+  .Calendar iframe {
+    width: 100%;
+    height: 420px;
+  }
+
+  /* Services page grid */
+  .services {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  /* Catalog page collections */
+  .digitalCollections {
+    grid-template-columns: 1fr;
+  }
+
+  /* Books section */
+  .Books {
+    padding: 20px;
+  }
+
+  .book {
+    width: 170px;
+  }
+
+  .book img {
+    height: 240px;
+  }
+
+  /* Library Card page */
+  .libraryCard {
+    padding: 20px;
+  }
+
+  /* Contact Us page sections */
+  .staffEmails,
+  .employment,
+  .LibraryBoard,
+  .catalog,
+  .googleMap {
+    padding: 20px;
+  }
+
+  /* Map */
+  .googleMap iframe {
+    height: 320px;
   }
 }
