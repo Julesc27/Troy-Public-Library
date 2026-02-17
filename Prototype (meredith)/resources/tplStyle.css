@@ -1,0 +1,398 @@
+/* ---------- Global ---------- */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f7f7f7;
+  color: #222;
+}
+
+h1 {
+  text-align: center;
+  margin: 25px 0 15px 0;
+  font-size: 2rem;
+}
+
+
+/* ---------- Header ---------- */
+
+.headerSection {
+  width: 100%;
+  background-color: #1f2a44;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/* ---------- Slideshow ---------- */
+
+.Banner-slideshow {
+  position: relative;
+  max-width: 950px;
+  margin: 0 auto;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #111;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.fadingSlides {
+  display: none;
+  width: 100%;
+}
+
+/* banner images */
+.fadingSlides img {
+  width: 100%;
+  height: 380px;              
+  object-fit: cover;         
+  display: block;
+}
+
+/* Prev/Next buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 14px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.45);
+  user-select: none;
+  transition: 0.2s;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+  left: 12px;
+}
+
+.next {
+  right: 12px;
+}
+
+/* Dots */
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 14px 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.25s;
+}
+
+.dot:hover {
+  background-color: #666;
+}
+
+.active {
+  background-color: #1f2a44;
+}
+
+/* ---------- Banner ----------*/
+
+.Banner {
+  max-width: 950px;
+  margin: 0 auto;
+
+  border-radius: 16px;
+  overflow: hidden;
+
+  height: 350px;              /* controls banner height */
+  background: #111;
+
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+.Banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* fills the banner nicely */
+  object-position: center;    /* keeps it centered */
+  display: block;             /* removes weird spacing under image */
+}
+
+
+
+/* ---------- Hotbar ---------- */
+
+.Hotbar {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  padding: 14px 10px;
+  margin-top: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
+  border-radius: 25px;
+
+  background: #1f2a44;
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.hotbar-item {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* links */
+.hotbar-item a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+/* Hover effect */
+.hotbar-item a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+/* ---------- Calendar Styling ---------- */
+
+.Calendar {
+  max-width: 950px;
+  margin: 35px auto;
+  background: white;
+  border-radius: 14px;
+  padding: 25px;
+  min-height: 250px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+
+}
+
+/* ---------- Library Services Page ---------- */
+
+.services {
+  max-width: 950px;
+  margin: 35px auto;
+  background: white;
+  border-radius: 16px;
+  padding: 28px 30px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.services h3 {
+  margin: 0;
+  padding: 18px 16px;
+  border-radius: 14px;
+
+  background: #f7f7f7;
+  color: #1f2a44;
+  font-size: 1.15rem;
+  font-weight: 700;
+
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.06);
+  transition: 0.2s;
+
+  cursor: pointer;
+}
+
+.services h3 a {
+  display: block;
+  padding: 18px 16px;
+  text-decoration: none;
+  color: #1f2a44;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+
+/* Hover effect */
+.services h3:hover {
+  transform: translateY(-2px);
+  background: #e0e9fc;
+}
+
+
+
+/* ---------- Library Card Page ---------- */
+
+.libraryCard {
+  max-width: 950px;
+  margin: 35px auto;
+  background: white;
+  border-radius: 16px;
+  padding: 28px 30px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+  line-height: 1.6;
+}
+
+.libraryCardInformation {
+  margin: 0;
+}
+
+/* Title */
+.libraryCard h3.libraryCardInformation {
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+  color: #1f2a44;
+}
+
+/* Paragraph */
+.libraryCard p.libraryCardInformation {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Apply Online link */
+.applyOnline {
+  margin: 0;
+  text-align: center;
+}
+
+.applyOnline a {
+  display: inline-block;
+  background: #1f2a44;
+  color: white;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.applyOnline a:hover {
+  background: #2b3a5f;
+  transform: translateY(-1px);
+}
+
+.childLibraryCard {
+  list-style-type: square;
+}
+
+/* ---------- Homepage Styling ---------*/
+
+/* ---------- Quick Links ---------- */
+
+.QuickLinks {
+  max-width: 950px;
+  margin: 35px auto 15px auto;
+  padding: 0 10px;
+
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.QuickLinks h2 {
+  margin: 0;
+}
+
+.QuickLinks a {
+  display: inline-block;
+  text-decoration: none;
+  background: #1f2a44;
+  color: white;
+
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.QuickLinks a:hover {
+  background: #2b3a5f;
+  transform: translateY(-2px);
+}
+
+
+/* ---------- Books Section ---------- */
+
+.Books {
+  max-width: 950px;
+  margin: 35px auto 45px auto;
+  background: white;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.Books h3 {
+  margin: 0 0 18px 0;
+  text-align: center;
+  color: #1f2a44;
+  font-size: 1.4rem;
+}
+
+/* Holds the book cards horizontally */
+.bookRow {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap; /* lets them wrap nicely on smaller screens */
+}
+
+.book {
+  width: 210px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.2s;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.book:hover {
+  transform: translateY(-3px);
+}
+
+.book img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.bookDescription {
+  margin: 0;
+  padding: 14px 14px 16px 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1f2a44;
+  line-height: 1.4;
+}
+
+
+
+
+
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .Hotbar {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .fadingSlides img {
+    height: 280px;
+  }
+}

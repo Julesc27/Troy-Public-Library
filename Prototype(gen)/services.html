@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — TPL Prototype</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="utility">
+    <div class="container">
+      <div class="row">
+        <div class="left">
+          <span class="pill">Hours: <strong>9–5</strong> <span>(example)</span></span>
+          <span class="pill">Email: <strong>info@tpl.example</strong></span>
+        </div>
+        <div class="right">
+          <a class="btn" href="card.html">Get a Card</a>
+          <a class="btn primary" href="support.html">Support TPL</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="brand-title">
+          <div class="name">Troy Public Library</div>
+          <div class="tag">Services</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <div class="nav-inner">
+          <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="navLinks">Menu</button>
+          <div class="nav-links" id="navLinks" data-nav-links>
+            <a href="index.html">Home</a>
+            <a href="catalog.html">Catalog</a>
+            <a href="events.html">Programs & Events</a>
+            <a href="services.html" aria-current="page">Services</a>
+            <a href="using-the-library.html">Using the Library</a>
+            <a href="news.html">News</a>
+            <a href="contact.html">Contact</a>
+            <a class="btn" href="account.html">Login</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="section">
+        <form class="searchbar" data-search-form>
+          <label for="q">Search</label>
+          <input id="q" data-search-q type="search" placeholder="Search services, policies, and more…" aria-label="Search query" />
+          <select data-search-scope aria-label="Search scope">
+            <option value="site">Site</option>
+            <option value="catalog">Catalog</option>
+          </select>
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="section">
+      <h2>Featured Services</h2>
+      <p class="lead">Clear wayfinding: services are separated into focused sections instead of a catch-all.</p>
+
+      <div class="grid cols-3">
+        <div class="card" id="printing">
+          <h3>Printing (Remote & In-Library)</h3>
+          <p><strong>Remote printing:</strong> submit files online, pick up at the desk.<br>
+             <strong>In-library:</strong> print, copy, scan (details + costs here).</p>
+          <div class="tagrow">
+            <span class="tag">Remote</span>
+            <span class="tag">In-library</span>
+          </div>
+          <a class="link" href="contact.html">Ask about printing →</a>
+        </div>
+
+        <div class="card" id="passes">
+          <h3>Museum Passes</h3>
+          <p>Borrow passes for local museums and cultural sites (availability rules listed here).</p>
+          <a class="link" href="#">View pass list (placeholder) →</a>
+        </div>
+
+        <div class="card" id="ill">
+          <h3>Interlibrary Loan</h3>
+          <p>Request items from other libraries. Clear timelines and pickup expectations.</p>
+          <a class="link" href="#">Request an ILL (placeholder) →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Support & Access</h2>
+
+      <div class="grid cols-3">
+        <div class="card" id="accessibility">
+          <h3>Accessibility Services</h3>
+          <p>Assistive technology, accommodations, and an ADA statement.</p>
+          <a class="link" href="accessibility.html">View accessibility →</a>
+        </div>
+
+        <div class="card" id="learning">
+          <h3>Job Seekers & Test Prep</h3>
+          <p>Resume help, computers/Wi-Fi, and learning platforms (links here).</p>
+          <a class="link" href="events.html">Workshops + events →</a>
+        </div>
+
+        <div class="card" id="homebound">
+          <h3>Homebound Delivery</h3>
+          <p>Service for patrons who can’t visit in person. Eligibility + request info.</p>
+          <a class="link" href="contact.html">Request homebound service →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Room Reservations</h2>
+      <div class="card">
+        <p><strong>Prototype placeholder:</strong> explain the process clearly, or link to a reservation tool.</p>
+        <a class="btn primary" href="#">Reserve a room (placeholder)</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="small">© <span id="year"></span> Troy Public Library (Prototype) • <a href="privacy.html">Privacy</a></p>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Programs & Events — TPL Prototype</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="utility">
+    <div class="container">
+      <div class="row">
+        <div class="left">
+          <span class="pill">Hours: <strong>9–5</strong> <span>(example)</span></span>
+          <span class="pill">Need help? <strong>Ask a Librarian</strong></span>
+        </div>
+        <div class="right">
+          <a class="btn" href="contact.html">Contact</a>
+          <a class="btn primary" href="support.html">Support TPL</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="brand-title">
+          <div class="name">Troy Public Library</div>
+          <div class="tag">Programs & Events</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <div class="nav-inner">
+          <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="navLinks">Menu</button>
+          <div class="nav-links" id="navLinks" data-nav-links>
+            <a href="index.html">Home</a>
+            <a href="catalog.html">Catalog</a>
+            <a href="events.html" aria-current="page">Programs & Events</a>
+            <a href="services.html">Services</a>
+            <a href="using-the-library.html">Using the Library</a>
+            <a href="news.html">News</a>
+            <a href="contact.html">Contact</a>
+            <a class="btn" href="card.html">Get a Card</a>
+            <a class="btn" href="account.html">Login</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="section">
+        <form class="searchbar" data-search-form>
+          <label for="q">Search</label>
+          <input id="q" data-search-q type="search" placeholder="Search the catalog or site…" aria-label="Search query" />
+          <select data-search-scope aria-label="Search scope">
+            <option value="catalog">Catalog</option>
+            <option value="site">Site</option>
+          </select>
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="section">
+      <h2>Calendar</h2>
+      <p class="lead">Embedded calendar placeholder (swap in Library Market embed code later).</p>
+
+      <div class="calendar-embed" aria-label="Embedded events calendar">
+        <div class="top">
+          <strong>Library Market Calendar</strong>
+          <span class="small">Filter tools below + event cards link to details</span>
+        </div>
+        <iframe title="Library Market calendar embed (placeholder)" src="about:blank"></iframe>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Filter Events</h2>
+
+      <div class="filters" data-event-filters aria-label="Event filters">
+        <label class="small" for="age">Age Group</label>
+        <select id="age" data-filter-age>
+          <option value="all">All Ages</option>
+          <option value="kids">Kids</option>
+          <option value="teens">Teens</option>
+          <option value="adults">Adults</option>
+        </select>
+
+        <label class="small" for="type">Format</label>
+        <select id="type" data-filter-type>
+          <option value="all">All Formats</option>
+          <option value="inperson">In-person</option>
+          <option value="virtual">Virtual</option>
+        </select>
+
+        <label class="small" for="q2">Search</label>
+        <input id="q2" data-filter-q type="search" placeholder="Search events…" />
+      </div>
+
+      <div class="grid cols-2" data-event-list>
+        <div class="card event" id="event-storytime" data-event data-age="kids" data-type="inperson">
+          <div class="title">Family Storytime</div>
+          <div class="meta">
+            <span>Sat • 10:30 AM</span>
+            <span class="tag">Kids</span>
+            <span class="tag">In-person</span>
+          </div>
+          <p>Stories, songs, and movement. Great for first-time families.</p>
+          <div class="actions">
+            <a class="btn primary" href="#">Event details</a>
+            <a class="btn" href="#">Register (if needed)</a>
+          </div>
+        </div>
+
+        <div class="card event" id="event-bookgroup" data-event data-age="adults" data-type="virtual">
+          <div class="title">Book Group: Contemporary Fiction</div>
+          <div class="meta">
+            <span>Tue • 6:00 PM</span>
+            <span class="tag">Adults</span>
+            <span class="tag">Virtual</span>
+          </div>
+          <p>Monthly discussion. Easy registration and reminders.</p>
+          <div class="actions">
+            <a class="btn primary" href="#">Event details</a>
+            <a class="btn" href="#">Register</a>
+          </div>
+        </div>
+
+        <div class="card event" data-event data-age="teens" data-type="inperson">
+          <div class="title">Teen Makerspace Night</div>
+          <div class="meta">
+            <span>Thu • 4:30 PM</span>
+            <span class="tag">Teens</span>
+            <span class="tag">In-person</span>
+          </div>
+          <p>Hands-on creative tech, art, and games — drop in.</p>
+          <div class="actions">
+            <a class="btn primary" href="#">Event details</a>
+          </div>
+        </div>
+
+        <div class="card event" data-event data-age="all" data-type="virtual">
+          <div class="title">Job Search Workshop</div>
+          <div class="meta">
+            <span>Wed • 12:00 PM</span>
+            <span class="tag">All Ages</span>
+            <span class="tag">Virtual</span>
+          </div>
+          <p>Resumes, applications, and interview prep with library resources.</p>
+          <div class="actions">
+            <a class="btn primary" href="#">Event details</a>
+            <a class="btn" href="#">Register</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="book-groups">
+      <h2>Book Groups & Series</h2>
+      <p class="lead">No longer buried — discoverable as a top-level section.</p>
+
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Contemporary Fiction</h3>
+          <p>Monthly • Virtual • Registration available</p>
+          <a class="link" href="#event-bookgroup">View upcoming →</a>
+        </div>
+        <div class="card">
+          <h3>Local History Circle</h3>
+          <p>Monthly • In-person</p>
+          <a class="link" href="#">View series →</a>
+        </div>
+        <div class="card">
+          <h3>Kids Reading Club</h3>
+          <p>Weekly • In-person</p>
+          <a class="link" href="#">View series →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="small">© <span id="year"></span> Troy Public Library (Prototype) • <a href="privacy.html">Privacy</a></p>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>
