@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Month Calendar - Troy Public Library</title>
+    <link rel="stylesheet" href="calendar.css"/>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <span>100 2nd Street, Troy NY 12180</span>
+        <div class="top-bar-links">
+            <a href="#">Translate</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <h1>Troy Public Library</h1>
+                <p>Your community resource for learning and discovery</p>
+            </div>
+            <div class="header-search">
+                <input type="text" placeholder="Search our website...">
+                <button aria-label="Search">🔍</button>
+            </div>
+            <div class="header-actions">
+                <button class="btn-account">My Account</button>
+                <button class="btn-card">Get a Card</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Nav -->
+  <nav>
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#services">Services</a>
+                    <div class="dropdown">
+                        <a href="#card">Get Library Card</a>
+                        <a href="#account">My Account</a>
+                        <a href="#accessibility">Accessibility</a>
+                        <a href="#museum">Museum Passes</a>
+                        <a href="#meeting">Meeting Rooms</a>
+                        <a href="#print">Print, Copy, Scan</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="https://catalog.sals.edu" target="_blank">Catalog</a>
+                </li>
+                <li>
+                    <a href="#events">Events & Programs</a>
+                    <div class="dropdown">
+                        <a href="calendar/calendar.html">📅 Events Calendar</a>
+                        <a href="#this-week">This Week's Events</a>
+                        <a href="#kids">Kids Programs</a>
+                        <a href="#teens">Teen Programs</a>
+                        <a href="#adults">Adult Programs</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="../about/about.html">About</a>
+                    <div class="dropdown">
+                        <a href="#hours">Hours & Location</a>
+                        <a href="#contact">Contact Us</a>
+                        <a href="#board">Library Board</a>
+                        <a href="#employment">Jobs & Volunteering</a>
+                        <a href="#donate">Support the Library</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="page-wrapper">
+        <h1 class="page-title">Month Calendar</h1>
+
+        <div class="calendar-layout">
+
+            <!-- ── Filters Sidebar ── -->
+            <aside class="sidebar">
+                <div class="sidebar-title">
+                    ☰ FILTERS
+                </div>
+
+                <!-- Keyword Search -->
+                <div class="filter-section sidebar-search">
+                    <div class="filter-label">Keyword Search</div>
+                    <input type="text" placeholder="">
+                </div>
+
+                <!-- Age Group -->
+                <div class="filter-section">
+                    <div class="filter-label">
+                        Age Group
+                        <span class="chevron">⊕</span>
+                    </div>
+                    <div class="tag-list">
+                        <label class="tag-btn active">
+                            <input type="checkbox" class="tag-check" checked>
+                            <span class="tag-pip" style="background: var(--tag-youth);"></span>
+                            Youth
+                        </label>
+                        <label class="tag-btn">
+                            <input type="checkbox" class="tag-check">
+                            <span class="tag-pip" style="background: var(--tag-babies);"></span>
+                            Babies
+                        </label>
+                        <label class="tag-btn">
+                            <input type="checkbox" class="tag-check">
+                            <span class="tag-pip" style="background: var(--tag-preschool);"></span>
+                            Preschool
+                        </label>
+                        <label class="tag-btn">
+                            <input type="checkbox" class="tag-check">
+                            <span class="tag-pip" style="background: var(--tag-elementary);"></span>
+                            Elementary
+                        </label>
+                        <label class="tag-btn">
+                            <input type="checkbox" class="tag-check">
+                            <span class="tag-pip" style="background: var(--tag-tweens);"></span>
+                            Tweens
+                        </label>
+                        <label class="tag-btn">
+                            <input type="checkbox" class="tag-check">
+                            <span class="tag-pip" style="background: var(--tag-teens);"></span>
+                            Teens
+                        </label>
+                        <label class="tag-btn">
+                            <input type="checkbox" class="tag-check">
+                            <span class="tag-pip" style="background: var(--tag-adults);"></span>
+                            Adults
+                        </label>
+                        <label class="tag-btn">
+                            <input type="checkbox" class="tag-check">
+                            <span class="tag-pip" style="background: var(--tag-seniors);"></span>
+                            Seniors
+                        </label>
+                        <label class="tag-btn">
+                            <input type="checkbox" class="tag-check">
+                            <span class="tag-pip" style="background: var(--tag-all-ages);"></span>
+                            All Ages
+                        </label>
+                        <label class="tag-btn">
+                            <input type="checkbox" class="tag-check">
+                            <span class="tag-pip" style="background: var(--tag-families);"></span>
+                            Families
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Program Type -->
+                <div class="filter-section">
+                    <div class="filter-label">
+                        Program Type
+                        <span class="chevron">⊕</span>
+                    </div>
+                </div>
+
+                <!-- Event Type -->
+                <div class="filter-section">
+                    <div class="filter-label">
+                        Event Type
+                        <span class="chevron">⊕</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-actions">
+                    <button class="btn-apply">Apply</button>
+                    <button class="btn-reset">Reset</button>
+                </div>
+            </aside>
+
+            <!-- ── Calendar Panel ── -->
+            <section class="calendar-panel">
+
+                <!-- View Toggle -->
+                <div class="view-toggle">
+                    <button class="view-btn">Upcoming</button>
+                    <button class="view-btn">List</button>
+                    <button class="view-btn active">Month</button>
+                    <button class="view-btn">Week</button>
+                    <button class="view-btn">Day</button>
+                </div>
+
+                <!-- Calendar Grid -->
+                <div class="cal-wrapper">
+
+                    <!-- Month Navigation -->
+                    <div class="cal-header">
+                        <button class="cal-nav-btn" id="prevMonth">&lt;&lt;</button>
+                        <span class="cal-month-label" id="monthLabel">February 2026</span>
+                        <button class="cal-nav-btn" id="nextMonth">&gt;&gt;</button>
+                    </div>
+
+                    <!-- Unified grid: day names + cells in one container -->
+                    <div class="cal-table" id="calTable">
+                        <div class="cal-day-name">Sunday</div>
+                        <div class="cal-day-name">Monday</div>
+                        <div class="cal-day-name">Tuesday</div>
+                        <div class="cal-day-name">Wednesday</div>
+                        <div class="cal-day-name">Thursday</div>
+                        <div class="cal-day-name">Friday</div>
+                        <div class="cal-day-name">Saturday</div>
+                        <!-- cells injected by JS below the 7 headers -->
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+    <script>
+        /* ── Sample events data ── */
+        const events = [
+            { date: '2026-02-03', label: 'Story Time',      color: '#e05252' },
+            { date: '2026-02-04', label: 'Teen Game Night', color: '#3a8a3a' },
+            { date: '2026-02-05', label: 'Book Club',       color: '#c97c1a' },
+            { date: '2026-02-10', label: 'Tech Help',       color: '#3b4cca' },
+            { date: '2026-02-10', label: 'Story Time',      color: '#e05252' },
+            { date: '2026-02-12', label: 'Family Craft',    color: '#b07830' },
+            { date: '2026-02-17', label: 'Author Talk',     color: '#c97c1a' },
+            { date: '2026-02-18', label: 'Story Time',      color: '#e05252' },
+            { date: '2026-02-19', label: 'Tech Help',       color: '#3b4cca' },
+            { date: '2026-02-21', label: 'Book Club',       color: '#c97c1a' },
+            { date: '2026-02-24', label: 'Teen Advisory',   color: '#3a8a3a' },
+            { date: '2026-02-26', label: 'Tax Help',        color: '#1a1a1a' },
+        ];
+
+        let current = new Date(2026, 1, 1); // Feb 2026
+
+        function renderCalendar(date) {
+            const year  = date.getFullYear();
+            const month = date.getMonth();
+            const today = new Date();
+
+            const months = ['January','February','March','April','May','June',
+                            'July','August','September','October','November','December'];
+            document.getElementById('monthLabel').textContent = `${months[month]} ${year}`;
+
+            const firstDay    = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const daysInPrev  = new Date(year, month, 0).getDate();
+
+            // Remove all cells (keep the 7 header divs at the top)
+            const table = document.getElementById('calTable');
+            const headers = Array.from(table.querySelectorAll('.cal-day-name'));
+            table.innerHTML = '';
+            headers.forEach(h => table.appendChild(h));
+
+            // Build 42 cells
+            const cells = [];
+            for (let i = 0; i < firstDay; i++) {
+                cells.push({ day: daysInPrev - firstDay + i + 1, type: 'prev' });
+            }
+            for (let d = 1; d <= daysInMonth; d++) {
+                cells.push({ day: d, type: 'cur' });
+            }
+            let next = 1;
+            while (cells.length < 42) cells.push({ day: next++, type: 'next' });
+
+            cells.forEach(cell => {
+                const el = document.createElement('div');
+                el.className = 'cal-cell' + (cell.type !== 'cur' ? ' other-month' : '');
+
+                const isToday = cell.type === 'cur'
+                    && year  === today.getFullYear()
+                    && month === today.getMonth()
+                    && cell.day === today.getDate();
+                if (isToday) el.classList.add('today');
+
+                const numEl = document.createElement('div');
+                numEl.className = 'cell-num';
+                numEl.textContent = cell.day;
+                el.appendChild(numEl);
+
+                if (cell.type === 'cur') {
+                    const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(cell.day).padStart(2,'0')}`;
+                    events.filter(e => e.date === dateStr).forEach(ev => {
+                        const pill = document.createElement('span');
+                        pill.className = 'event-pill';
+                        pill.style.background = ev.color;
+                        pill.textContent = ev.label;
+                        pill.title = ev.label;
+                        el.appendChild(pill);
+                    });
+                }
+
+                table.appendChild(el);
+            });
+        }
+
+        document.getElementById('prevMonth').addEventListener('click', () => {
+            current = new Date(current.getFullYear(), current.getMonth() - 1, 1);
+            renderCalendar(current);
+        });
+        document.getElementById('nextMonth').addEventListener('click', () => {
+            current = new Date(current.getFullYear(), current.getMonth() + 1, 1);
+            renderCalendar(current);
+        });
+
+        /* ── Checkbox toggle active class on label ── */
+        document.querySelectorAll('.tag-check').forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                const label = checkbox.closest('.tag-btn');
+                label.classList.toggle('active', checkbox.checked);
+            });
+        });
+
+        /* ── View toggle ── */
+        document.querySelectorAll('.view-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+
+        renderCalendar(current);
+    </script>
+</body>
+</html>
