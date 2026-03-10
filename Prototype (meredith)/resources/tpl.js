@@ -60,6 +60,8 @@ function displaySlides(n) {
   let slides = document.getElementsByClassName("fadingSlides");
   let dots = document.getElementsByClassName("dot");
 
+  if(slides.length === 0) { return; }
+
   if (n >= slides.length) index = 0;
   if (n < 0) index = slides.length - 1;
 
@@ -93,3 +95,22 @@ function resetAutoplay() {
   clearInterval(autoplayTimer);
   startAutoplay();
 }
+
+//This is library policies functionality
+
+const policies = document.querySelectorAll(".dropDownButton");
+
+policies.forEach(button => {
+  
+  button.addEventListener("click", () =>{
+    const content = button.nextElementSibling;
+
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+
+  });
+
+});
