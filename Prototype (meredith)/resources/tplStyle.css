@@ -397,6 +397,29 @@ h2, h3, h4{
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
 }
 
+.CatalogHeader {
+  display: inline-block;
+  text-decoration: none;
+
+  background: #1f2a44;
+  color: white;
+
+  padding: 14px 22px;
+  border-radius: 14px;
+
+  font-weight: 700;
+  font-size: 1.15rem;
+
+  transition: 0.2s;
+
+  margin: 0 auto 25px auto;
+}
+
+.CatalogHeader:hover {
+  background-color: #454e63;
+  transform: translateY(-2px);
+}
+
 /* Keeps the catalog button centered */
 .catalog h3 {
   margin: 0 0 25px 0;
