@@ -13,6 +13,13 @@ h1 {
   margin: 25px 0 15px 0;
   font-size: 3rem;
   font-family: "Garamond", "Bookman Old Style", "Times New Roman", serif;
+  background: #1f2a44;
+  color: white;
+  border-radius: 14px;
+  margin-top: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
+  border-radius: 25px;
 }
 
 h2, h3, h4{
