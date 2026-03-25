@@ -4,7 +4,7 @@ body {
   margin: 0;
   font-family: "Garamond", "Bookman Old Style", "Times New Roman", serif;
   font-weight: bold;
-  background-color: rgb(227, 206, 180);
+  background-color: white;
   color: #222;
 }
 
@@ -16,7 +16,8 @@ h1 {
   background: #1f2a44;
   color: white;
   border-radius: 14px;
-  margin-top: 20px;
+  margin-top: 60px;
+  margin-bottom: 50px;
   margin-left: 80px;
   margin-right: 80px;
   border-radius: 25px;
@@ -31,44 +32,42 @@ h2, h3, h4{
 
 .headerSection {
   width: 100%;
-  background-color: #1f2a44; /* closer to your screenshot */
+  box-sizing: border-box;
+  background-color: #1f2a44;
   color: white;
-  padding: 10px 20px;
-
+  padding: 6px 20px;
   display: flex;
   align-items: center;
-  position: relative;
-}
-
-.centerTitle {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 28px;
-  font-weight: bold;
-}
-
-
-.rightSide {
-  margin-left: auto;
-  text-align: right;
-  font-size: 16px;
-  line-height: 1.4;
-}
-
-.rightSide p {
-  margin: 0;
-}
-
-.rightside pre{
-  font-family: "Garamond", "Bookman Old Style", "Times New Roman", serif;
-  margin: 0;
+  justify-content: space-between;
 }
 
 .leftSide {
-  font-size: 20px;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: left;
 }
 
+.leftSide p {
+  margin: 0;
+}
+
+.centerSection {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  text-align: center;
+}
+
+.rightSide {
+  text-align: right;
+  font-size: 16px;
+}
+
+pre{
+  font-family: "Garamond", "Bookman Old Style", "Times New Roman", serif;
+  margin: 0;
+}
 
 /* ---------- Slideshow ---------- */
 
@@ -149,6 +148,7 @@ h2, h3, h4{
 .Banner {
   max-width: 950px;
   margin: 0 auto;
+  margin-bottom: 50px;
 
   border-radius: 16px;
   overflow: hidden;
@@ -210,26 +210,51 @@ h2, h3, h4{
   height: 60px;
 }
 
-/* ---------- Calendar Styling ---------- */
-
-.Calendar {
-  max-width: 950px;
-  margin: 35px auto;
-  background: white;
-  border-radius: 14px;
-  padding: 25px;
-  min-height: 250px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  justify-content: center;
-
+.dropdown {
+  position: relative;
 }
 
-.Calendar h3{
-  font-size: 1.4rem;
+.dropdown h3 {
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.arrow {
+  font-size: 0.75em;
+  opacity: 0.7;
+}
+
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1f2a44;
+  border-radius: 8px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.dropdownMenu a {
+  display: block;
+  padding: 10px 16px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.dropdownMenu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown:hover .dropdownMenu {
+  display: block;
 }
 
 /* ---------- Library Services Page ---------- */
@@ -372,11 +397,11 @@ h2, h3, h4{
 /* ---------- Books Section ---------- */
 
 .Books {
-  max-width: 950px;
+  max-width: 1200px;
   margin: 35px auto 45px auto;
   background: white;
   border-radius: 16px;
-  padding: 25px 30px;
+  padding: 25px 40px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
 }
 
@@ -387,38 +412,35 @@ h2, h3, h4{
   font-size: 1.4rem;
 }
 
-/* Holds the book cards horizontally */
 .bookRow {
   display: flex;
   justify-content: center;
-  gap: 22px;
-  flex-wrap: wrap; /* lets them wrap nicely on smaller screens */
+  gap: 28px;
+  flex-wrap: wrap;
 }
 
 .book {
-  width: 210px;
+  width: 240px;
   background: white;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
   transition: 0.2s;
-
   display: flex;
   flex-direction: column;
 }
 
-
-
 .book img {
   width: 100%;
-  height: 280px;
+  height: 300px;
   object-fit: cover;
   display: block;
 }
 
 .bookDescription {
   margin: 0;
-  padding: 14px 14px 16px 14px;
+  margin-bottom: 10px;
+  padding: 14px 16px 16px 16px;
   font-size: 0.95rem;
   font-weight: 600;
   color: #1f2a44;
@@ -545,6 +567,7 @@ h2, h3, h4{
 
 .siteFooter {
   width: 100%;
+  box-sizing: border-box;
   background: #1f2a44;
   color: white;
   padding: 30px 20px;
@@ -560,9 +583,9 @@ h2, h3, h4{
   justify-content: space-between;
 }
 
-/* Map */
 .footerMap iframe {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 200px;
   border: 0;
   border-radius: 12px;
@@ -571,29 +594,25 @@ h2, h3, h4{
 .Socials {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* change to flex-end for right side */
+  align-items: flex-start;
   gap: 10px;
 }
 
-/* Title */
 .Socials h3 {
   margin: 0;
 }
 
-/* Grid container */
 .SocialsLinks {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  gap: 8px 20px;
+  gap: 1px 10px;
 }
 
-/* Links */
 .SocialsLinks a {
   text-decoration: none;
   color: white;
 }
 
-/* Info section */
 .footerInfo {
   font-size: 1rem;
   line-height: 1.6;
@@ -636,7 +655,7 @@ h2, h3, h4{
 
 /* ---------- Policy Dropdowns ---------- */
 
-.dropDown {
+.PolicyDropDown {
   margin-bottom: 12px;
 }
 

@@ -11,9 +11,32 @@
 
     <body>
 
-        <div class = "headerSection">
-            <header id = "libraryHours"></header>
-        </div>
+        <div class="headerSection">
+
+            <div class="leftSide">
+              <div class="headerContact">
+                <p>hello@troylibrary.org</p>
+                <p><pre>100 Second Street  Troy, NY 12180</pre></p>
+                <p>518-274-7071</p>
+              </div>
+            </div>
+          
+            <div class="centerSection">
+              <div id="libraryHours"></div>
+            </div>
+          
+            <div class="rightSide">
+              <div class="Socials">
+                <div class="SocialsLinks">
+                  <p><a>Instagram</a></p>
+                  <p><a>Youtube</a></p>
+                  <p><a>Facebook</a></p>
+                  <p><a>Newsletter</a></p>
+                </div>
+              </div>
+            </div>
+          
+          </div>
 
         <h1>Library Cards</h1>
 
@@ -21,14 +44,36 @@
             <img src = "./resources/banner-image-placeholder.jpg">
         </div>
 
-        <div class = "Hotbar">
-            <a  class = "homepageLogo" href = "./index.html"><img src = "../tpl_logo.jpg"></a>
-            <h3 class = "hotbar-item"> <a href = "./libraryServices.html"> Library Services </a> </h3>
-            <h3 class = "hotbar-item"> <a href = "./calendar.html"> Events Calendar </a> </h3>
-            <h3 class = "hotbar-item"> <a href = "./catalog.html">Explore the Catalog</a> </h3>
-            <h3 class = "hotbar-item"> <a href = "./contactus.html"> Contact Us </a> </h3>
-            <h3 class = "hotbar-item"> <a href = "./aboutUs.html"> About Us </a> </h3>
-        </div>
+        <div class="Hotbar">
+            <a class="homepageLogo" href="./index.html"><img src="../tpl_logo.jpg"></a>
+          
+            <div class="hotbar-item dropdown">
+              <h3><a href="./libraryServices.html">Library Services</a> <span class="arrow">▾</span></h3>
+              <div class="dropdownMenu">
+                <a href="./get-library-card.html">Get a Library Card</a>
+                <a href="./libraryServices.html#hours">Hours & Holiday Closures</a>
+                <a href="./libraryServices.html#printing">Printing Services</a>
+                <a href="./libraryServices.html#museum-passes">Museum Passes</a>
+                <a href="./libraryServices.html#interlibrary">Interlibrary Loan</a>
+                <a href="./libraryServices.html#accessibility">Accessibility Services</a>
+                <a href="./libraryServices.html#job-seekers">Jobs & Test Prep</a>
+                <a href="./libraryServices.html#homebound">Homebound Delivery</a>
+              </div>
+            </div>
+          
+            <h3 class="hotbar-item"><a href="https://troyny.librarycalendar.com/events/month">Events Calendar</a></h3>
+          
+            <h3 class="hotbar-item"><a href="./catalog.html">Explore the Catalog</a></h3>
+          
+            <div class="hotbar-item dropdown">
+              <h3><a href="./contactus.html">Contact Us</a> <span class="arrow">▾</span></h3>
+              <div class="dropdownMenu">
+                <a href="./aboutus.html">About Us</a>
+                <a href="./contactus.html#feedback">Send Feedback</a>
+              </div>
+            </div>
+          
+          </div>
         
         <div class = "libraryCard">
 
