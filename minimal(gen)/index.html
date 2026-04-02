@@ -1,0 +1,431 @@
+export default function TPLHomepageGen3() {
+  const topLinks = [
+    "Catalog & Collections",
+    "Programs & Events",
+    "Services",
+    "Using the Library",
+    "News & Updates",
+    "Contact",
+    "About",
+  ];
+
+  const serviceCards = [
+    {
+      title: "Get a Library Card",
+      text: "Start here for new cards, renewals, and account help.",
+      action: "Card information",
+    },
+    {
+      title: "Printing & Copying",
+      text: "Find remote printing, public computers, and copy services.",
+      action: "Printing details",
+    },
+    {
+      title: "Museum Passes",
+      text: "Reserve passes and learn how borrowing works.",
+      action: "See museum passes",
+    },
+    {
+      title: "Research Databases",
+      text: "Homework help, genealogy, newspapers, and trusted research tools.",
+      action: "Browse databases",
+    },
+  ];
+
+  const digitalCards = [
+    {
+      title: "Libby",
+      text: "Borrow eBooks and audiobooks on your phone, tablet, or e-reader.",
+    },
+    {
+      title: "Hoopla",
+      text: "Stream or download movies, music, comics, and more.",
+    },
+    {
+      title: "Kanopy",
+      text: "Watch thoughtful films and documentaries online.",
+    },
+  ];
+
+  const eventCards = [
+    {
+      title: "Family Storytime",
+      meta: "Sat · 10:30 AM · Kids",
+      text: "Stories, songs, and movement for young children and caregivers.",
+    },
+    {
+      title: "Book Group: Contemporary Fiction",
+      meta: "Tue · 6:00 PM · Adults",
+      text: "A monthly discussion group with easy registration and reminders.",
+    },
+    {
+      title: "Teen Game Night",
+      meta: "Thu · 4:00 PM · Teens",
+      text: "Drop in after school for board games, snacks, and community.",
+    },
+  ];
+
+  const collections = [
+    "New Books",
+    "TPL Picks",
+    "Staff Recommendations",
+  ];
+
+  return (
+    <div className="min-h-screen bg-stone-50 text-stone-900">
+      <div className="border-b border-stone-200 bg-stone-100">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-6 py-3 text-sm text-stone-700">
+          <div className="flex flex-wrap items-center gap-4">
+            <span className="font-medium">Open today: 9 AM–6 PM</span>
+            <span>100 Second Street, Troy, NY 12180</span>
+            <span>(518) 274-7071</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <button className="rounded-full border border-stone-300 px-4 py-2 hover:bg-white">
+              Support TPL
+            </button>
+            <button className="rounded-full border border-stone-300 px-4 py-2 hover:bg-white">
+              My Account / Login
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <header className="mx-auto max-w-7xl px-6 py-6">
+        <div className="rounded-[28px] border border-stone-200 bg-white px-6 py-5 shadow-sm">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <div className="flex items-center gap-4">
+                <div className="h-14 w-14 rounded-2xl border border-stone-200 bg-stone-100" />
+                <div>
+                  <h1 className="font-serif text-4xl text-stone-900">Troy Public Library</h1>
+                  <p className="mt-1 text-base text-stone-600">
+                    A welcoming place to read, learn, connect, and explore.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="w-full max-w-3xl">
+              <div className="flex flex-col gap-3 md:flex-row">
+                <input
+                  className="h-14 flex-1 rounded-2xl border border-stone-300 bg-stone-50 px-5 text-base outline-none focus:border-stone-500"
+                  placeholder="Search the catalog or this site..."
+                />
+                <select className="h-14 rounded-2xl border border-stone-300 bg-stone-50 px-4 text-base">
+                  <option>Catalog</option>
+                  <option>Website</option>
+                </select>
+                <button className="h-14 rounded-2xl border border-stone-400 bg-stone-100 px-6 text-base font-medium hover:bg-stone-200">
+                  Search
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <nav className="mt-6 border-t border-stone-200 pt-4">
+            <div className="flex flex-wrap gap-x-8 gap-y-3 text-lg">
+              <a className="hover:underline" href="#">Home</a>
+              {topLinks.map((item) => (
+                <a key={item} className="hover:underline" href="#">
+                  {item}
+                </a>
+              ))}
+            </div>
+            <div className="mt-4 flex flex-wrap gap-3 text-base">
+              <button className="rounded-full border border-stone-300 px-4 py-2 hover:bg-stone-50">
+                Get a Library Card
+              </button>
+              <button className="rounded-full border border-stone-300 px-4 py-2 hover:bg-stone-50">
+                Ask a Librarian
+              </button>
+              <button className="rounded-full border border-stone-300 px-4 py-2 hover:bg-stone-50">
+                Hours & Holiday Closures
+              </button>
+              <button className="rounded-full border border-stone-300 px-4 py-2 hover:bg-stone-50">
+                Remote Printing
+              </button>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <main className="mx-auto max-w-7xl space-y-10 px-6 pb-16">
+        <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="rounded-[32px] border border-stone-200 bg-gradient-to-r from-stone-100 to-white p-8 shadow-sm">
+            <p className="mb-3 text-sm uppercase tracking-[0.25em] text-stone-500">
+              Welcome
+            </p>
+            <h2 className="max-w-2xl font-serif text-6xl leading-tight text-stone-900">
+              Explore the library.
+            </h2>
+            <p className="mt-5 max-w-2xl text-xl leading-9 text-stone-700">
+              Search the catalog, find upcoming events, discover digital collections,
+              and quickly reach the services people use most.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <button className="rounded-full border border-stone-400 bg-white px-5 py-3 text-base font-medium hover:bg-stone-50">
+                View the calendar
+              </button>
+              <button className="rounded-full border border-stone-400 bg-white px-5 py-3 text-base font-medium hover:bg-stone-50">
+                Browse new books
+              </button>
+              <button className="rounded-full border border-stone-400 bg-white px-5 py-3 text-base font-medium hover:bg-stone-50">
+                See digital collections
+              </button>
+            </div>
+            <p className="mt-8 text-lg text-stone-600">
+              Featured today: New Books, TPL Picks, staff recommendations, and family programs.
+            </p>
+          </div>
+
+          <div className="rounded-[32px] border border-stone-200 bg-white p-6 shadow-sm">
+            <div className="aspect-[4/3] rounded-[24px] border border-stone-200 bg-stone-100" />
+            <div className="mt-5 rounded-[24px] border border-stone-200 bg-stone-50 p-5">
+              <h3 className="font-serif text-3xl">This week at the library</h3>
+              <p className="mt-3 text-lg leading-8 text-stone-700">
+                Use this space for one timely highlight: a major program, closure update,
+                seasonal service, or featured exhibit.
+              </p>
+              <div className="mt-5 flex justify-between text-base">
+                <button className="rounded-full border border-stone-300 px-4 py-2 hover:bg-white">
+                  Previous
+                </button>
+                <button className="rounded-full border border-stone-300 px-4 py-2 hover:bg-white">
+                  Next
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="rounded-[32px] border border-stone-200 bg-white p-8 shadow-sm">
+          <div className="flex items-end justify-between gap-4">
+            <div>
+              <h3 className="font-serif text-4xl">Collections Spotlight</h3>
+              <p className="mt-2 text-lg text-stone-600">
+                Homepage-level access to New Books, TPL Picks, and Staff Recommendations.
+              </p>
+            </div>
+            <a href="#" className="text-lg underline-offset-4 hover:underline">
+              View all collections
+            </a>
+          </div>
+          <div className="mt-6 grid gap-5 md:grid-cols-3">
+            {collections.map((item) => (
+              <div key={item} className="rounded-[24px] border border-stone-200 bg-stone-50 p-5">
+                <div className="mb-4 h-44 rounded-[18px] border border-stone-200 bg-white" />
+                <h4 className="font-serif text-2xl">{item}</h4>
+                <p className="mt-2 text-base leading-7 text-stone-600">
+                  Clear browsing entry point with simple labels and room for real cover art.
+                </p>
+                <button className="mt-4 rounded-full border border-stone-300 px-4 py-2 hover:bg-white">
+                  Explore {item}
+                </button>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="grid gap-6 lg:grid-cols-[1fr_1fr]">
+          <div className="rounded-[32px] border border-stone-200 bg-white p-8 shadow-sm">
+            <div className="flex items-end justify-between gap-4">
+              <div>
+                <h3 className="font-serif text-4xl">Library Services</h3>
+                <p className="mt-2 text-lg text-stone-600">
+                  Straightforward help for the tasks patrons need most.
+                </p>
+              </div>
+              <a href="#" className="text-lg underline-offset-4 hover:underline">
+                All services
+              </a>
+            </div>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              {serviceCards.map((card) => (
+                <div key={card.title} className="rounded-[24px] border border-stone-200 bg-stone-50 p-5">
+                  <h4 className="font-serif text-2xl">{card.title}</h4>
+                  <p className="mt-3 text-base leading-7 text-stone-600">{card.text}</p>
+                  <button className="mt-5 rounded-full border border-stone-300 px-4 py-2 hover:bg-white">
+                    {card.action}
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-[32px] border border-stone-200 bg-white p-8 shadow-sm">
+            <div className="flex items-end justify-between gap-4">
+              <div>
+                <h3 className="font-serif text-4xl">Digital Collections</h3>
+                <p className="mt-2 text-lg text-stone-600">
+                  Direct links to Libby, Hoopla, Kanopy, and other online resources.
+                </p>
+              </div>
+              <a href="#" className="text-lg underline-offset-4 hover:underline">
+                All digital resources
+              </a>
+            </div>
+            <div className="mt-6 space-y-4">
+              {digitalCards.map((card) => (
+                <div key={card.title} className="rounded-[24px] border border-stone-200 bg-stone-50 p-5">
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                    <div>
+                      <h4 className="font-serif text-2xl">{card.title}</h4>
+                      <p className="mt-2 max-w-xl text-base leading-7 text-stone-600">{card.text}</p>
+                    </div>
+                    <button className="rounded-full border border-stone-300 px-4 py-2 hover:bg-white">
+                      Open {card.title}
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="rounded-[32px] border border-stone-200 bg-white p-8 shadow-sm">
+          <div className="flex items-end justify-between gap-4">
+            <div>
+              <h3 className="font-serif text-4xl">Programs & Events</h3>
+              <p className="mt-2 text-lg text-stone-600">
+                A simple preview with clear paths into the full LibraryMarket calendar.
+              </p>
+            </div>
+            <div className="flex gap-3">
+              <button className="rounded-full border border-stone-300 px-4 py-2 hover:bg-stone-50">
+                Adults
+              </button>
+              <button className="rounded-full border border-stone-300 px-4 py-2 hover:bg-stone-50">
+                Teens
+              </button>
+              <button className="rounded-full border border-stone-300 px-4 py-2 hover:bg-stone-50">
+                Kids
+              </button>
+            </div>
+          </div>
+          <div className="mt-6 grid gap-5 md:grid-cols-3">
+            {eventCards.map((event) => (
+              <div key={event.title} className="rounded-[24px] border border-stone-200 bg-stone-50 p-5">
+                <p className="text-sm uppercase tracking-[0.2em] text-stone-500">{event.meta}</p>
+                <h4 className="mt-3 font-serif text-2xl">{event.title}</h4>
+                <p className="mt-3 text-base leading-7 text-stone-600">{event.text}</p>
+                <div className="mt-5 flex gap-3">
+                  <button className="rounded-full border border-stone-300 px-4 py-2 hover:bg-white">
+                    View details
+                  </button>
+                  <button className="rounded-full border border-stone-300 px-4 py-2 hover:bg-white">
+                    Register
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+          <button className="mt-6 rounded-full border border-stone-400 bg-stone-100 px-5 py-3 text-base font-medium hover:bg-stone-200">
+            Open full calendar
+          </button>
+        </section>
+
+        <section className="grid gap-6 lg:grid-cols-[1fr_0.9fr]">
+          <div className="rounded-[32px] border border-stone-200 bg-white p-8 shadow-sm">
+            <h3 className="font-serif text-4xl">News & Updates</h3>
+            <p className="mt-2 text-lg text-stone-600">
+              One clear place for closings, director notes, service changes, and newsletters.
+            </p>
+            <div className="mt-6 grid gap-4 sm:grid-cols-3">
+              <div className="rounded-[24px] border border-stone-200 bg-stone-50 p-5">
+                <h4 className="font-serif text-2xl">Service Announcement</h4>
+                <p className="mt-3 text-base leading-7 text-stone-600">
+                  Example: printing updates this week and what to expect.
+                </p>
+              </div>
+              <div className="rounded-[24px] border border-stone-200 bg-stone-50 p-5">
+                <h4 className="font-serif text-2xl">From the Director</h4>
+                <p className="mt-3 text-base leading-7 text-stone-600">
+                  Example: a monthly note with goals, progress, and community highlights.
+                </p>
+              </div>
+              <div className="rounded-[24px] border border-stone-200 bg-stone-50 p-5">
+                <h4 className="font-serif text-2xl">Monthly Newsletter</h4>
+                <p className="mt-3 text-base leading-7 text-stone-600">
+                  Embedded preview and signup, not a buried PDF link.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded-[32px] border border-stone-200 bg-white p-8 shadow-sm">
+            <h3 className="font-serif text-4xl">Visit the Library</h3>
+            <div className="mt-6 space-y-4">
+              <div className="rounded-[24px] border border-stone-200 bg-stone-50 p-5">
+                <h4 className="font-serif text-2xl">Main Library</h4>
+                <p className="mt-3 text-base leading-7 text-stone-600">
+                  Open today: 9 AM–6 PM
+                  <br />100 Second Street, Troy, NY 12180
+                </p>
+              </div>
+              <div className="rounded-[24px] border border-stone-200 bg-stone-50 p-5">
+                <h4 className="font-serif text-2xl">Lansingburgh Library</h4>
+                <p className="mt-3 text-base leading-7 text-stone-600">
+                  Open today: 10 AM–6 PM
+                  <br />27 114th Street, Troy, NY 12182
+                </p>
+              </div>
+            </div>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <button className="rounded-full border border-stone-300 px-4 py-2 hover:bg-stone-50">
+                View all hours
+              </button>
+              <button className="rounded-full border border-stone-300 px-4 py-2 hover:bg-stone-50">
+                Get directions
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="border-t border-stone-200 bg-stone-100">
+        <div className="mx-auto grid max-w-7xl gap-8 px-6 py-10 md:grid-cols-4">
+          <div>
+            <h4 className="font-serif text-2xl">Troy Public Library</h4>
+            <p className="mt-3 text-base leading-7 text-stone-700">
+              100 Second Street
+              <br />Troy, NY 12180
+              <br />(518) 274-7071
+            </p>
+          </div>
+          <div>
+            <h5 className="font-serif text-xl">Hours</h5>
+            <p className="mt-3 text-base leading-7 text-stone-700">
+              Mon–Thu: 9 AM–8 PM
+              <br />Fri–Sat: 9 AM–5 PM
+              <br />Sun: Closed
+            </p>
+          </div>
+          <div>
+            <h5 className="font-serif text-xl">Quick Links</h5>
+            <ul className="mt-3 space-y-2 text-base text-stone-700">
+              <li>Catalog</li>
+              <li>Events</li>
+              <li>Library Services</li>
+              <li>Research Databases</li>
+            </ul>
+          </div>
+          <div>
+            <h5 className="font-serif text-xl">Stay Updated</h5>
+            <p className="mt-3 text-base leading-7 text-stone-700">
+              Get updates about library events, programs, and new books.
+            </p>
+            <div className="mt-4 flex gap-3">
+              <input
+                className="h-11 flex-1 rounded-2xl border border-stone-300 bg-white px-4"
+                placeholder="Email address"
+              />
+              <button className="rounded-2xl border border-stone-400 bg-white px-4 hover:bg-stone-50">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
