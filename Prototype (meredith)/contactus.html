@@ -11,10 +11,32 @@
 
     <body>
 
-        <div class = "headerSection">
-            <header id = "libraryHours">Hours: 9am - 9pm</header>
+        <div class="headerSection">
 
-        </div>
+            <div class="leftSide">
+              <div class="headerContact">
+                <p>hello@troylibrary.org</p>
+                <p><pre>100 Second Street  Troy, NY 12180</pre></p>
+                <p>518-274-7071</p>
+              </div>
+            </div>
+          
+            <div class="centerSection">
+              <div id="libraryHours"></div>
+            </div>
+          
+            <div class="rightSide">
+              <div class="Socials">
+                <div class="SocialsLinks">
+                  <p><a>Instagram</a></p>
+                  <p><a>Youtube</a></p>
+                  <p><a>Facebook</a></p>
+                  <p><a>Newsletter</a></p>
+                </div>
+              </div>
+            </div>
+          
+          </div>
 
         <h1>Contact Us</h1>
 
@@ -22,14 +44,36 @@
             <img src = "./resources/banner-image-placeholder.jpg">
         </div>
 
-        <div class = "Hotbar">
-            <h3 class = "hotbar-item"> <a href = "./index.html"> Homepage </a> </h3>
-            <h3 class = "hotbar-item"> <a href = "./libraryServices.html"> Library Services </a> </h3>
-            <h3 class = "hotbar-item"> <a href = "./calendar.html"> Calendar </a> </h3>
-            <h3 class = "hotbar-item"> <a href = "./catalog.html">Explore the Catalog</a> </h3>
-            <h3 class = "hotbar-item"> <a href = "./contactus.html"> Contact Us </a> </h3>
-            <h3 class = "hotbar-item"> <a href = "./aboutUs.html"> About Us </a> </h3>
-        </div>
+        <div class="Hotbar">
+            <a class="homepageLogo" href="./index.html"><img src="../tpl_logo.jpg"></a>
+          
+            <div class="hotbar-item dropdown">
+              <h3><a href="./libraryServices.html">Library Services</a> <span class="arrow">▾</span></h3>
+              <div class="dropdownMenu">
+                <a href="./get-library-card.html">Get a Library Card</a>
+                <a href="./libraryServices.html#hours">Hours & Holiday Closures</a>
+                <a href="./libraryServices.html#printing">Printing Services</a>
+                <a href="./libraryServices.html#museum-passes">Museum Passes</a>
+                <a href="./libraryServices.html#interlibrary">Interlibrary Loan</a>
+                <a href="./libraryServices.html#accessibility">Accessibility Services</a>
+                <a href="./libraryServices.html#job-seekers">Jobs & Test Prep</a>
+                <a href="./libraryServices.html#homebound">Homebound Delivery</a>
+              </div>
+            </div>
+          
+            <h3 class="hotbar-item"><a href="https://troyny.librarycalendar.com/events/month">Events Calendar</a></h3>
+          
+            <h3 class="hotbar-item"><a href="./catalog.html">Explore the Catalog</a></h3>
+          
+            <div class="hotbar-item dropdown">
+              <h3><a href="./contactus.html">Contact Us</a> <span class="arrow">▾</span></h3>
+              <div class="dropdownMenu">
+                <a href="./aboutus.html">About Us</a>
+                <a href="./contactus.html#feedback">Send Feedback</a>
+              </div>
+            </div>
+          
+          </div>
 
         <div class = "staffEmails">
 
@@ -58,9 +102,34 @@
 
         
         
-        <div class = "googleMap">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23446.817914539348!2d-73.73024042568359!3d42.728018099999986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89de0f06f622d373%3A0x43f180c30be3ddfe!2sTroy%20Public%20Library!5e0!3m2!1sen!2sus!4v1771352799160!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        <footer class="siteFooter">
+            <div class="footerContent">
+          
+              <div class="footerMap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23446.817914539348!2d-73.73024042568359!3d42.728018099999986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89de0f06f622d373%3A0x43f180c30be3ddfe!2sTroy%20Public%20Library!5e0!3m2!1sen!2sus!4v1771352799160!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+
+              <div class = "Socials">
+
+                  <div class = "SocialsLinks">
+
+                    <p> <a> Instagram </a> </p>
+                    <p> <a> Youtube </a> </p>
+                    <p> <a> Facebook </a> </p>
+                    <p> <a> Newsletter </a> </p>
+
+                  </div>
+
+              </div>
+          
+              <div class="footerInfo">
+                <p><strong>Email:</strong> hello@troylibrary.org</p>
+                <p><strong>Phone:</strong> (518) 274-7071</p>
+                <p><strong>Address:</strong> 100 Second Street  Troy, NY 12180</p>
+              </div>
+          
+            </div>
+          </footer>
         
 
     </body>
