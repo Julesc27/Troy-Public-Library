@@ -172,30 +172,48 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="section-head">
-      <div>
-        <h2>Collections Spotlight</h2>
-        <p class="lead">Three clear, distinct ways to browse what the library is highlighting right now.</p>
-      </div>
+<section class="section">
+  <div class="section-head">
+    <div>
+      <h2>Collections Spotlight</h2>
+      <p class="lead">
+        Three clear, distinct ways to browse what the library is highlighting right now.
+      </p>
     </div>
+  </div>
 
-    <div class="grid cols-3">
-      <article class="card">
-        <div class="card-image placeholder-books"></div>
+  <div class="grid cols-3 collections-grid">
+
+    <!-- New Books -->
+    <article class="card collection-card">
+      <div class="card-image">
+        <img src="assets/images/topbook.webp" alt="Featured new books at Troy Public Library">
+      </div>
+      <div class="collection-content">
         <h3>New Books</h3>
         <p>Fresh arrivals across fiction, nonfiction, and children’s titles.</p>
-        <a class="link" href="new-books.html">Browse New Books</a>
-      </article>
+        <a class="link" href="catalog.html">Browse New Books</a>
+      </div>
+    </article>
 
-      <article class="card">
-        <div class="card-image placeholder-picks"></div>
+    <!-- Staff List -->
+    <article class="card collection-card">
+      <div class="card-image">
+        <img src="assets/images/staffoption.webp" alt="Curated staff picks at Troy Public Library">
+      </div>
+      <div class="collection-content">
         <h3>Curated Staff List</h3>
         <p>A themed recommendation list chosen by library staff.</p>
-        <a class="link" href="tpl-picks.html">Explore This List</a>
-      </article>
+        <a class="link" href="catalog.html">Explore This List</a>
+      </div>
+    </article>
 
-      <article class="card item-of-week">
+    <!-- Item of the Week -->
+    <article class="card collection-card featured-card">
+      <div class="card-image">
+        <img src="assets/images/topbook.webp" alt="The Night Circus featured item of the week">
+      </div>
+      <div class="collection-content">
         <div class="item-tag">Item of the Week</div>
         <h3>The Night Circus</h3>
         <p>
@@ -206,9 +224,12 @@
           <span class="tag">Staff favorite</span>
           <span class="tag">Fiction</span>
         </div>
-      </article>
-    </div>
-  </section>
+        <a class="link featured-link" href="catalog.html">View in Catalog</a>
+      </div>
+    </article>
+
+  </div>
+</section>
 
   <section class="section instagram-highlight">
     <div class="section-head">
