@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Troy Public Library — Catalog</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <span><strong>Today’s Hours:</strong> 9 AM – 6 PM</span>
+        <a href="mailto:hello@troylibrary.org">hello@troylibrary.org</a>
+        <a href="tel:15182747071">518.274.7071</a>
+      </div>
+      <div class="topbar-right"><a href="#">My Account</a></div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="row">
+        <a class="brand" href="../index.html" aria-label="Troy Public Library home"><img src="../../tpl_logo.jpg" alt="Troy Public Library logo" /></a>
+        <button class="menu-toggle" aria-label="Open menu">☰</button>
+        <div class="search" role="search">
+          <div class="field">
+            <label for="catalog-search" class="sr-only">Search the catalog</label>
+            <input id="catalog-search" type="search" placeholder="Search the catalog" />
+            <span class="icon" aria-hidden="true">🔎</span>
+          </div>
+        </div>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="../index.html">Home</a>
+          <div class="dropdown">
+            <button class="dropdown-toggle">About</button>
+            <div class="dropdown-menu">
+              <a href="../about/about.html">About the Library</a>
+              <a href="../about/about.html#hours">Hours &amp; Holidays</a>
+              <a href="../about/about.html#friends">Friends of the Library</a>
+              <a href="../about/about.html#board">Library Board</a>
+              <a href="../about/about.html#foundation">Library Foundation</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-toggle">Services</button>
+            <div class="dropdown-menu">
+              <a href="../services/services.html">All Services</a>
+              <a href="../services/services.html#from-home">Services from Home</a>
+              <a href="../services/services.html#in-person">In-Person Services</a>
+              <a href="../services/services.html#collections">Collections &amp; Research</a>
+              <a href="../contact/contact.html">Ask a Librarian</a>
+            </div>
+          </div>
+          <a class="is-active" href="catalog.html">Catalog</a>
+          <a href="../events/events.html">Calendar</a>
+          <a href="../contact/contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero" aria-label="Catalog hero">
+        <div class="welcome">
+          <h1>Catalog</h1>
+          <p>This page now treats the catalog as the direct destination and reframes supporting browse content as exploration, not the catalog itself.</p>
+
+          <div class="quick-actions" aria-label="Catalog quick actions">
+            <a class="btn btn-primary" href="#search-results">Search</a>
+            <a class="btn btn-ghost" href="#">Advanced Search</a>
+            <a class="btn btn-ghost" href="#">My Account</a>
+          </div>
+
+          <h2 id="explore" class="section-title">Explore the Collections</h2>
+          <div class="grid-2">
+            <article class="card">
+              <h3>New Books</h3>
+              <p>Recent arrivals, featured titles, and a future homepage carousel can all connect here.</p>
+              <a class="link" href="#new-books">Browse new books &gt;</a>
+            </article>
+            <article id="digital" class="card">
+              <h3>Digital Collections</h3>
+              <p>Libby, Kanopy, and Comics Plus should all be directly linked from here and from the homepage.</p>
+              <a class="link" href="#">Open digital collections &gt;</a>
+            </article>
+          </div>
+
+          <h2 id="search-results" class="section-title">Catalog Search</h2>
+          <div class="card">
+            <div class="embed-placeholder">Connect this page directly to the real catalog so patrons can search without confusion about where they are going.</div>
+          </div>
+        </div>
+
+        <aside class="panel" aria-label="Catalog help">
+          <h2>Quick Links</h2>
+          <ul class="info-list">
+            <li><strong>Direct Catalog</strong> — link out to the real OPAC here.</li>
+            <li><strong>My Account</strong> — make hold pickups and renewals easy to reach.</li>
+            <li><strong>Digital Collections</strong> — keep these one click away.</li>
+          </ul>
+          <a class="small-link" href="#digital">Explore digital collections &gt;</a>
+        </aside>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="container">Troy Public Library — 100 Second Street, Troy, New York 12180 — 518.274.7071 — Copyright © 2026.</div></footer>
+</body>
+</html>
