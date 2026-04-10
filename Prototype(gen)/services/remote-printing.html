@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Remote Printing — Troy Public Library</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <script defer src="../assets/js/main.js"></script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="utility">
+  <div class="container utility-layout">
+    <div class="utility-actions">
+      <a class="btn utility-btn" href="../card.html">
+        <span class="utility-icon" aria-hidden="true">🪪</span>
+        <span>Get a Library Card</span>
+      </a>
+
+      <a class="btn utility-btn" href="../account.html">
+        <span class="utility-icon" aria-hidden="true">👤</span>
+        <span>My Account / Login</span>
+      </a>
+
+      <a class="btn utility-btn" href="../ask.html">
+        <span class="utility-icon" aria-hidden="true">💬</span>
+        <span>Ask a Librarian</span>
+      </a>
+    </div>
+
+    <div class="utility-info-vertical">
+      <span><strong>Hours:</strong> 9–6</span>
+      <span>100 Second Street</span>
+      <span>Troy, NY 12180</span>
+      <span>(518) 274-7071</span>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container">
+    <div class="brand-row">
+      <div class="brand">
+        <div class="logo">
+          <img src="../assets/images/tpl_logo - Copy.jpg" alt="Troy Public Library logo">
+        </div>
+
+        <div class="brand-title">
+          <div class="name">Troy Public Library</div>
+        </div>
+      </div>
+
+      <a
+        class="instagram-link"
+        href="https://www.instagram.com/thetroylibrary/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Follow us on Instagram →
+      </a>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <div class="nav-inner">
+        <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="navLinks">Menu</button>
+
+        <div class="nav-links" id="navLinks" data-nav-links>
+          <a href="../index.html">Home</a>
+
+          <div class="dropdown" data-dropdown>
+            <button class="nav-btn" data-dropdown-btn aria-expanded="false">Catalog &amp; Collections</button>
+            <div class="dropdown-panel" data-dropdown-panel>
+              <a href="../catalog.html">Search the Catalog</a>
+              <a href="../digital.html">Digital Collections</a>
+              <a href="../new-books.html">New Books</a>
+              <a href="../tpl-picks.html">TPL Picks</a>
+              <a href="../staff-recommendations.html">Staff Recommendations</a>
+            </div>
+          </div>
+
+          <div class="dropdown" data-dropdown>
+            <button class="nav-btn" data-dropdown-btn aria-expanded="false">Programs &amp; Events</button>
+            <div class="dropdown-panel" data-dropdown-panel>
+              <a href="../events.html">Event Calendar</a>
+            </div>
+          </div>
+
+          <div class="dropdown" data-dropdown>
+            <button class="nav-btn" data-dropdown-btn aria-current="page" aria-expanded="false">Services</button>
+            <div class="dropdown-panel" data-dropdown-panel>
+              <a href="services.html">View all Services</a>
+              <a href="../card.html">Get a Library Card</a>
+              <a href="remote-printing.html" aria-current="page">Remote Printing</a>
+              <a href="interlibrary-loan.html">Interlibrary Loan</a>
+              <a href="research-databases.html">Research Databases</a>
+              <a href="suggest-an-item.html">Suggest an Item</a>
+            </div>
+          </div>
+
+          <a href="../news.html">News &amp; Updates</a>
+
+          <div class="dropdown" data-dropdown>
+            <button class="nav-btn" data-dropdown-btn aria-expanded="false">About</button>
+            <div class="dropdown-panel" data-dropdown-panel>
+              <a href="../about.html">About the Library</a>
+              <a href="../locations.html">Locations &amp; Hours</a>
+              <a href="../policies.html">Policies</a>
+              <a href="../contact.html">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="section">
+      <form class="searchbar" data-search-form>
+        <label for="scope">Search scope</label>
+        <select id="scope" data-search-scope aria-label="Search scope">
+          <option value="catalog">Catalog</option>
+          <option value="site">Website</option>
+        </select>
+
+        <label for="q">Search</label>
+        <input id="q" data-search-q type="search" placeholder="Search the catalog or this site…" aria-label="Search query" />
+
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container">
+  <section class="section service-hero">
+    <p class="service-eyebrow">Services</p>
+    <h1>Remote Printing</h1>
+    <p class="service-intro">
+      Send your print job to the library before you arrive, then pick it up at the branch you selected.
+    </p>
+  </section>
+
+  <section class="section service-split">
+    <div class="service-main">
+      <h2>Choose a Pickup Location</h2>
+      <p>
+        Email your file to the branch where you want to pick it up. Bring your name when you arrive so staff can locate your print job.
+      </p>
+
+      <div class="service-columns">
+        <div>
+          <h3>Main Library</h3>
+          <p>
+            100 Second Street<br>
+            Troy, NY 12180
+          </p>
+          <p>
+            <strong>Email:</strong> printing@thetroylibrary.org
+          </p>
+        </div>
+
+        <div>
+          <h3>Lansingburgh Branch</h3>
+          <p>
+            27 114th Street<br>
+            Troy, NY 12182
+          </p>
+          <p>
+            <strong>Email:</strong> lansprint@thetroylibrary.org
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <aside class="service-side-note">
+      <h3>Good to know</h3>
+      <p>Pick up print jobs by closing time on the day they are sent.</p>
+      <p>Unclaimed jobs are deleted at the end of the day.</p>
+    </aside>
+  </section>
+
+  <section class="section service-split">
+    <div class="service-main">
+      <h2>Pricing</h2>
+      <div class="service-list">
+        <div class="service-row">
+          <span>First 10 black-and-white pages</span>
+          <strong>Free</strong>
+        </div>
+        <div class="service-row">
+          <span>Additional black-and-white pages</span>
+          <strong>$0.10 each</strong>
+        </div>
+        <div class="service-row">
+          <span>Color pages</span>
+          <strong>$0.25 each</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-side-note">
+      <h3>Before you send</h3>
+      <p>Double-check the branch email address and make sure your file is ready to print the way you want it.</p>
+    </div>
+  </section>
+
+  <section class="section service-help">
+    <h2>Need help?</h2>
+    <p>
+      Contact the library if you have questions about file setup, pickup, or printing at a specific branch.
+    </p>
+    <a class="btn primary" href="../contact.html">Contact the Library</a>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h3>Troy Public Library</h3>
+        <p>
+          100 Second Street<br />
+          Troy, NY 12180<br />
+          (518) 274-7071<br />
+          <a href="mailto:hello@troylibrary.org">hello@troylibrary.org</a>
+        </p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="../catalog.html">Catalog</a></p>
+        <p><a href="../events.html">Programs &amp; Events</a></p>
+        <p><a href="../contact.html">Contact</a></p>
+        <p><a href="../newsletter.html">Newsletter</a></p>
+      </div>
+
+      <div>
+        <h3>Policies</h3>
+        <p><a href="../privacy.html">Privacy</a></p>
+        <p><a href="../policies.html">Library Policies</a></p>
+        <p><a href="../code-of-conduct.html">Code of Conduct</a></p>
+      </div>
+    </div>
+
+    <p class="small">© <span id="year"></span> Troy Public Library (Prototype)</p>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
+</body>
+</html>

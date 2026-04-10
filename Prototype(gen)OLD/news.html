@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>News & Updates — TPL Prototype</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="utility"><div class="container"><div class="row">
+  <div class="left"><span class="pill">Hours: <strong>9–5</strong> <span>(example)</span></span></div>
+  <div class="right"><a class="btn primary" href="support.html">Support TPL</a></div>
+</div></div></div>
+
+<header class="header"><div class="container">
+  <div class="brand"><div class="logo" aria-hidden="true"></div>
+    <div class="brand-title"><div class="name">Troy Public Library</div><div class="tag">News & Updates</div></div>
+  </div>
+
+  <nav class="nav" aria-label="Primary"><div class="nav-inner">
+    <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="navLinks">Menu</button>
+    <div class="nav-links" id="navLinks" data-nav-links>
+      <a href="index.html">Home</a><a href="catalog.html">Catalog</a><a href="events.html">Events</a>
+      <a href="services.html">Services</a><a href="using-the-library.html">Using the Library</a>
+      <a href="news.html" aria-current="page">News</a><a href="contact.html">Contact</a>
+      <a class="btn" href="account.html">Login</a>
+    </div>
+  </div></nav>
+
+  <div class="section">
+    <form class="searchbar" data-search-form>
+      <label for="q">Search</label>
+      <input id="q" data-search-q type="search" placeholder="Search announcements…" aria-label="Search query" />
+      <select data-search-scope aria-label="Search scope"><option value="site">Site</option><option value="catalog">Catalog</option></select>
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</div></header>
+
+<main id="main" class="container">
+  <section class="section">
+    <h2>Latest</h2>
+    <div class="grid cols-3">
+      <div class="card">
+        <h3>Service Announcement</h3>
+        <p>Example: holiday closures, printing changes, renovation notice.</p>
+        <a class="link" href="#">Read more →</a>
+      </div>
+      <div class="card">
+        <h3>From the Director</h3>
+        <p>Revive or remove — but if kept, update consistently.</p>
+        <a class="link" href="#">Read more →</a>
+      </div>
+      <div class="card" id="newsletter">
+        <h3>Monthly Newsletter</h3>
+        <p>Replace buried PDFs with a preview + signup.</p>
+        <a class="btn primary" href="#">Sign up (placeholder)</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer"><div class="container">
+  <p class="small">© <span id="year"></span> Troy Public Library (Prototype) • <a href="privacy.html">Privacy</a></p>
+</div><script>document.getElementById('year').textContent=new Date().getFullYear();</script></footer>
+</body>
+</html>

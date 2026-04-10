@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — TPL Prototype</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="utility">
+    <div class="container utility-layout">
+      <div class="utility-actions">
+        <a class="btn utility-btn" href="../card.html">
+          <span class="utility-icon" aria-hidden="true">🪪</span>
+          <span>Get a Library Card</span>
+        </a>
+
+        <a class="btn utility-btn" href="../account.html">
+          <span class="utility-icon" aria-hidden="true">👤</span>
+          <span>My Account / Login</span>
+        </a>
+
+        <a class="btn utility-btn" href="../ask.html">
+          <span class="utility-icon" aria-hidden="true">💬</span>
+          <span>Ask a Librarian</span>
+        </a>
+      </div>
+
+      <div class="utility-info-vertical">
+        <span><strong>Hours:</strong> 9–6</span>
+        <span>100 Second Street</span>
+        <span>Troy, NY 12180</span>
+        <span>(518) 274-7071</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <div class="brand-row">
+        <div class="brand">
+          <div class="logo">
+            <img src="../assets/images/tpl_logo - Copy.jpg" alt="Troy Public Library logo">
+          </div>
+
+          <div class="brand-title">
+            <div class="name">Troy Public Library</div>
+            <div class="tag">Services</div>
+          </div>
+        </div>
+
+        <a
+          class="instagram-link"
+          href="https://www.instagram.com/thetroylibrary/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Follow us on Instagram →
+        </a>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <div class="nav-inner">
+          <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="navLinks">Menu</button>
+
+          <div class="nav-links" id="navLinks" data-nav-links>
+            <a href="../index.html">Home</a>
+            <a href="../catalog.html">Catalog &amp; Collections</a>
+            <a href="../events.html">Programs &amp; Events</a>
+            <a href="services.html" aria-current="page">Services</a>
+            <a href="../news.html">News &amp; Updates</a>
+            <a href="../about.html">About</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="section">
+        <form class="searchbar" data-search-form>
+          <label for="scope">Search scope</label>
+          <select id="scope" data-search-scope aria-label="Search scope">
+            <option value="site">Site</option>
+            <option value="catalog">Catalog</option>
+          </select>
+
+          <label for="q">Search</label>
+          <input id="q" data-search-q type="search" placeholder="Search services, policies, and more…" aria-label="Search query" />
+
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>Library Services</h2>
+          <p class="lead">Borrowing help, printing, research tools, and everyday library services in one place.</p>
+        </div>
+      </div>
+
+      <div class="grid cols-3">
+        <article class="card">
+          <h3>Get a Library Card</h3>
+          <p>Learn what to bring, who can apply, and how to get started.</p>
+          <a class="link" href="get-a-library-card.html">Learn More</a>
+        </article>
+
+        <article class="card">
+          <h3>Remote Printing</h3>
+          <p>Email your print job to the library and pick it up at the desk.</p>
+          <a class="link" href="remote-printing.html">View Printing Info</a>
+        </article>
+
+        <article class="card">
+          <h3>Renewals &amp; Requests</h3>
+          <p>Renew eligible items and place requests for materials you want.</p>
+          <a class="link" href="renewals-requests.html">View Details</a>
+        </article>
+
+        <article class="card">
+          <h3>Interlibrary Loan</h3>
+          <p>Request items not available in the local collection.</p>
+          <a class="link" href="interlibrary-loan.html">Learn More</a>
+        </article>
+
+        <article class="card">
+          <h3>Research &amp; Databases</h3>
+          <p>Find research help, online resources, and reference support.</p>
+          <a class="link" href="research-databases.html">Explore Resources</a>
+        </article>
+
+        <article class="card">
+          <h3>Suggest an Item</h3>
+          <p>Recommend a title for the library to consider adding.</p>
+          <a class="link" href="suggest-an-item.html">Suggest an Item</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>Policies &amp; Borrowing Information</h2>
+          <p class="lead">Quick access to circulation details and service expectations.</p>
+        </div>
+      </div>
+
+      <div class="grid cols-2">
+        <article class="card">
+          <h3>Loan Periods &amp; Fines</h3>
+          <p>See how long items may be borrowed and review fine information for specialty collections.</p>
+          <a class="link" href="loan-periods-fines.html">View Loan Periods</a>
+        </article>
+
+        <article class="card">
+          <h3>Need Help?</h3>
+          <p>Questions about services, your account, or borrowing policies? Contact library staff for help.</p>
+          <a class="btn primary" href="../contact.html">Contact the Library</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="small">© <span id="year"></span> Troy Public Library (Prototype) • <a href="../privacy.html">Privacy</a></p>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>

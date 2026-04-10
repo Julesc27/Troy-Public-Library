@@ -7,37 +7,24 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
   <script defer src="assets/js/main.js"></script>
 </head>
-
-
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 
 <div class="utility">
-  <div class="container utility-layout">
-    <div class="utility-actions">
-
-      <a class="btn utility-btn" href="card.html">
-        <span class="utility-icon" aria-hidden="true">🪪</span>
-        <span>Get a Library Card</span>
-      </a>
-
-      <a class="btn utility-btn" href="account.html">
-      <span class="utility-icon" aria-hidden="true">👤</span>
-      <span>My Account / Login</span>
-      </a>
-
-      <a class="btn utility-btn" href="ask.html">
-      <span class="utility-icon" aria-hidden="true">💬</span>
-      <span>Ask a Librarian</span>
-      </a>
-
+  <div class="container">
+    <div class="utility-top">
+      <div class="utility-info">
+        <span><strong>Hours:</strong> 9–6</span>
+        <span>100 Second Street, Troy, NY 12180</span>
+        <span>(518) 274-7071</span>
+        <a href="mailto:hello@troylibrary.org">hello@troylibrary.org</a>
+      </div>
     </div>
 
-    <div class="utility-info-vertical">
-      <span><strong>Hours:</strong> 9–6</span>
-      <span>100 Second Street</span>
-      <span>Troy, NY 12180</span>
-      <span>(518) 274-7071</span>
+    <div class="utility-actions">
+      <a class="btn utility-btn" href="card.html">Get a Library Card</a>
+      <a class="btn utility-btn" href="account.html">My Account / Login</a>
+      <a class="btn utility-btn" href="ask.html">Ask a Librarian</a>
     </div>
   </div>
 </div>
@@ -52,7 +39,7 @@
 
       <div class="brand-title">
         <div class="name">Troy Public Library</div>
-        <!--<div class="tag">A welcoming place to read, learn, and explore.</div>-->
+        <div class="tag">A welcoming place to read, learn, and explore.</div>
       </div>
     </div>
 
@@ -88,19 +75,23 @@
             <button class="nav-btn" data-dropdown-btn aria-expanded="false">Programs &amp; Events</button>
             <div class="dropdown-panel" data-dropdown-panel>
               <a href="events.html">Event Calendar</a>
+              <a href="events.html#kids">Kids</a>
+              <a href="events.html#teens">Teens</a>
+              <a href="events.html#adults">Adults</a>
+              <a href="events.html#book-groups">Book Groups</a>
             </div>
           </div>
 
           <div class="dropdown" data-dropdown>
             <button class="nav-btn" data-dropdown-btn aria-expanded="false">Services</button>
             <div class="dropdown-panel" data-dropdown-panel>
-              <a href="services/services.html">View all Services</a>
-              <a href="services/get-a-library-card.html">Get a Library Card</a>
-              <a href="services/remote-printing.html">Printing &amp; Copying</a>
-              <a href="services/interlibrary-loan.html">Interlibrary Loan</a>
-              <a href="services/accessibility.html">Accessibility Services</a>
-              <a href="services/research-databases.html">Research Databases</a>
-              <a href="services/suggest-an-item.html">Suggest an Item</a>
+              <a href="card.html">Get a Library Card</a>
+              <a href="printing.html">Printing &amp; Copying</a>
+              <a href="museum-passes.html">Museum Passes</a>
+              <a href="ill.html">Interlibrary Loan</a>
+              <a href="accessibility.html">Accessibility Services</a>
+              <a href="databases.html">Research Databases</a>
+              <a href="suggest.html">Suggest an Item</a>
             </div>
           </div>
 
@@ -141,12 +132,17 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-copy">
-        <h1>A welcoming digital front door for Troy.</h1>
+        <p class="eyebrow">Explore the Library</p>
+        <h1>A clear, welcoming digital front door for Troy.</h1>
+        <p>
+          Search the catalog, find upcoming events, discover digital collections,
+          and quickly reach the services patrons use most.
+        </p>
 
         <div class="quick-tasks">
-          <a class="cta" href="catalog.html">Search Catalog</a>
-          <a class="cta" href="events.html">Upcoming Events</a>
-          <a class="cta" href="services.html">Library Services</a>
+          <a class="cta" href="ask.html">Ask a Librarian</a>
+          <a class="cta" href="new-books.html">Browse New Books</a>
+          <a class="cta" href="digital.html">Digital Collections</a>
         </div>
 
         <div class="featured-strip">
@@ -165,20 +161,24 @@
 
       <div class="carousel" data-carousel>
         <div class="frame hero-photo">
-         <img id="slideshow" src="assets/images/slideshowpic1.jpg" alt="Troy Public Library building">
+          <div class="caption" data-carousel-caption></div>
         </div>
 
         <div class="controls">
           <button type="button" data-carousel-prev>Previous</button>
           <button type="button" data-carousel-next>Next</button>
-         </div>
+        </div>
       </div>
+    </div>
   </section>
 
 <section class="section">
   <div class="section-head">
     <div>
       <h2>Collections Spotlight</h2>
+      <p class="lead">
+        Three clear, distinct ways to browse what the library is highlighting right now.
+      </p>
     </div>
   </div>
 
@@ -186,6 +186,9 @@
 
     <!-- New Books -->
     <article class="card collection-card">
+      <div class="card-image">
+        <img src="assets/images/topbook.webp" alt="Featured new books at Troy Public Library">
+      </div>
       <div class="collection-content">
         <h3>New Books</h3>
         <p>Fresh arrivals across fiction, nonfiction, and children’s titles.</p>
@@ -195,6 +198,9 @@
 
     <!-- Staff List -->
     <article class="card collection-card">
+      <div class="card-image">
+        <img src="assets/images/staffoption.webp" alt="Curated staff picks at Troy Public Library">
+      </div>
       <div class="collection-content">
         <h3>Curated Staff List</h3>
         <p>A themed recommendation list chosen by library staff.</p>
@@ -204,9 +210,12 @@
 
     <!-- Item of the Week -->
     <article class="card collection-card featured-card">
+      <div class="card-image">
+        <img src="assets/images/night.webp" alt="The Night Circus featured item of the week">
+      </div>
       <div class="collection-content">
-        <h3>Item of the Week</h3>
-        <h4 class="featured-title">The Night Circus</h4>    
+        <div class="item-tag">Item of the Week</div>
+        <h3>The Night Circus</h3>
         <p>
           A single featured title gives visitors something immediate to lock onto
           without having to click first.
@@ -228,6 +237,7 @@
     <div class="section-head">
       <div>
         <h2>Digital Collections</h2>
+        <p class="lead">High-demand resources should be easy to find and easy to understand.</p>
       </div>
     </div>
 
@@ -256,6 +266,7 @@
     <div class="section-head">
       <div>
         <h2>Programs &amp; Events</h2>
+        <p class="lead">Today and tomorrow’s highlights, with a clear path to the full calendar.</p>
       </div>
       <a class="btn primary" href="events.html">Open Full Calendar</a>
     </div>
@@ -309,6 +320,7 @@
     <div class="section-head">
       <div>
         <h2>News &amp; Updates</h2>
+        <p class="lead">A central place for announcements, director notes, and newsletters.</p>
       </div>
     </div>
 
@@ -367,37 +379,5 @@
     <p class="small">© <span id="year"></span> Troy Public Library (Prototype)</p>
   </div>
 </footer>
-<script>
-  const images = [
-    "assets/images/slideshowpic1.jpg",
-    "assets/images/slideshowpic2.webp",
-    "assets/images/slideshowpic3.jpg"
-  ];
-
-  let current = 0;
-
-  const slideshow = document.getElementById("slideshow");
-  const prevBtn = document.querySelector("[data-carousel-prev]");
-  const nextBtn = document.querySelector("[data-carousel-next]");
-
-  function showImage(index) {
-    slideshow.style.opacity = 0;
-
-    setTimeout(() => {
-      slideshow.src = images[index];
-      slideshow.style.opacity = 1;
-    }, 200);
-  }
-
-  nextBtn.addEventListener("click", () => {
-    current = (current + 1) % images.length;
-    showImage(current);
-  });
-
-  prevBtn.addEventListener("click", () => {
-    current = (current - 1 + images.length) % images.length;
-    showImage(current);
-  });
-</script>
 </body>
 </html>
