@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Troy Public Library</title>
+
+<style>
+:root{
+  --navy:#1B1F34;
+  --cream:#EFE6D8;
+  --text:#1B1F34;
+  --muted:#5c627d;
+}
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background:var(--cream);
+  color:var(--text);
+}
+
+/* NAV */
+.header-top{
+  background:#fff;
+  padding:16px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+.logo{
+  font-weight:700;
+  letter-spacing:.04em;
+}
+
+.navbar{
+  background:var(--navy);
+  padding:14px 40px;
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+}
+
+.nav-links a{
+  color:#fff;
+  text-decoration:none;
+  font-size:.9rem;
+  letter-spacing:.04em;
+  opacity:.9;
+}
+
+/* HERO */
+.hero{
+  height:460px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  padding:60px 40px;
+  color:#fff;
+  background:
+    linear-gradient(rgba(27,31,52,.7), rgba(27,31,52,.7)),
+    url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f") center/cover;
+}
+
+.hero h1{
+  font-size:3rem;
+  margin-bottom:12px;
+}
+
+.hero p{
+  max-width:520px;
+  color:#e3e5ef;
+}
+
+.buttons{
+  margin-top:20px;
+}
+
+.btn{
+  padding:12px 18px;
+  border-radius:6px;
+  border:1px solid #fff;
+  background:transparent;
+  color:#fff;
+  margin-right:10px;
+  cursor:pointer;
+}
+
+.btn.primary{
+  background:#fff;
+  color:var(--navy);
+  border:none;
+}
+
+/* SECTIONS */
+.section{
+  padding:70px 40px;
+}
+
+.section h2{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:1.8rem;
+}
+
+/* WHY */
+.features{
+  display:flex;
+  justify-content:center;
+  gap:60px;
+  text-align:center;
+}
+
+.feature{
+  max-width:200px;
+}
+
+.feature-icon{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:var(--navy);
+  margin:0 auto 12px;
+}
+
+/* EVENTS */
+.events{
+  display:flex;
+  gap:30px;
+}
+
+.event{
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  flex:1;
+  box-shadow:0 6px 16px rgba(0,0,0,.06);
+}
+
+.event img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.event-content{
+  padding:16px;
+}
+
+/* SERVICES */
+.services{
+  display:flex;
+  gap:20px;
+}
+
+.service{
+  flex:1;
+  background:#fff;
+  border-radius:12px;
+  padding:24px;
+  text-align:center;
+  border:1px solid rgba(0,0,0,.06);
+}
+
+/* CTA */
+.cta{
+  background:var(--navy);
+  color:#fff;
+  text-align:center;
+  padding:60px 20px;
+}
+
+.cta p{
+  color:#d3d6e3;
+}
+
+.cta button{
+  margin-top:16px;
+  padding:12px 20px;
+  border:none;
+  background:#fff;
+  color:var(--navy);
+  border-radius:6px;
+}
+
+/* FOOTER */
+.footer{
+  background:var(--navy);
+  color:#fff;
+  padding:40px;
+  display:flex;
+  justify-content:space-between;
+  font-size:.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header-top">
+  <div class="logo">TROY PUBLIC LIBRARY</div>
+</div>
+
+<div class="navbar">
+  <div class="nav-links">
+    <a href="#">LIBRARY WEBSITE</a>
+    <a href="#">EVENTS CALENDAR</a>
+    <a href="#">RESERVE A ROOM</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Welcome to Troy Public Library</h1>
+    <p>Your community hub for learning, discovery, and connection. Explore our resources and programs today.</p>
+    <div class="buttons">
+      <button class="btn primary">Explore Services</button>
+      <button class="btn">View Events</button>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section">
+  <h2>Why Choose Troy Public Library?</h2>
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon"></div>
+      <h4>Extensive Collection</h4>
+      <p>Books, audiobooks, and digital resources</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon"></div>
+      <h4>Community Events</h4>
+      <p>Programs for all ages</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon"></div>
+      <h4>Meeting Rooms</h4>
+      <p>Spaces for groups and study</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon"></div>
+      <h4>Free WiFi</h4>
+      <p>High-speed internet access</p>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="section">
+  <h2>Upcoming Events</h2>
+  <div class="events">
+    <div class="event">
+      <img src="https://via.placeholder.com/400x200">
+      <div class="event-content">
+        <strong>Taxpayer Assistance Program</strong>
+        <p>March 26, 2026</p>
+      </div>
+    </div>
+
+    <div class="event">
+      <img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
+      <div class="event-content">
+        <strong>Children's Story Time</strong>
+        <p>March 27, 2026</p>
+      </div>
+    </div>
+
+    <div class="event">
+      <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da">
+      <div class="event-content">
+        <strong>Adult Book Club</strong>
+        <p>March 28, 2026</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service">Technology Access</div>
+    <div class="service">Learning Programs</div>
+    <div class="service">Children’s Programs</div>
+    <div class="service">Cultural Events</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Get Your Library Card Today</h2>
+  <p>Access all our resources and services with a free library card.</p>
+  <button>Learn More</button>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div>
+    <strong>Main Library</strong><br>
+    100 Second Street<br>
+    Troy, NY
+  </div>
+  <div>
+    <strong>Quick Links</strong><br>
+    About<br>
+    Contact<br>
+    Accessibility
+  </div>
+</footer>
+
+</body>
+</html>
