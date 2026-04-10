@@ -10,35 +10,129 @@
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 
-<div class="utility"><div class="container"><div class="row">
-  <div class="left"><span class="pill">Hours: <strong>9–5</strong> <span>(example)</span></span></div>
-  <div class="right"><a class="btn primary" href="support.html">Support TPL</a></div>
-</div></div></div>
+<div class="utility">
+  <div class="container utility-layout">
+    <div class="utility-actions">
 
-<header class="header"><div class="container">
-  <div class="brand"><div class="logo" aria-hidden="true"></div>
-    <div class="brand-title"><div class="name">Troy Public Library</div><div class="tag">News & Updates</div></div>
-  </div>
+      <a class="btn utility-btn" href="card.html">
+        <span class="utility-icon" aria-hidden="true">🪪</span>
+        <span>Get a Library Card</span>
+      </a>
 
-  <nav class="nav" aria-label="Primary"><div class="nav-inner">
-    <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="navLinks">Menu</button>
-    <div class="nav-links" id="navLinks" data-nav-links>
-      <a href="index.html">Home</a><a href="catalog.html">Catalog</a><a href="events.html">Events</a>
-      <a href="services.html">Services</a><a href="using-the-library.html">Using the Library</a>
-      <a href="news.html" aria-current="page">News</a><a href="contact.html">Contact</a>
-      <a class="btn" href="account.html">Login</a>
+      <a class="btn utility-btn" href="account.html">
+      <span class="utility-icon" aria-hidden="true">👤</span>
+      <span>My Account / Login</span>
+      </a>
+
+      <a class="btn utility-btn" href="ask.html">
+      <span class="utility-icon" aria-hidden="true">💬</span>
+      <span>Ask a Librarian</span>
+      </a>
+
     </div>
-  </div></nav>
 
-  <div class="section">
-    <form class="searchbar" data-search-form>
-      <label for="q">Search</label>
-      <input id="q" data-search-q type="search" placeholder="Search announcements…" aria-label="Search query" />
-      <select data-search-scope aria-label="Search scope"><option value="site">Site</option><option value="catalog">Catalog</option></select>
-      <button type="submit">Search</button>
-    </form>
+    <div class="utility-info-vertical">
+      <span><strong>Hours:</strong> 9–6</span>
+      <span>100 Second Street</span>
+      <span>Troy, NY 12180</span>
+      <span>(518) 274-7071</span>
+    </div>
   </div>
-</div></header>
+</div>
+
+<header class="header">
+  <div class="container">
+    <div class="brand-row">
+      <div class="brand">
+        <div class="logo">
+          <img src="assets/images/tpl_logo - Copy.jpg" alt="Troy Public Library logo">
+      </div>
+
+      <div class="brand-title">
+        <div class="name">Troy Public Library</div>
+        <!--<div class="tag">A welcoming place to read, learn, and explore.</div>-->
+      </div>
+    </div>
+
+      <a 
+        class="instagram-link" 
+        href="https://www.instagram.com/thetroylibrary/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        Follow us on Instagram →
+      </a>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <div class="nav-inner">
+        <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="navLinks">Menu</button>
+
+        <div class="nav-links" id="navLinks" data-nav-links>
+          <a href="index.html" aria-current="page">Home</a>
+
+          <div class="dropdown" data-dropdown>
+            <button class="nav-btn" data-dropdown-btn aria-expanded="false">Catalog &amp; Collections</button>
+            <div class="dropdown-panel" data-dropdown-panel>
+              <a href="catalog.html">Search the Catalog</a>
+              <a href="digital.html">Digital Collections</a>
+              <a href="new-books.html">New Books</a>
+              <a href="tpl-picks.html">TPL Picks</a>
+              <a href="staff-recommendations.html">Staff Recommendations</a>
+            </div>
+          </div>
+
+          <div class="dropdown" data-dropdown>
+            <button class="nav-btn" data-dropdown-btn aria-expanded="false">Programs &amp; Events</button>
+            <div class="dropdown-panel" data-dropdown-panel>
+              <a href="events.html">Event Calendar</a>
+            </div>
+          </div>
+
+          <div class="dropdown" data-dropdown>
+            <button class="nav-btn" data-dropdown-btn aria-expanded="false">Services</button>
+            <div class="dropdown-panel" data-dropdown-panel>
+              <a href="services/services.html">View all Services</a>
+              <a href="services/get-a-library-card.html">Get a Library Card</a>
+              <a href="services/remote-printing.html">Printing &amp; Copying</a>
+              <a href="services/interlibrary-loan.html">Interlibrary Loan</a>
+              <a href="services/accessibility.html">Accessibility Services</a>
+              <a href="services/research-databases.html">Research Databases</a>
+              <a href="services/suggest-an-item.html">Suggest an Item</a>
+            </div>
+          </div>
+
+          <a href="news.html">News &amp; Updates</a>
+
+          <div class="dropdown" data-dropdown>
+            <button class="nav-btn" data-dropdown-btn aria-expanded="false">About</button>
+            <div class="dropdown-panel" data-dropdown-panel>
+              <a href="about.html">About the Library</a>
+              <a href="locations.html">Locations &amp; Hours</a>
+              <a href="policies.html">Policies</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="section">
+      <form class="searchbar" data-search-form>
+        <label for="scope">Search scope</label>
+        <select id="scope" data-search-scope aria-label="Search scope">
+          <option value="catalog">Catalog</option>
+          <option value="site">Website</option>
+        </select>
+
+        <label for="q">Search</label>
+        <input id="q" data-search-q type="search" placeholder="Search the catalog or this site…" aria-label="Search query" />
+
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</header>
 
 <main id="main" class="container">
   <section class="section">
