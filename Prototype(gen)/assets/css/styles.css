@@ -1025,5 +1025,28 @@ select {
   }
 }
 
+.locations-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.location-block {
+  padding-top: 10px;
+}
+
+/* optional: makes headings feel cleaner */
+.location-block h3 {
+  margin-bottom: 8px;
+}
+
+/* mobile fix */
+@media (max-width: 700px) {
+  .locations-row {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 }
