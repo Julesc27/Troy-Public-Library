@@ -191,6 +191,46 @@
     color: #fff;
     font-weight: 600;
   }
+    /* Make nav items position anchors for dropdowns */
+  .nav-item.dropdown {
+    position: relative;
+  }
+
+  /* The dropdown panel — hidden by default */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;           /* sits right below the nav bar */
+    left: 0;
+    background: var(--leaded-iron);
+    min-width: 220px;
+    border-top: 2px solid var(--warm-amber);  /* amber accent line */
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    z-index: 100;
+    padding: 8px 0;
+  }
+
+  /* Each link in the dropdown */
+  .dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 13px;
+    color: rgba(241,239,233,0.75);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .dropdown-menu a:hover {
+    background: rgba(176,176,203,0.15);
+    color: #fff;
+  }
+
+  /* Show dropdown on hover */
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
 
   /* ── Hero ── */
   .hero {
@@ -810,10 +850,48 @@
 <!-- NAV -->
 <nav>
   <div class="nav-item active">Home</div>
-  <div class="nav-item">Catalog &amp; Collections ▾</div>
-  <div class="nav-item">Programs &amp; Events ▾</div>
-  <div class="nav-item">Services ▾</div>
-  <div class="nav-item">About ▾</div>
+  <div class="nav-item dropdown">Catalog &amp; Collections ▾
+    <div class="dropdown-menu">
+      <a href="#">Search the Catalog</a>
+      <a href="#">New Books</a>
+      <a href="#">TPL Pics</a>
+      <a href="#">Staff Recommendations</a>
+      <a href="#">Digital Collections</a>
+  </div>
+</div>
+   <div class="nav-item dropdown">
+    Programs & Events ▾
+    <div class="dropdown-menu">
+      <a href="#">All Programs</a>
+      <a href="#">Kids</a>
+      <a href="#">Teens</a>
+      <a href="#">Adults</a>
+      <a href="#">Book Groups</a>
+      <a href="#">Recurring Series</a>
+    </div>
+  </div>
+
+  <div class="nav-item dropdown">
+    Services ▾
+    <div class="dropdown-menu">
+      <a href="#">Get a Library Card</a>
+      <a href="#">Museum Passes</a>
+      <a href="#">Printing & Copying</a>
+      <a href="#">Interlibrary Loan</a>
+      <a href="#">Accessibility Services</a>
+    </div>
+  </div>
+
+  <div class="nav-item dropdown">
+    About ▾
+    <div class="dropdown-menu">
+      <a href="#">About the Library</a>
+      <a href="#">Hours & Locations</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Employment</a>
+      <a href="#">Policies</a>
+    </div>
+  </div>
   <div class="nav-item">News &amp; Updates</div>
   <div class="nav-item">Support TPL</div>
 </nav>
