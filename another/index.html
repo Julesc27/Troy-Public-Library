@@ -4,316 +4,1209 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Troy Public Library</title>
-
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --navy:#1B1F34;
-  --cream:#EFE6D8;
-  --text:#1B1F34;
-  --muted:#5c627d;
-}
+  /* ── Brand Tokens ── */
+  :root {
+    --carrara:     #F1EFE9;
+    --periwinkle:  #B0B0CB;
+    --lavender:    #C4C8E8;
+    --warm-amber:  #E2A63D;
+    --sage:        #7DA660;
+    --leaded-iron: #2A2535;
+    --dark-walnut: #3C2A22;
+  }
 
-*{box-sizing:border-box;}
-body{
-  margin:0;
-  font-family: system-ui, -apple-system, sans-serif;
-  background:var(--cream);
-  color:var(--text);
-}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* NAV */
-.header-top{
-  background:#fff;
-  padding:16px 40px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  border-bottom:1px solid rgba(0,0,0,.08);
-}
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--carrara);
+    color: var(--leaded-iron);
+    min-width: 1440px;
+  }
 
-.logo{
-  font-weight:700;
-  letter-spacing:.04em;
-}
+  /* ── Utility Ribbon ── */
+  .ribbon {
+    background: var(--leaded-iron);
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0 120px;
+    gap: 0;
+    position: relative;
+  }
+  .ribbon-info {
+    font-size: 11px;
+    color: rgba(241,239,233,0.65);
+    white-space: pre;
+    margin-right: 28px;
+  }
+  .ribbon-btns {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .ribbon-btn {
+    height: 26px;
+    padding: 0 20px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    white-space: nowrap;
+  }
+  .ribbon-btn.ghost {
+    background: rgba(255,255,255,0.10);
+    color: #fff;
+  }
+  .ribbon-btn.amber {
+    background: var(--warm-amber);
+    color: var(--leaded-iron);
+  }
 
-.navbar{
-  background:var(--navy);
-  padding:14px 40px;
-}
+  /* ── Header ── */
+  .header {
+    background: var(--carrara);
+    height: 88px;
+    display: flex;
+    align-items: center;
+    padding: 0 120px;
+    gap: 0;
+    border-bottom: 1px solid rgba(176,176,203,0.30);
+  }
+  .logo-wrap {
+    width: 130px;
+    height: 60px;
+    flex-shrink: 0;
+  }
+  .logo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .header-name-group {
+    margin-left: 18px;
+    flex-shrink: 0;
+  }
+  .header-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--leaded-iron);
+    line-height: 1.2;
+  }
+  .header-tagline {
+    font-size: 12px;
+    color: rgba(42,37,53,0.50);
+    margin-top: 4px;
+  }
+  .search-bar {
+    margin-left: auto;
+    width: 580px;
+    height: 44px;
+    background: #fff;
+    border: 1.5px solid rgba(176,176,203,0.60);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .search-scope {
+    background: var(--lavender);
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    margin: 0 7px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--leaded-iron);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .search-sep {
+    width: 1px;
+    height: 24px;
+    background: rgba(176,176,203,0.30);
+    flex-shrink: 0;
+    margin: 0 10px;
+  }
+  .search-input {
+    flex: 1;
+    font-size: 13px;
+    color: rgba(42,37,53,0.40);
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+  }
+  .search-btn {
+    background: var(--leaded-iron);
+    color: #fff;
+    height: 44px;
+    width: 82px;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family: 'Inter', sans-serif;
+  }
+  .header-social {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--leaded-iron);
+    margin-left: 24px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
 
-.nav-links{
-  display:flex;
-  gap:30px;
-}
+  /* ── Nav ── */
+  nav {
+    background: var(--leaded-iron);
+    height: 54px;
+    display: flex;
+    align-items: center;
+    padding: 0 120px;
+    gap: 0;
+  }
+  .nav-item {
+    height: 54px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    font-size: 13px;
+    color: rgba(241,239,233,0.70);
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .nav-item.active {
+    background: rgba(176,176,203,0.25);
+    color: #fff;
+    font-weight: 600;
+  }
+    /* Make nav items position anchors for dropdowns */
+  .nav-item.dropdown {
+    position: relative;
+  }
 
-.nav-links a{
-  color:#fff;
-  text-decoration:none;
-  font-size:.9rem;
-  letter-spacing:.04em;
-  opacity:.9;
-}
+  /* The dropdown panel — hidden by default */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;           /* sits right below the nav bar */
+    left: 0;
+    background: var(--leaded-iron);
+    min-width: 220px;
+    border-top: 2px solid var(--warm-amber);  /* amber accent line */
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    z-index: 100;
+    padding: 8px 0;
+  }
 
-/* HERO */
-.hero{
-  height:460px;
-  position:relative;
-  display:flex;
-  align-items:center;
-  padding:60px 40px;
-  color:#fff;
-  background:
-    linear-gradient(rgba(27,31,52,.7), rgba(27,31,52,.7)),
-    url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f") center/cover;
-}
+  /* Each link in the dropdown */
+  .dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 13px;
+    color: rgba(241,239,233,0.75);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s, color 0.15s;
+  }
 
-.hero h1{
-  font-size:3rem;
-  margin-bottom:12px;
-}
+  .dropdown-menu a:hover {
+    background: rgba(176,176,203,0.15);
+    color: #fff;
+  }
 
-.hero p{
-  max-width:520px;
-  color:#e3e5ef;
-}
+  /* Show dropdown on hover */
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
 
-.buttons{
-  margin-top:20px;
-}
+  /* ── Hero ── */
+  .hero {
+    background: var(--periwinkle);
+    height: 640px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-content {
+    position: absolute;
+    left: 120px;
+    top: 0;
+    width: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 80px;
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--leaded-iron);
+    letter-spacing: 0.08em;
+    opacity: 0.7;
+    margin-bottom: 16px;
+  }
+  .hero-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 54px;
+    font-weight: 700;
+    color: var(--leaded-iron);
+    line-height: 1.22;
+    margin-bottom: 24px;
+  }
+  .hero-body {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(42,37,53,0.75);
+    width: 540px;
+    margin-bottom: 32px;
+  }
+  .hero-btns {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--warm-amber);
+    color: var(--leaded-iron);
+    height: 44px;
+    padding: 0 20px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: 'Inter', sans-serif;
+  }
+  .btn-outline-dark {
+    background: rgba(42,37,53,0.08);
+    color: var(--leaded-iron);
+    height: 44px;
+    padding: 0 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1.5px solid rgba(42,37,53,0.50);
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: 'Inter', sans-serif;
+  }
+  .hero-hours {
+    background: rgba(241,239,233,0.35);
+    border: 1px solid rgba(42,37,53,0.10);
+    border-radius: 8px;
+    width: 500px;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+  }
+  .hours-col {
+    flex: 1;
+  }
+  .hours-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(42,37,53,0.55);
+    margin-bottom: 4px;
+  }
+  .hours-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--leaded-iron);
+  }
+  .hero-photo {
+    position: absolute;
+    right: 120px;
+    top: 60px;
+    width: 600px;
+    height: 520px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(42,37,53,0.18);
+  }
 
-.btn{
-  padding:12px 18px;
-  border-radius:6px;
-  border:1px solid #fff;
-  background:transparent;
-  color:#fff;
-  margin-right:10px;
-  cursor:pointer;
-}
 
-.btn.primary{
-  background:#fff;
-  color:var(--navy);
-  border:none;
+  .hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero-nav-btns {
+  position: absolute;
+  bottom: 20px;        /* adjust this to control gap below the photo */
+  right: 120px;
+  width: 600px;        /* same width as .hero-photo */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
+  .hero-nav-btn {
+    background: rgba(255,255,255,0.75);
+    color: var(--leaded-iron);
+    height: 36px;
+    width: 110px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+  }
+  
 
-/* SECTIONS */
-.section{
-  padding:70px 40px;
-}
+  /* ── Section base ── */
+  section { width: 100%; }
+  .section-inner {
+    max-width: 1440px;
+    padding: 0 120px;
+  }
+  .section-head {
+    display: flex;
+    align-items: flex-start;
+    padding: 80px 120px 0;
+  }
+  .section-head-text { flex: 1; }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+  .section-subtitle {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.5;
+  }
+  .section-cta {
+    margin-left: auto;
+    margin-top: 8px;
+  }
+  .btn-dark {
+    background: var(--leaded-iron);
+    color: #fff;
+    height: 44px;
+    padding: 0 24px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: 'Inter', sans-serif;
+  }
+  .btn-carrara {
+    background: var(--carrara);
+    color: var(--leaded-iron);
+    height: 44px;
+    padding: 0 24px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: 'Inter', sans-serif;
+  }
 
-.section h2{
-  text-align:center;
-  margin-bottom:40px;
-  font-size:1.8rem;
-}
+  /* ── Catalog & Collections ── */
+  .catalog { background: var(--carrara); padding-bottom: 80px; }
+  .catalog .section-title, .catalog .section-subtitle { color: var(--leaded-iron); }
+  .catalog .section-subtitle { color: rgba(42,37,53,0.5); }
+  .cards-row {
+    display: flex;
+    gap: 24px;
+    padding: 40px 120px 0;
+  }
+  .card {
+    flex: 1;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid rgba(176,176,203,0.35);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    overflow: hidden;
+    min-height: 400px;
+  }
+  .card-img {
+    background: var(--lavender);
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(42,37,53,0.35);
+    font-size: 12px;
+  }
+  .card-body { padding: 24px 27px 27px; }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    height: 24px;
+    padding: 0 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .badge-amber { background: var(--warm-amber); color: var(--leaded-iron); }
+  .badge-lavender { background: var(--lavender); color: var(--leaded-iron); }
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--leaded-iron);
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+  .card-text {
+    font-size: 14px;
+    color: rgba(42,37,53,0.65);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .card-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--warm-amber);
+    cursor: pointer;
+  }
 
-/* WHY */
-.features{
-  display:flex;
-  justify-content:center;
-  gap:60px;
-  text-align:center;
-}
+  /* ── Digital Collections ── */
+  .digital { background: var(--leaded-iron); padding-bottom: 80px; }
+  .digital .section-title { color: var(--carrara); }
+  .digital .section-subtitle { color: rgba(241,239,233,0.55); }
+  .dig-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 375px);
+    gap: 20px;
+    padding: 40px 120px 0;
+  }
+  .dig-card {
+    background: rgba(241,239,233,0.06);
+    border: 1px solid rgba(176,176,203,0.20);
+    border-radius: 8px;
+    padding: 22px 23px 22px;
+    height: 196px;
+    display: flex;
+    flex-direction: column;
+  }
+  .dig-icon { font-size: 26px; margin-bottom: 16px; }
+  .dig-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--carrara);
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .dig-text {
+    font-size: 13px;
+    color: rgba(241,239,233,0.55);
+    line-height: 1.55;
+    flex: 1;
+  }
+  .dig-link {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--periwinkle);
+    cursor: pointer;
+    margin-top: 12px;
+  }
 
-.feature{
-  max-width:200px;
-}
+  /* ── Programs & Events ── */
+  .programs { background: var(--carrara); padding-bottom: 80px; }
+  .programs .section-title { color: var(--leaded-iron); }
+  .programs .section-subtitle { color: rgba(42,37,53,0.5); }
+  .tabs {
+    display: flex;
+    gap: 10px;
+    padding: 0 120px;
+    margin-top: 28px;
+  }
+  .tab {
+    height: 36px;
+    padding: 0 14px;
+    border-radius: 18px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    white-space: nowrap;
+  }
+  .tab.active { background: var(--warm-amber); color: var(--leaded-iron); font-weight: 600; }
+  .tab.inactive {
+    background: var(--carrara);
+    color: rgba(42,37,53,0.65);
+    border: 1px solid rgba(176,176,203,0.40);
+  }
+  .events-row {
+    display: flex;
+    gap: 24px;
+    padding: 24px 120px 0;
+  }
+  .event-card {
+    flex: 1;
+    background: #fff;
+    border: 1px solid rgba(176,176,203,0.30);
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    padding: 24px 27px;
+    min-height: 268px;
+    display: flex;
+    flex-direction: column;
+  }
+  .event-time { font-size: 12px; color: rgba(42,37,53,0.45); margin-bottom: 10px; }
+  .event-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--leaded-iron);
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .event-text { font-size: 14px; color: rgba(42,37,53,0.65); line-height: 1.57; flex: 1; margin-bottom: 12px; }
+  .event-footer { display: flex; align-items: center; justify-content: space-between; }
+  .event-btns { display: flex; gap: 10px; margin-top: 16px; }
+  .btn-outline-sm {
+    height: 44px;
+    width: 90px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1.5px solid rgba(42,37,53,0.50);
+    background: #fff;
+    color: var(--leaded-iron);
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+  }
+  .btn-dark-sm {
+    height: 44px;
+    width: 110px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    background: var(--leaded-iron);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+  }
+  .calendar-embed {
+    margin: 32px 120px 0;
+    background: var(--lavender);
+    border: 1px solid rgba(176,176,203,0.30);
+    border-radius: 10px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(42,37,53,0.5);
+    gap: 8px;
+  }
+  .calendar-embed .icon { font-size: 28px; }
+  .calendar-embed .cal-title { font-size: 15px; font-weight: 600; }
+  .calendar-embed .cal-sub { font-size: 13px; }
 
-.feature-icon{
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  background:var(--navy);
-  margin:0 auto 12px;
-}
+  /* ── Library Services ── */
+  .services { background: var(--sage); padding-bottom: 80px; }
+  .services .section-title { color: var(--carrara); }
+  .services .section-subtitle { color: rgba(241,239,233,0.80); }
+  .svc-cards {
+    display: flex;
+    gap: 32px;
+    padding: 40px 120px 0;
+  }
+  .svc-card {
+    flex: 1;
+    background: #fff;
+    border: 1px solid rgba(125,166,96,0.40);
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    padding: 22px 23px 27px;
+    min-height: 204px;
+    display: flex;
+    flex-direction: column;
+  }
+  .svc-icon { font-size: 26px; color: var(--sage); margin-bottom: 16px; }
+  .svc-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--leaded-iron);
+    margin-bottom: 8px;
+    line-height: 1.35;
+  }
+  .svc-text {
+    font-size: 13px;
+    color: rgba(42,37,53,0.65);
+    line-height: 1.55;
+    flex: 1;
+  }
+  .svc-link { font-size: 13px; font-weight: 600; color: var(--sage); margin-top: 12px; cursor: pointer; }
 
-/* EVENTS */
-.events{
-  display:flex;
-  gap:30px;
-}
+  /* ── News & Updates ── */
+  .news { background: var(--carrara); padding-bottom: 80px; }
+  .news .section-title { color: var(--leaded-iron); }
+  .news .section-subtitle { color: rgba(42,37,53,0.5); }
+  .news-cards {
+    display: flex;
+    gap: 24px;
+    padding: 40px 120px 0;
+  }
+  .news-card {
+    flex: 1;
+    background: #fff;
+    border: 1px solid rgba(176,176,203,0.30);
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    padding: 27px;
+    min-height: 196px;
+    display: flex;
+    flex-direction: column;
+  }
+  .news-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--leaded-iron);
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+  .news-text { font-size: 14px; color: rgba(42,37,53,0.65); line-height: 1.57; flex: 1; margin-bottom: 12px; }
+  .news-link { font-size: 13px; font-weight: 600; color: var(--warm-amber); cursor: pointer; margin-top: auto; }
 
-.event{
-  background:#fff;
-  border-radius:12px;
-  overflow:hidden;
-  flex:1;
-  box-shadow:0 6px 16px rgba(0,0,0,.06);
-}
+  /* ── Support TPL ── */
+  .support {
+    background: var(--warm-amber);
+    height: 180px;
+    display: flex;
+    align-items: center;
+    padding: 0 120px;
+  }
+  .support-text { flex: 1; }
+  .support-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--leaded-iron);
+    margin-bottom: 10px;
+  }
+  .support-sub { font-size: 15px; color: rgba(42,37,53,0.70); max-width: 580px; }
+  .support-btns { display: flex; gap: 10px; }
+  .btn-volunteer {
+    background: rgba(42,37,53,0.15);
+    color: var(--leaded-iron);
+    height: 44px;
+    padding: 0 24px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1.5px solid rgba(42,37,53,0.50);
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+  }
 
-.event img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-}
+  /* ── Instagram ── */
+  .instagram { background: var(--leaded-iron); padding: 56px 120px 56px; }
+  .insta-head {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+  .insta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--carrara);
+    margin-bottom: 8px;
+  }
+  .insta-sub { font-size: 15px; color: rgba(241,239,233,0.55); }
+  .btn-periwinkle-outline {
+    margin-left: auto;
+    height: 44px;
+    padding: 0 24px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    background: rgba(176,176,203,0.15);
+    color: var(--periwinkle);
+    border: 1.5px solid rgba(176,176,203,0.60);
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    white-space: nowrap;
+  }
+  .ig-grid {
+    display: flex;
+    gap: 20px;
+  }
+  .ig-card {
+    flex: 1;
+    height: 210px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: rgba(241,239,233,0.35);
+  }
+  .ig-card.cool {
+    background: rgba(176,176,203,0.10);
+    border: 1px solid rgba(176,176,203,0.20);
+  }
+  .ig-card.warm {
+    background: rgba(226,166,61,0.10);
+    border: 1px solid rgba(226,166,61,0.20);
+  }
 
-.event-content{
-  padding:16px;
-}
-
-/* SERVICES */
-.services{
-  display:flex;
-  gap:20px;
-}
-
-.service{
-  flex:1;
-  background:#fff;
-  border-radius:12px;
-  padding:24px;
-  text-align:center;
-  border:1px solid rgba(0,0,0,.06);
-}
-
-/* CTA */
-.cta{
-  background:var(--navy);
-  color:#fff;
-  text-align:center;
-  padding:60px 20px;
-}
-
-.cta p{
-  color:#d3d6e3;
-}
-
-.cta button{
-  margin-top:16px;
-  padding:12px 20px;
-  border:none;
-  background:#fff;
-  color:var(--navy);
-  border-radius:6px;
-}
-
-/* FOOTER */
-.footer{
-  background:var(--navy);
-  color:#fff;
-  padding:40px;
-  display:flex;
-  justify-content:space-between;
-  font-size:.9rem;
-}
+  /* ── Footer ── */
+  footer {
+    background: var(--dark-walnut);
+    border-top: 1px solid rgba(176,176,203,0.25);
+    padding: 56px 120px 56px;
+  }
+  .footer-inner { display: flex; gap: 80px; }
+  .footer-brand { min-width: 240px; }
+  .footer-brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--carrara);
+    margin-bottom: 16px;
+  }
+  .footer-contact {
+    font-size: 12px;
+    color: rgba(241,239,233,0.45);
+    line-height: 2;
+  }
+  .footer-copy {
+    font-size: 11px;
+    color: rgba(241,239,233,0.30);
+    margin-top: 16px;
+    line-height: 1.7;
+  }
+  .footer-col { min-width: 160px; }
+  .footer-col-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--warm-amber);
+    margin-bottom: 16px;
+  }
+  .footer-links { list-style: none; }
+  .footer-links li {
+    font-size: 12px;
+    color: rgba(241,239,233,0.45);
+    line-height: 2;
+    cursor: pointer;
+  }
+  .footer-links li:hover { color: var(--carrara); }
 </style>
 </head>
-
 <body>
 
-<!-- HEADER -->
-<div class="header-top">
-  <div class="logo">TROY PUBLIC LIBRARY</div>
-</div>
-
-<div class="navbar">
-  <div class="nav-links">
-    <a href="#">LIBRARY WEBSITE</a>
-    <a href="#">EVENTS CALENDAR</a>
-    <a href="#">RESERVE A ROOM</a>
+<!-- UTILITY RIBBON -->
+<div class="ribbon">
+  <span class="ribbon-info">🕐  Mon–Sat 9am–6pm  ·  Sun Closed</span>
+  <span class="ribbon-info">📍  100 Second Street, Troy NY</span>
+  <span class="ribbon-info">📞  (518) 274-7071</span>
+  <div class="ribbon-btns">
+    <button class="ribbon-btn amber">Get a Library Card</button>
+    <button class="ribbon-btn ghost">My Account / Login</button>
+    <button class="ribbon-btn ghost">Ask a Librarian</button>
   </div>
 </div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo-wrap">
+    <img src="../tpl_logo.jpg" alt="Troy Public Library Logo">
+  </div>
+  <div class="header-name-group">
+    <div class="header-name">Troy Public Library</div>
+    <div class="header-tagline">A welcoming place to read, learn, and explore.</div>
+  </div>
+  <div class="search-bar">
+    <div class="search-scope">Catalog ▾</div>
+    <div class="search-sep"></div>
+    <input class="search-input" type="text" placeholder="Search books, events, services…">
+    <button class="search-btn">Search</button>
+  </div>
+  <div class="header-social">📷 Instagram &nbsp;·&nbsp; ❤️ Donate to TPL</div>
+</header>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-item active">Home</div>
+  <div class="nav-item dropdown">Catalog &amp; Collections ▾
+    <div class="dropdown-menu">
+      <a href="catalog.html">Search the Catalog</a>
+      <a href="#">New Books</a>
+      <a href="#">TPL Pics</a>
+      <a href="#">Staff Recommendations</a>
+      <a href="#">Digital Collections</a>
+  </div>
+</div>
+   <div class="nav-item dropdown">
+    Programs & Events ▾
+    <div class="dropdown-menu">
+      <a href="#">All Programs</a>
+      <a href="#">Kids</a>
+      <a href="#">Teens</a>
+      <a href="#">Adults</a>
+      <a href="#">Book Groups</a>
+      <a href="#">Recurring Series</a>
+    </div>
+  </div>
+
+  <div class="nav-item dropdown">
+    Services ▾
+    <div class="dropdown-menu">
+      <a href="card.html">Get a Library Card</a>
+      <a href="#">Museum Passes</a>
+      <a href="#">Printing & Copying</a>
+      <a href="#">Interlibrary Loan</a>
+      <a href="#">Accessibility Services</a>
+    </div>
+  </div>
+
+  <div class="nav-item dropdown">
+    About ▾
+    <div class="dropdown-menu">
+      <a href="#">About the Library</a>
+      <a href="#">Hours & Locations</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Employment</a>
+      <a href="#">Policies</a>
+    </div>
+  </div>
+  <div class="nav-item">News &amp; Updates</div>
+  <div class="nav-item">Support TPL</div>
+</nav>
 
 <!-- HERO -->
-<section class="hero">
-  <div>
-    <h1>Welcome to Troy Public Library</h1>
-    <p>Your community hub for learning, discovery, and connection. Explore our resources and programs today.</p>
-    <div class="buttons">
-      <button class="btn primary">Explore Services</button>
-      <button class="btn">View Events</button>
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">EXPLORE THE LIBRARY</div>
+    <div class="hero-headline">Your Community.<br>Your Library.</div>
+    <div class="hero-body">Search our catalog, discover events, access digital resources, and find the services that matter most to you and your family.</div>
+    <div class="hero-btns">
+      <button class="btn-primary">🔍 Search Catalog</button>
+      <button class="btn-outline-dark">📅 Events Calendar</button>
+      <button class="btn-outline-dark">📚 Digital Collections</button>
     </div>
-  </div>
-</section>
-
-<!-- WHY -->
-<section class="section">
-  <h2>Why Choose Troy Public Library?</h2>
-  <div class="features">
-    <div class="feature">
-      <div class="feature-icon"></div>
-      <h4>Extensive Collection</h4>
-      <p>Books, audiobooks, and digital resources</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon"></div>
-      <h4>Community Events</h4>
-      <p>Programs for all ages</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon"></div>
-      <h4>Meeting Rooms</h4>
-      <p>Spaces for groups and study</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon"></div>
-      <h4>Free WiFi</h4>
-      <p>High-speed internet access</p>
-    </div>
-  </div>
-</section>
-
-<!-- EVENTS -->
-<section class="section">
-  <h2>Upcoming Events</h2>
-  <div class="events">
-    <div class="event">
-      <img src="https://via.placeholder.com/400x200">
-      <div class="event-content">
-        <strong>Taxpayer Assistance Program</strong>
-        <p>March 26, 2026</p>
+    <div class="hero-hours">
+      <div class="hours-col">
+        <div class="hours-label">Mon–Thu</div>
+        <div class="hours-value">9am – 7pm</div>
       </div>
-    </div>
-
-    <div class="event">
-      <img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
-      <div class="event-content">
-        <strong>Children's Story Time</strong>
-        <p>March 27, 2026</p>
+      <div class="hours-col">
+        <div class="hours-label">Fri–Sat</div>
+        <div class="hours-value">9am – 5pm</div>
       </div>
-    </div>
-
-    <div class="event">
-      <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da">
-      <div class="event-content">
-        <strong>Adult Book Club</strong>
-        <p>March 28, 2026</p>
+      <div class="hours-col">
+        <div class="hours-label">Sunday</div>
+        <div class="hours-value">Closed</div>
       </div>
     </div>
   </div>
-</section>
+  <div class="hero-photo">
+    <img src="../pic.jpg" alt="Hart Memorial Building — Troy Public Library">
+  </div>
+    <div class="hero-nav-btns">
+    <button class="hero-nav-btn">← Prev</button>
+    <button class="hero-nav-btn">Next →</button>
+  </div>
+</div>
 
-<!-- SERVICES -->
-<section class="section">
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="service">Technology Access</div>
-    <div class="service">Learning Programs</div>
-    <div class="service">Children’s Programs</div>
-    <div class="service">Cultural Events</div>
+<!-- CATALOG & COLLECTIONS -->
+<section class="catalog">
+  <div class="section-head">
+    <div class="section-head-text">
+      <div class="section-title">Catalog &amp; Collections</div>
+      <div class="section-subtitle">Search our full catalog or browse curated lists from our team.</div>
+    </div>
+    <a href="catalog.html" class="section-cta">
+      <button class="btn-dark">Search the Catalog</button>
+    </a>
+  </div>
+  <div class="cards-row">
+    <div class="card">
+      <div class="card-img">[ New Books ]</div>
+      <div class="card-body">
+        <span class="badge badge-amber">🆕 Just Arrived</span>
+        <div class="card-title">New Books</div>
+        <div class="card-text">Fresh arrivals across fiction, nonfiction, children's &amp; YA.</div>
+        <div class="card-link">Browse New Arrivals →</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">[ TPL Picks ]</div>
+      <div class="card-body">
+        <div class="card-title" style="margin-top:8px;">TPL Picks</div>
+        <div class="card-text">Curated selections chosen by your library staff each month.</div>
+        <div class="card-link">See TPL Picks →</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">[ Staff Recommendations ]</div>
+      <div class="card-body">
+        <div class="card-title" style="margin-top:8px;">Staff Recommendations</div>
+        <div class="card-text">Personal picks and reviews from librarians who love to read.</div>
+        <div class="card-link">Read Staff Reviews →</div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
-  <h2>Get Your Library Card Today</h2>
-  <p>Access all our resources and services with a free library card.</p>
-  <button>Learn More</button>
+<!-- DIGITAL COLLECTIONS -->
+<section class="digital">
+  <div class="section-head">
+    <div class="section-head-text">
+      <div class="section-title">Digital Collections</div>
+      <div class="section-subtitle">Free access to eBooks, audiobooks, films, and comics — 24/7 with your library card.</div>
+    </div>
+  </div>
+  <div class="dig-grid">
+    <div class="dig-card">
+      <div class="dig-icon" style="color:var(--warm-amber)">📱</div>
+      <div class="dig-title">Libby / OverDrive</div>
+      <div class="dig-text">eBooks &amp; audiobooks for phones, tablets, and e-readers.</div>
+      <div class="dig-link">Access Now →</div>
+    </div>
+    <div class="dig-card">
+      <div class="dig-icon" style="color:var(--warm-amber)">🎵</div>
+      <div class="dig-title">Hoopla</div>
+      <div class="dig-text">Music, comics, movies — no waitlist, borrow instantly.</div>
+      <div class="dig-link">Access Now →</div>
+    </div>
+    <div class="dig-card">
+      <div class="dig-icon" style="color:var(--warm-amber)">🎬</div>
+      <div class="dig-title">Kanopy</div>
+      <div class="dig-text">Award-winning films and documentaries, free with your card.</div>
+      <div class="dig-link">Access Now →</div>
+    </div>
+    <div class="dig-card">
+      <div class="dig-icon" style="color:var(--warm-amber)">💬</div>
+      <div class="dig-title">Comics Plus</div>
+      <div class="dig-text">Thousands of graphic novels and comics, anytime.</div>
+      <div class="dig-link">Access Now →</div>
+    </div>
+    <div class="dig-card">
+      <div class="dig-icon" style="color:var(--warm-amber)">🔬</div>
+      <div class="dig-title">Research Databases</div>
+      <div class="dig-text">Academic journals, job resources, and test prep tools.</div>
+      <div class="dig-link">Access Now →</div>
+    </div>
+    <div class="dig-card">
+      <div class="dig-icon" style="color:var(--warm-amber)">📰</div>
+      <div class="dig-title">Newspaper Archive</div>
+      <div class="dig-text">Local and national newspapers, historical and current.</div>
+      <div class="dig-link">Access Now →</div>
+    </div>
+  </div>
 </section>
+
+<!-- PROGRAMS & EVENTS -->
+<section class="programs">
+  <div class="section-head">
+    <div class="section-head-text">
+      <div class="section-title">Programs &amp; Events</div>
+      <div class="section-subtitle">Find programs for every age and interest. Browse by category or view the full calendar.</div>
+    </div>
+    <div class="section-cta">
+      <button class="btn-dark">Open Full Calendar</button>
+    </div>
+  </div>
+  <div class="tabs">
+    <button class="tab active">All Ages</button>
+    <button class="tab inactive">Kids</button>
+    <button class="tab inactive">Teens</button>
+    <button class="tab inactive">Adults</button>
+    <button class="tab inactive">Book Groups</button>
+    <button class="tab inactive">Recurring Series</button>
+  </div>
+  <div class="events-row">
+    <div class="event-card">
+      <div class="event-time">Today · 10:30 AM</div>
+      <div class="event-title">Storytime Learn &amp; Play</div>
+      <div class="event-text">Songs, books, and movement for babies and toddlers with caregivers.</div>
+      <span class="badge badge-lavender" style="width:fit-content;margin-bottom:16px;">👶 Kids</span>
+      <div class="event-btns">
+        <button class="btn-outline-sm">Details</button>
+        <button class="btn-dark-sm">Register</button>
+      </div>
+    </div>
+    <div class="event-card">
+      <div class="event-time">Today · 4:00 PM</div>
+      <div class="event-title">Teen Game Night</div>
+      <div class="event-text">Drop in after school for video games, board games, and great company.</div>
+      <span class="badge badge-lavender" style="width:fit-content;margin-bottom:16px;">🎮 Teens</span>
+      <div class="event-btns">
+        <button class="btn-outline-sm">Details</button>
+        <button class="btn-dark-sm">Register</button>
+      </div>
+    </div>
+    <div class="event-card">
+      <div class="event-time">Tomorrow · 6:00 PM</div>
+      <div class="event-title">Contemporary Fiction Book Group</div>
+      <div class="event-text">Monthly discussion — this month: James by Percival Everett.</div>
+      <span class="badge badge-lavender" style="width:fit-content;margin-bottom:16px;">📖 Adults</span>
+      <div class="event-btns">
+        <button class="btn-outline-sm">Details</button>
+        <button class="btn-dark-sm">Register</button>
+      </div>
+    </div>
+  </div>
+  <div class="calendar-embed">
+    <div class="icon">📅</div>
+    <div class="cal-title">Library Market Calendar Embed</div>
+    <div class="cal-sub">Full interactive calendar with filtering by age, category &amp; date</div>
+  </div>
+</section>
+
+<!-- LIBRARY SERVICES -->
+<section class="services">
+  <div class="section-head">
+    <div class="section-head-text">
+      <div class="section-title">Library Services</div>
+      <div class="section-subtitle">Everything we offer — in the library and remotely from home.</div>
+    </div>
+    <div class="section-cta">
+      <button class="btn-carrara">All Services</button>
+    </div>
+  </div>
+  <div class="svc-cards">
+    <div class="svc-card">
+      <div class="svc-icon">🖨️</div>
+      <div class="svc-title">Printing &amp; Copying</div>
+      <div class="svc-text">Remote &amp; in-library printing, scanning, and copying.</div>
+      <div class="svc-link">Learn More →</div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">🎟️</div>
+      <div class="svc-title">Museum Passes</div>
+      <div class="svc-text">Free passes to 20+ regional museums. Reserve online.</div>
+      <div class="svc-link">Reserve a Pass →</div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">🚚</div>
+      <div class="svc-title">Interlibrary Loan</div>
+      <div class="svc-text">Request materials from libraries across New York.</div>
+      <div class="svc-link">Request ILL →</div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">💼</div>
+      <div class="svc-title">Job &amp; Career Help</div>
+      <div class="svc-text">Test prep, job search tools, and reference assistance.</div>
+      <div class="svc-link">Explore Resources →</div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS & UPDATES -->
+<section class="news">
+  <div class="section-head">
+    <div class="section-head-text">
+      <div class="section-title">News &amp; Updates</div>
+      <div class="section-subtitle">Announcements, director notes, and the monthly newsletter — all in one place.</div>
+    </div>
+  </div>
+  <div class="news-cards">
+    <div class="news-card">
+      <div class="news-title">Director's Note: Spring 2025</div>
+      <div class="news-text">Updates on the renovation, new programs this season, and a message from our director.</div>
+      <div class="news-link">Read More →</div>
+    </div>
+    <div class="news-card">
+      <div class="news-title">Service Announcement: Extended Hours</div>
+      <div class="news-text">Starting May 1st, Thursday hours extend to 8pm. See the full updated schedule.</div>
+      <div class="news-link">Read More →</div>
+    </div>
+    <div class="news-card">
+      <div class="news-title">Monthly Newsletter — April 2025</div>
+      <div class="news-text">Read the full newsletter or sign up to receive it by email each month.</div>
+      <div class="news-link">View Newsletter →</div>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORT TPL -->
+<div class="support">
+  <div class="support-text">
+    <div class="support-title">Support Troy Public Library</div>
+    <div class="support-sub">Your donations fund programs, collections, and services for the entire Troy community.</div>
+  </div>
+  <div class="support-btns">
+    <button class="btn-dark">Donate to TPL</button>
+    <button class="btn-volunteer">Volunteer</button>
+  </div>
+</div>
+
+<!-- INSTAGRAM -->
+<div class="instagram">
+  <div class="insta-head">
+    <div>
+      <div class="insta-title">From Our Instagram</div>
+      <div class="insta-sub">See what's happening at TPL.</div>
+    </div>
+    <button class="btn-periwinkle-outline">Follow @thetroylibrary</button>
+  </div>
+  <div class="ig-grid">
+    <div class="ig-card cool">📷 Instagram Post</div>
+    <div class="ig-card warm">📷 Instagram Post</div>
+    <div class="ig-card cool">📷 Instagram Post</div>
+    <div class="ig-card warm">📷 Instagram Post</div>
+  </div>
+</div>
 
 <!-- FOOTER -->
-<footer class="footer">
-  <div>
-    <strong>Main Library</strong><br>
-    100 Second Street<br>
-    Troy, NY
-  </div>
-  <div>
-    <strong>Quick Links</strong><br>
-    About<br>
-    Contact<br>
-    Accessibility
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-brand-name">Troy Public Library</div>
+      <div class="footer-contact">
+        100 Second Street<br>
+        Troy, NY 12180<br>
+        (518) 274-7071<br>
+        hello@troylibrary.org
+      </div>
+      <div class="footer-copy">© 2025 Troy Public Library<br>Privacy Policy · Accessibility Statement</div>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Explore</div>
+      <ul class="footer-links">
+        <li>Search Catalog</li><li>New Books</li><li>TPL Picks</li>
+        <li>Digital Collections</li><li>Programs &amp; Events</li><li>Book Groups</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li>Get a Library Card</li><li>My Account / Login</li><li>Museum Passes</li>
+        <li>Printing &amp; Copying</li><li>Interlibrary Loan</li><li>Accessibility Services</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">About</div>
+      <ul class="footer-links">
+        <li>About the Library</li><li>Hours &amp; Locations</li><li>News &amp; Updates</li>
+        <li>Contact Us</li><li>Donate</li><li>Employment</li><li>Policies</li>
+      </ul>
+    </div>
   </div>
 </footer>
 
