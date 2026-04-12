@@ -299,18 +299,22 @@
     overflow: hidden;
     box-shadow: 0 8px 40px rgba(42,37,53,0.18);
   }
+
+
   .hero-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
   .hero-nav-btns {
-    position: absolute;
-    bottom: 60px;
-    right: 120px;
-    display: flex;
-    gap: 10px;
-  }
+  position: absolute;
+  bottom: 20px;        /* adjust this to control gap below the photo */
+  right: 120px;
+  width: 600px;        /* same width as .hero-photo */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
   .hero-nav-btn {
     background: rgba(255,255,255,0.75);
     color: var(--leaded-iron);
@@ -843,7 +847,7 @@
   <div class="hero-photo">
     <img src="../pic.jpg" alt="Hart Memorial Building — Troy Public Library">
   </div>
-  <div class="hero-nav-btns">
+    <div class="hero-nav-btns">
     <button class="hero-nav-btn">← Prev</button>
     <button class="hero-nav-btn">Next →</button>
   </div>
