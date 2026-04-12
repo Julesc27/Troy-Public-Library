@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Accessibility Services — Troy Public Library</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="utility">
+    <div class="container utility-layout">
+      <div class="utility-actions">
+        <a class="btn utility-btn" href="../card.html"><span class="utility-icon" aria-hidden="true">🪪</span><span>Get a Library Card</span></a>
+        <a class="btn utility-btn" href="../account.html"><span class="utility-icon" aria-hidden="true">👤</span><span>My Account / Login</span></a>
+        <a class="btn utility-btn" href="../ask.html"><span class="utility-icon" aria-hidden="true">💬</span><span>Ask a Librarian</span></a>
+      </div>
+      <div class="utility-info-vertical">
+        <span><strong>Hours:</strong> 9–6</span>
+        <span>100 Second Street</span>
+        <span>Troy, NY 12180</span>
+        <span>(518) 274-7071</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <div class="brand-row">
+        <div class="brand">
+          <div class="logo">
+            <img src="../assets/images/tpl_logo - Copy.jpg" alt="Troy Public Library logo">
+          </div>
+          <div class="brand-title">
+            <div class="name">Troy Public Library</div>
+          </div>
+        </div>
+        <a class="instagram-link" href="https://www.instagram.com/thetroylibrary/" target="_blank" rel="noopener noreferrer">
+          Follow us on Instagram →
+        </a>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <div class="nav-inner">
+          <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="navLinks">Menu</button>
+          <div class="nav-links" id="navLinks" data-nav-links>
+            <a href="../index.html">Home</a>
+            <a href="../catalog.html">Catalog &amp; Collections</a>
+            <a href="../events.html">Programs &amp; Events</a>
+            <a href="services.html" aria-current="page">Services</a>
+            <a href="../news.html">News &amp; Updates</a>
+            <a href="../about.html">About</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="section">
+        <form class="searchbar" data-search-form>
+          <label for="scope">Search scope</label>
+          <select id="scope" data-search-scope aria-label="Search scope">
+            <option value="site">Site</option>
+            <option value="catalog">Catalog</option>
+          </select>
+          <label for="q">Search</label>
+          <input id="q" data-search-q type="search" placeholder="Search services, policies, and more…" aria-label="Search query" />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Services</p>
+          <h1>Accessibility Services</h1>
+          <p>Troy Public Library aims to make library spaces, resources, and services more accessible for all visitors.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid cols-2">
+        <article class="card">
+          <h2>Accessible Support</h2>
+          <p>Library staff can help visitors locate materials, use public services, and find resources that support different access needs.</p>
+          <p>If you need assistance during your visit, please ask at the service desk.</p>
+        </article>
+
+        <article class="card">
+          <h2>Planning Your Visit</h2>
+          <p>If you have questions before arriving, contact the library in advance so staff can help you prepare for your visit and answer service questions.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid cols-3">
+        <article class="card">
+          <h3>Building Access</h3>
+          <p>Find information about entering the building and getting assistance once you arrive.</p>
+        </article>
+
+        <article class="card">
+          <h3>Help with Technology</h3>
+          <p>Staff may be able to assist with computers, printing, and accessing library resources.</p>
+        </article>
+
+        <article class="card">
+          <h3>Service Questions</h3>
+          <p>Ask about accommodations, available materials, and support options at the library.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid cols-2">
+        <article class="card">
+          <h2>Contact for Assistance</h2>
+          <p>Please reach out if you would like help before your visit or need support using library services.</p>
+          <a class="btn primary" href="../contact.html">Contact the Library</a>
+        </article>
+
+        <article class="card">
+          <h2>More Services</h2>
+          <p>Explore the rest of the library’s services, including printing, library cards, research help, and requests.</p>
+          <a class="link" href="services.html">Back to Services</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="small">© <span id="year"></span> Troy Public Library (Prototype) • <a href="../privacy.html">Privacy</a></p>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>
