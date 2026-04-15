@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catalog & Collections — Troy Public Library</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --carrara:    #F1EFE9;
+    --periwinkle: #B0B0CB;
+    --lavender:   #C4C8E8;
+    --amber:      #E2A63D;
+    --sage:       #7DA660;
+    --iron:       #2A2535;
+    --walnut:     #3C2A22;
+    --white:      #ffffff;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--carrara);
+    color: var(--iron);
+    min-width: 1440px;
+  }
+
+  /* ── UTILITY RIBBON ── */
+  .ribbon {
+    background: var(--iron);
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0 120px;
+  }
+  .ribbon-info {
+    font-size: 11px;
+    color: rgba(241,239,233,0.65);
+    white-space: nowrap;
+    margin-right: 28px;
+  }
+  .ribbon-btns { margin-left: auto; display: flex; gap: 10px; }
+  .ribbon-btn {
+    height: 26px; padding: 0 16px; border-radius: 6px;
+    font-size: 13px; font-weight: 600; border: none; cursor: pointer;
+    font-family: 'Inter', sans-serif; white-space: nowrap;
+  }
+  .ribbon-btn.ghost { background: rgba(255,255,255,0.10); color: #fff; }
+  .ribbon-btn.amber { background: var(--amber); color: var(--iron); }
+
+  /* ── HEADER ── */
+  .header {
+    background: var(--carrara);
+    height: 88px;
+    display: flex;
+    align-items: center;
+    padding: 0 120px;
+    border-bottom: 1px solid rgba(176,176,203,0.30);
+  }
+  .logo-wrap { width: 130px; height: 60px; flex-shrink: 0; }
+  .logo-wrap img { width: 100%; height: 100%; object-fit: contain; }
+  .header-name-group { margin-left: 18px; }
+  .header-name { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--iron); }
+  .header-tagline { font-size: 12px; color: rgba(42,37,53,0.5); margin-top: 4px; }
+  .search-bar {
+    margin-left: auto; width: 580px; height: 44px;
+    background: #fff; border: 1.5px solid rgba(176,176,203,0.60);
+    border-radius: 8px; display: flex; align-items: center; overflow: hidden; flex-shrink: 0;
+  }
+  .search-scope {
+    background: var(--lavender); height: 30px; width: 80px;
+    border-radius: 5px; margin: 0 7px; display: flex; align-items: center;
+    padding: 0 12px; font-size: 11px; font-weight: 600; color: var(--iron);
+    white-space: nowrap; flex-shrink: 0;
+  }
+  .search-sep { width: 1px; height: 24px; background: rgba(176,176,203,0.30); flex-shrink: 0; margin: 0 10px; }
+  .search-input { flex: 1; font-size: 13px; color: rgba(42,37,53,0.40); background: transparent; border: none; outline: none; font-family: 'Inter', sans-serif; }
+  .search-btn {
+    background: var(--iron); color: #fff; height: 44px; width: 82px;
+    border: none; font-size: 13px; font-weight: 600; cursor: pointer;
+    flex-shrink: 0; font-family: 'Inter', sans-serif;
+  }
+  .header-social { font-size: 12px; font-weight: 600; color: var(--iron); margin-left: 24px; white-space: nowrap; flex-shrink: 0; }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--iron); height: 54px;
+    display: flex; align-items: center; padding: 0 120px;
+    position: relative;
+  }
+  .nav-item {
+    height: 54px; display: flex; align-items: center;
+    padding: 0 16px; font-size: 13px; color: rgba(241,239,233,0.70);
+    cursor: pointer; white-space: nowrap; position: relative;
+  }
+  .nav-item.active { background: rgba(176,176,203,0.25); color: #fff; font-weight: 600; }
+  .nav-item.dropdown:hover .dropdown-menu { display: block; }
+  nav a.nav-item {
+  text-decoration: none;
+  color: rgba(241,239,233,0.70);
+}
+
+nav a.nav-item:hover {
+  color: #fff;
+}
+  .dropdown-menu {
+    display: none; position: absolute; top: 54px; left: 0;
+    background: var(--iron); min-width: 220px;
+    border-top: 2px solid var(--amber); border-radius: 0 0 8px 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25); z-index: 100; padding: 8px 0;
+  }
+  .dropdown-menu a {
+    display: block; padding: 10px 20px; font-size: 13px;
+    color: rgba(241,239,233,0.75); text-decoration: none; white-space: nowrap;
+  }
+  .dropdown-menu a:hover { background: rgba(176,176,203,0.15); color: #fff; }
+
+  /* ── PAGE BANNER ── */
+  .page-banner {
+    background: var(--periwinkle);
+    padding: 48px 120px 40px;
+  }
+  .page-banner h1 {
+    font-family: 'Playfair Display', serif; font-size: 40px;
+    font-weight: 700; color: var(--iron); margin-bottom: 12px;
+  }
+  .page-banner p { font-size: 15px; color: rgba(42,37,53,0.65); }
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb {
+    padding: 12px 120px; font-size: 13px; color: rgba(42,37,53,0.40);
+    background: var(--carrara); border-bottom: 1px solid rgba(176,176,203,0.2);
+  }
+  .breadcrumb a { color: rgba(42,37,53,0.40); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--amber); }
+
+  /* ── SECTION BASE ── */
+  .section { padding: 64px 120px; }
+  .section-title {
+    font-family: 'Playfair Display', serif; font-size: 36px;
+    font-weight: 700; color: var(--iron); margin-bottom: 10px;
+  }
+  .section-sub { font-size: 14px; color: rgba(42,37,53,0.50); margin-bottom: 40px; }
+
+  /* ── KOHA SEARCH BAR ── */
+  .koha-search {
+    display: flex; height: 56px; background: #fff;
+    border: 2px solid rgba(226,166,61,0.55); border-radius: 12px;
+    overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    margin-bottom: 12px; max-width: 920px;
+  }
+  .koha-input {
+    flex: 1; padding: 0 20px; font-size: 14px; font-family: 'Inter', sans-serif;
+    border: none; outline: none; color: rgba(42,37,53,0.40); background: transparent;
+  }
+  .koha-btn {
+    background: var(--amber); color: var(--iron); border: none;
+    padding: 0 28px; font-size: 14px; font-weight: 600;
+    cursor: pointer; font-family: 'Inter', sans-serif; white-space: nowrap;
+  }
+  .koha-note { font-size: 11px; color: rgba(42,37,53,0.35); margin-bottom: 40px; }
+  .koha-note a { color: rgba(42,37,53,0.45); text-decoration: underline; }
+
+  /* ── PATHWAY CARDS (3 col) ── */
+  .cards-3 { display: flex; gap: 24px; }
+  .pathway-card {
+    flex: 1; background: #fff; border-radius: 16px;
+    border: 1.5px solid rgba(226,166,61,0.35);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    padding: 28px; display: flex; flex-direction: column; min-height: 240px;
+  }
+  .pathway-card h3 {
+    font-family: 'Playfair Display', serif; font-size: 20px;
+    font-weight: 700; color: var(--iron); margin-bottom: 12px;
+  }
+  .pathway-card p { font-size: 14px; color: rgba(42,37,53,0.60); line-height: 1.6; flex: 1; margin-bottom: 24px; }
+  .pathway-link {
+    display: inline-block; padding: 12px 16px; border-radius: 8px;
+    border: 1.5px solid rgba(42,37,53,0.20); background: #fff;
+    font-size: 13px; font-weight: 600; color: var(--iron);
+    text-decoration: none; cursor: pointer; transition: border-color 0.15s, background 0.15s;
+  }
+  .pathway-link:hover { border-color: var(--amber); background: rgba(226,166,61,0.06); }
+
+  /* ── DIGITAL COLLECTIONS SECTION ── */
+  .digital-section { background: var(--carrara); padding: 64px 120px; }
+
+  /* ── DIGITAL PLATFORM CARDS ── */
+  .dig-card {
+    flex: 1; background: #fff; border-radius: 16px;
+    border: 1.5px solid rgba(226,166,61,0.35);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    padding: 28px; display: flex; flex-direction: column;
+  }
+  .dig-icon-circle {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: var(--lavender); display: flex; align-items: center;
+    justify-content: center; font-size: 24px; margin-bottom: 20px; flex-shrink: 0;
+  }
+  .dig-card h3 {
+    font-family: 'Playfair Display', serif; font-size: 22px;
+    font-weight: 700; color: var(--iron); margin-bottom: 4px;
+  }
+  .dig-card .dig-sub { font-size: 12px; font-weight: 600; color: var(--periwinkle); margin-bottom: 14px; }
+  .dig-card p { font-size: 14px; color: rgba(42,37,53,0.60); line-height: 1.6; flex: 1; margin-bottom: 16px; }
+  .dig-note {
+    background: rgba(196,200,232,0.30); border-radius: 6px;
+    padding: 10px 14px; font-size: 12px; color: rgba(42,37,53,0.65);
+    margin-bottom: 20px;
+  }
+
+  /* ── MORE RESOURCES ── */
+  .more-section { background: var(--carrara); padding: 0 120px 64px; }
+  .more-section .section-title { margin-bottom: 10px; }
+  .more-section .section-sub { margin-bottom: 40px; }
+  .cards-4 { display: flex; gap: 24px; }
+  .more-card {
+    flex: 1; background: #fff; border-radius: 12px;
+    border: 1px solid rgba(176,176,203,0.30);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.05);
+    padding: 24px; min-height: 200px; display: flex; flex-direction: column;
+  }
+  .more-card .more-icon { font-size: 28px; margin-bottom: 14px; }
+  .more-card h4 {
+    font-family: 'Playfair Display', serif; font-size: 15px;
+    font-weight: 700; color: var(--iron); margin-bottom: 8px; line-height: 1.35;
+  }
+  .more-card p { font-size: 13px; color: rgba(42,37,53,0.55); line-height: 1.55; flex: 1; }
+  .more-link { font-size: 12px; font-weight: 600; color: var(--amber); margin-top: 14px; cursor: pointer; text-decoration: none; }
+
+  /* ── HELP STRIP ── */
+  .help-strip {
+    background: var(--iron);
+    padding: 36px 120px;
+    display: flex;
+    align-items: center;
+  }
+  .help-strip-text { flex: 1; }
+  .help-strip h2 {
+    font-family: 'Playfair Display', serif; font-size: 24px;
+    font-weight: 700; color: var(--carrara); margin-bottom: 8px;
+  }
+  .help-strip p { font-size: 14px; color: rgba(241,239,233,0.60); max-width: 620px; }
+  .btn-ask {
+    background: var(--amber); color: var(--iron); height: 48px;
+    padding: 0 28px; border-radius: 8px; font-size: 14px; font-weight: 600;
+    border: none; cursor: pointer; font-family: 'Inter', sans-serif; white-space: nowrap;
+    flex-shrink: 0; margin-left: 48px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--walnut);
+    border-top: 1px solid rgba(176,176,203,0.20);
+    padding: 56px 120px;
+  }
+  .footer-inner { display: flex; gap: 80px; }
+  .footer-brand { min-width: 260px; }
+  .footer-brand-name {
+    font-family: 'Playfair Display', serif; font-size: 17px;
+    font-weight: 700; color: var(--carrara); margin-bottom: 16px;
+  }
+  .footer-contact { font-size: 12px; color: rgba(241,239,233,0.45); line-height: 2; }
+  .footer-copy { font-size: 11px; color: rgba(241,239,233,0.28); margin-top: 20px; line-height: 1.7; }
+  .footer-col { min-width: 160px; }
+  .footer-col-title { font-size: 13px; font-weight: 600; color: var(--amber); margin-bottom: 16px; }
+  .footer-links { list-style: none; }
+  .footer-links li { font-size: 12px; color: rgba(241,239,233,0.45); line-height: 2.1; cursor: pointer; }
+  .footer-links li:hover { color: var(--carrara); }
+
+  /* ── DIVIDER ── */
+  hr.section-divider { border: none; border-top: 1px solid rgba(176,176,203,0.20); margin: 0 120px; }
+</style>
+</head>
+<body>
+
+<!-- UTILITY RIBBON -->
+<div class="ribbon">
+  <span class="ribbon-info">🕐&nbsp; Mon–Sat 9am–6pm · Sun Closed</span>
+  <span class="ribbon-info">📍&nbsp; 100 Second Street, Troy NY</span>
+  <span class="ribbon-info">📞&nbsp; (518) 274-7071</span>
+  <div class="ribbon-btns">
+    <button class="ribbon-btn amber">Get a Library Card</button>
+    <button class="ribbon-btn ghost">My Account / Login</button>
+    <button class="ribbon-btn ghost">Ask a Librarian</button>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo-wrap">
+    <img src="https://www.figma.com/api/mcp/asset/232592af-4f40-4821-8ffa-e9813dcb96c8" alt="Troy Public Library Logo">
+  </div>
+  <div class="header-name-group">
+    <div class="header-name">Troy Public Library</div>
+    <div class="header-tagline">A welcoming place to read, learn, and explore.</div>
+  </div>
+  <div class="search-bar">
+    <div class="search-scope">Catalog ▾</div>
+    <div class="search-sep"></div>
+    <input class="search-input" type="text" placeholder="Search books, events, services…">
+    <button class="search-btn">Search</button>
+  </div>
+  <div class="header-social">📷 Instagram &nbsp;·&nbsp; ❤️ Donate to TPL</div>
+</header>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-item" href="index.html">Home</a>
+  <div class="nav-item active dropdown">Catalog &amp; Collections ▾
+    <div class="dropdown-menu">
+      <a href="catalog.html">Search Catalog ↗</a>
+      <a href="#">New Books</a>
+      <a href="#">TPL Picks</a>
+      <a href="#">Staff Recommendations</a>
+      <a href="#">Digital Collections</a>
+    </div>
+  </div>
+  <div class="nav-item dropdown">Programs &amp; Events ▾
+    <div class="dropdown-menu">
+      <a href="#">All Programs</a>
+      <a href="#">Kids</a>
+      <a href="#">Teens</a>
+      <a href="#">Adults</a>
+      <a href="#">Book Groups</a>
+    </div>
+  </div>
+  <div class="nav-item dropdown">Services ▾
+    <div class="dropdown-menu">
+      <a href="card.html">Get a Library Card</a>
+      <a href="#">Museum Passes</a>
+      <a href="#">Printing &amp; Copying</a>
+      <a href="#">Interlibrary Loan</a>
+      <a href="#">Accessibility Services</a>
+    </div>
+  </div>
+  <div class="nav-item dropdown">About ▾
+    <div class="dropdown-menu">
+      <a href="#">About the Library</a>
+      <a href="#">Hours &amp; Locations</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Employment</a>
+    </div>
+  </div>
+  <div class="nav-item">News &amp; Updates</div>
+  <div class="nav-item">Support TPL</div>
+</nav>
+
+<!-- PAGE BANNER -->
+<div class="page-banner">
+  <h1>Catalog &amp; Collections</h1>
+  <p>Search our catalog or jump directly to a collection below.</p>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="#">Home</a> &nbsp;›&nbsp; Catalog &amp; Collections
+</div>
+
+<!-- ══════════════════════════════════════ -->
+<!-- SECTION 1 — LIBRARY CATALOG (KOHA)   -->
+<!-- ══════════════════════════════════════ -->
+<section class="section">
+  <h2 class="section-title">Library Catalog</h2>
+  <p class="section-sub">Search above, or use these direct pathways:</p>
+
+  <div class="koha-search">
+    <input class="koha-input" type="text" placeholder="Search by title, author, subject, ISBN…">
+    <button class="koha-btn">Search →</button>
+  </div>
+  <p class="koha-note">Opens in Vega — Troy Public Library's catalog system. <a href="#">Advanced Search</a> &nbsp;·&nbsp; <a href="#">Browse by Subject</a> &nbsp;·&nbsp; <a href="#">Browse by Format</a></p>
+
+  <div class="cards-3">
+
+    <div class="pathway-card">
+      <h3>New Books</h3>
+      <p>Featured on the homepage so patrons don't have to dig.</p>
+      <a href="#" class="pathway-link">View New Books (placeholder) →</a>
+    </div>
+
+    <div class="pathway-card">
+      <h3>TPL Picks</h3>
+      <p>Curated lists and themed collections.</p>
+      <a href="#" class="pathway-link">Browse TPL Picks (placeholder) →</a>
+    </div>
+
+    <div class="pathway-card">
+      <h3>Staff Recommendations</h3>
+      <p>Visual discovery — could become a carousel.</p>
+      <a href="#" class="pathway-link">See Staff Recommendations (placeholder) →</a>
+    </div>
+
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══════════════════════════════════════ -->
+<!-- SECTION 2 — DIGITAL COLLECTIONS      -->
+<!-- ══════════════════════════════════════ -->
+<section class="digital-section">
+  <h2 class="section-title">Digital Collections</h2>
+  <p class="section-sub">Clear explanations + simple "what is this?" text.</p>
+
+  <div class="cards-3">
+
+    <div class="dig-card">
+      <div class="dig-icon-circle">📱</div>
+      <h3>Libby</h3>
+      <div class="dig-sub">eBooks &amp; Audiobooks</div>
+      <p>Borrow eBooks and audiobooks with your library card.</p>
+      <div class="dig-note">Free with your Troy Public Library card</div>
+      <a href="#" class="pathway-link">Open Libby (placeholder) →</a>
+    </div>
+
+    <div class="dig-card">
+      <div class="dig-icon-circle">🎵</div>
+      <h3>Hoopla</h3>
+      <div class="dig-sub">Music, Comics &amp; Movies</div>
+      <p>Stream movies, music, comics, and more (availability varies).</p>
+      <div class="dig-note">Free with your Troy Public Library card</div>
+      <a href="#" class="pathway-link">Open Hoopla (placeholder) →</a>
+    </div>
+
+    <div class="dig-card">
+      <div class="dig-icon-circle">🎬</div>
+      <h3>Kanopy</h3>
+      <div class="dig-sub">Film &amp; Documentary</div>
+      <p>Documentaries and thoughtful film for learning and entertainment.</p>
+      <div class="dig-note">Free with your Troy Public Library card</div>
+      <a href="#" class="pathway-link">Open Kanopy (placeholder) →</a>
+    </div>
+
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══════════════════════════════════════ -->
+<!-- SECTION 3 — MORE RESOURCES           -->
+<!-- ══════════════════════════════════════ -->
+<section class="more-section" style="padding-top:64px;">
+  <h2 class="section-title">More Resources</h2>
+  <p class="section-sub">Additional databases and research tools available with your library card.</p>
+
+  <div class="cards-4">
+
+    <div class="more-card">
+      <div class="more-icon">📰</div>
+      <h4>Newspaper Archive</h4>
+      <p>Local &amp; national papers, historical and current.</p>
+      <a href="#" class="more-link">Access Now →</a>
+    </div>
+
+    <div class="more-card">
+      <div class="more-icon">🔬</div>
+      <h4>Research Databases</h4>
+      <p>Academic journals, job resources, and test prep tools.</p>
+      <a href="#" class="more-link">Access Now →</a>
+    </div>
+
+    <div class="more-card">
+      <div class="more-icon">💬</div>
+      <h4>Comics Plus</h4>
+      <p>Thousands of graphic novels and comics, anytime.</p>
+      <a href="#" class="more-link">Access Now →</a>
+    </div>
+
+    <div class="more-card">
+      <div class="more-icon">🎙️</div>
+      <h4>Mango Languages</h4>
+      <p>Learn a new language at your own pace, online.</p>
+      <a href="#" class="more-link">Access Now →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!-- HELP STRIP                            -->
+<!-- ══════════════════════════════════════ -->
+<div class="help-strip">
+  <div class="help-strip-text">
+    <h2>Not sure where to start?</h2>
+    <p>A librarian can help you find exactly what you need — in person, by phone, or online.</p>
+  </div>
+  <button class="btn-ask">Ask a Librarian</button>
+</div>
+
+<!-- ══════════════════════════════════════ -->
+<!-- FOOTER                               -->
+<!-- ══════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <div class="footer-brand-name">Troy Public Library</div>
+      <div class="footer-contact">
+        100 Second Street<br>
+        Troy, NY 12180<br>
+        (518) 274-7071<br>
+        hello@troylibrary.org
+      </div>
+      <div class="footer-copy">
+        © 2025 Troy Public Library<br>
+        Privacy Policy · Accessibility Statement
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-col-title">Explore</div>
+      <ul class="footer-links">
+        <li>Search Catalog</li>
+        <li>New Books</li>
+        <li>TPL Picks</li>
+        <li>Digital Collections</li>
+        <li>Programs &amp; Events</li>
+        <li>Book Groups</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li>Get a Library Card</li>
+        <li>My Account / Login</li>
+        <li>Museum Passes</li>
+        <li>Printing &amp; Copying</li>
+        <li>Interlibrary Loan</li>
+        <li>Accessibility Services</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-col-title">About</div>
+      <ul class="footer-links">
+        <li>About the Library</li>
+        <li>Hours &amp; Locations</li>
+        <li>News &amp; Updates</li>
+        <li>Contact Us</li>
+        <li>Donate</li>
+        <li>Employment</li>
+        <li>Policies</li>
+      </ul>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get a Library Card — Troy Public Library</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --carrara:    #F1EFE9;
+    --periwinkle: #B0B0CB;
+    --lavender:   #C4C8E8;
+    --amber:      #E2A63D;
+    --sage:       #7DA660;
+    --iron:       #2A2535;
+    --walnut:     #3C2A22;
+    --white:      #ffffff;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--carrara);
+    color: var(--iron);
+    min-width: 1440px;
+  }
+
+  /* ── UTILITY RIBBON ── */
+  .ribbon {
+    background: var(--iron);
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0 120px;
+    overflow: hidden;
+  }
+  .ribbon-info {
+    font-size: 11px;
+    color: rgba(241,239,233,0.65);
+    white-space: nowrap;
+    margin-right: 24px;
+  }
+  .ribbon-btns { margin-left: auto; display: flex; gap: 10px; }
+  .ribbon-btn {
+    height: 26px; padding: 0 16px; border-radius: 6px;
+    font-size: 13px; font-weight: 600; border: none; cursor: pointer;
+    font-family: 'Inter', sans-serif; white-space: nowrap;
+  }
+  .ribbon-btn.ghost { background: rgba(255,255,255,0.10); color: #fff; }
+  .ribbon-btn.amber { background: var(--amber); color: var(--iron); }
+
+  /* ── HEADER ── */
+  .header {
+    background: var(--carrara);
+    height: 88px;
+    display: flex;
+    align-items: center;
+    padding: 0 120px;
+    border-bottom: 1px solid rgba(176,176,203,0.30);
+    overflow: hidden;
+  }
+  .logo-wrap {
+    width: 130px;
+    height: 60px;
+    flex-shrink: 0;
+  }
+  .logo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .logo-wrap span { font-size: 12px; color: var(--periwinkle); }
+  .header-name-group { margin-left: 18px; }
+  .header-name { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--iron); }
+  .header-tagline { font-size: 12px; color: rgba(42,37,53,0.5); margin-top: 4px; }
+  .search-bar {
+    margin-left: auto; width: 580px; height: 44px;
+    background: #fff; border: 1.5px solid rgba(176,176,203,0.50);
+    border-radius: 8px; display: flex; align-items: center; overflow: hidden; flex-shrink: 0;
+  }
+  .search-scope {
+    background: var(--lavender); height: 30px; width: 80px;
+    border-radius: 5px; margin: 0 7px; display: flex; align-items: center;
+    padding: 0 10px; font-size: 11px; font-weight: 600; color: var(--iron);
+    white-space: nowrap; flex-shrink: 0;
+  }
+  .search-sep { width: 1px; height: 24px; background: rgba(176,176,203,0.30); flex-shrink: 0; margin: 0 10px; }
+  .search-input {
+    flex: 1; font-size: 13px; color: rgba(42,37,53,0.35);
+    background: transparent; border: none; outline: none; font-family: 'Inter', sans-serif;
+  }
+  .search-btn {
+    background: var(--iron); color: #fff; height: 44px; width: 82px;
+    border: none; font-size: 13px; font-weight: 600; cursor: pointer;
+    flex-shrink: 0; font-family: 'Inter', sans-serif;
+  }
+  .header-social { font-size: 12px; font-weight: 600; color: var(--iron); margin-left: 24px; white-space: nowrap; flex-shrink: 0; }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--iron); height: 54px;
+    display: flex; align-items: center; padding: 0 120px;
+    position: relative;
+  }
+  .nav-item {
+    height: 54px; display: flex; align-items: center;
+    padding: 0 16px; font-size: 13px; color: rgba(241,239,233,0.70);
+    cursor: pointer; white-space: nowrap; position: relative;
+    text-decoration: none;
+  }
+  .nav-item.active { background: rgba(176,176,203,0.25); color: #fff; font-weight: 600; }
+  .nav-item.dropdown:hover .dropdown-menu { display: block; }
+  .dropdown-menu {
+    display: none; position: absolute; top: 54px; left: 0;
+    background: var(--iron); min-width: 220px;
+    border-top: 2px solid var(--amber); border-radius: 0 0 8px 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25); z-index: 100; padding: 8px 0;
+  }
+  .dropdown-menu a {
+    display: block; padding: 10px 20px; font-size: 13px;
+    color: rgba(241,239,233,0.75); text-decoration: none; white-space: nowrap;
+  }
+  .dropdown-menu a:hover { background: rgba(176,176,203,0.15); color: #fff; }
+
+  /* ── PAGE BANNER ── */
+  .page-banner {
+    background: var(--periwinkle);
+    height: 160px;
+    padding: 40px 120px;
+    overflow: hidden;
+  }
+  .page-banner h1 {
+    font-family: 'Playfair Display', serif; font-size: 40px;
+    font-weight: 700; color: var(--iron); margin-bottom: 10px;
+  }
+  .page-banner p { font-size: 15px; color: rgba(42,37,53,0.65); }
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb {
+    background: var(--carrara); height: 40px;
+    display: flex; align-items: center;
+    padding: 0 120px;
+    font-size: 13px; color: rgba(42,37,53,0.40);
+    border-bottom: 1px solid rgba(176,176,203,0.20);
+  }
+  .breadcrumb a { color: rgba(42,37,53,0.40); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--amber); }
+
+  /* ── MAIN LAYOUT ── */
+  .main-layout {
+    padding: 24px 120px 64px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .left-col { flex: 0 0 860px; display: flex; flex-direction: column; gap: 20px; }
+  .right-col { flex: 0 0 300px; display: flex; flex-direction: column; gap: 20px; }
+
+  /* ── APPLY ONLINE CTA ── */
+  .apply-cta {
+    background: var(--amber);
+    border-radius: 14px;
+    padding: 20px 28px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .apply-cta-text { flex: 1; }
+  .apply-cta h2 {
+    font-family: 'Playfair Display', serif; font-size: 18px;
+    font-weight: 700; color: var(--iron); margin-bottom: 10px;
+  }
+  .apply-cta p { font-size: 14px; color: rgba(42,37,53,0.70); }
+  .apply-now-btn {
+    background: var(--iron); color: #fff;
+    height: 44px; padding: 0 18px; border-radius: 8px;
+    font-size: 13px; font-weight: 600; border: none; cursor: pointer;
+    font-family: 'Inter', sans-serif; white-space: nowrap; flex-shrink: 0;
+    margin-left: 32px;
+  }
+
+  /* ── CARD PANELS ── */
+  .panel {
+    background: #fff;
+    border: 1px solid rgba(176,176,203,0.20);
+    border-radius: 14px;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+    padding: 32px;
+    overflow: hidden;
+  }
+  .panel h2 {
+    font-family: 'Playfair Display', serif; font-size: 24px;
+    font-weight: 700; color: var(--iron); margin-bottom: 20px;
+  }
+  .panel-divider {
+    height: 1px; background: rgba(176,176,203,0.20);
+    margin-bottom: 20px;
+  }
+  .panel-divider-light {
+    height: 1px; background: rgba(176,176,203,0.12);
+    margin: 18px 0;
+  }
+
+  /* ── ID ROWS ── */
+  .intro-text {
+    font-size: 14px; color: rgba(42,37,53,0.75); line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .valid-id-label {
+    font-size: 13px; font-weight: 600; color: var(--iron);
+    margin-bottom: 14px;
+  }
+  .id-row {
+    background: rgba(196,200,232,0.25);
+    border-radius: 8px;
+    padding: 16px 16px 16px 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 10px;
+  }
+  .id-row .id-icon { font-size: 22px; flex-shrink: 0; width: 28px; text-align: center; }
+  .id-row .id-text { font-size: 13px; color: rgba(42,37,53,0.75); line-height: 1.5; }
+
+  .no-id-label {
+    font-size: 13px; font-weight: 600; color: var(--iron);
+    margin-top: 20px; margin-bottom: 8px;
+  }
+  .no-id-text {
+    font-size: 13px; color: rgba(42,37,53,0.65); line-height: 1.65;
+  }
+
+  /* ── FOR YOUR INFORMATION ROWS ── */
+  .info-row {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 16px 0;
+  }
+  .info-row:first-child { padding-top: 0; }
+  .info-icon { font-size: 20px; flex-shrink: 0; width: 28px; margin-top: 1px; }
+  .info-title { font-size: 13px; font-weight: 600; color: var(--iron); margin-bottom: 6px; }
+  .info-body { font-size: 13px; color: rgba(42,37,53,0.65); line-height: 1.6; }
+
+  /* ── UHLS STRIP ── */
+  .uhls-strip {
+    background: rgba(125,166,96,0.12);
+    border-radius: 14px;
+    padding: 24px 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .uhls-icon { font-size: 26px; flex-shrink: 0; }
+  .uhls-title { font-size: 14px; font-weight: 600; color: var(--iron); margin-bottom: 6px; }
+  .uhls-body { font-size: 13px; color: rgba(42,37,53,0.65); line-height: 1.55; }
+
+  /* ── RIGHT SIDEBAR CARDS ── */
+  .sidebar-card {
+    background: var(--iron); border-radius: 14px;
+    padding: 24px; overflow: hidden;
+  }
+  .sidebar-card.light {
+    background: #fff;
+    border: 1px solid rgba(176,176,203,0.20);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  }
+  .sidebar-card-title {
+    font-size: 14px; font-weight: 600; margin-bottom: 14px;
+  }
+  .sidebar-card-title.amber { color: var(--amber); }
+  .sidebar-card-title.dark { color: var(--iron); }
+  .sidebar-divider {
+    height: 1px; background: rgba(255,255,255,0.15);
+    margin-bottom: 16px;
+  }
+  .sidebar-divider.light-line {
+    background: rgba(176,176,203,0.20);
+  }
+
+  /* summary dots */
+  .summary-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+  .summary-item {
+    display: flex; align-items: center; gap: 14px;
+    padding: 10px 0;
+  }
+  .summary-dot {
+    width: 20px; height: 20px; border-radius: 50%;
+    background: var(--amber); display: flex; align-items: center;
+    justify-content: center; flex-shrink: 0;
+    font-size: 11px; font-weight: 700; color: var(--iron);
+  }
+  .summary-text { font-size: 13px; color: rgba(255,255,255,0.85); }
+
+  /* hours card */
+  .hours-row {
+    display: flex; justify-content: space-between;
+    align-items: center; padding: 10px 0;
+  }
+  .hours-day { font-size: 12px; color: rgba(42,37,53,0.5); }
+  .hours-time { font-size: 14px; font-weight: 700; color: var(--iron); }
+  .hours-address {
+    font-size: 12px; color: rgba(42,37,53,0.45);
+    padding-top: 10px; margin-top: 4px;
+    border-top: 1px solid rgba(176,176,203,0.12);
+  }
+
+  /* contact card */
+  .contact-line { font-size: 13px; color: rgba(42,37,53,0.65); margin-bottom: 10px; }
+  .ask-btn {
+    display: block; width: 100%; height: 36px;
+    background: rgba(196,200,232,0.35); border-radius: 8px;
+    border: none; cursor: pointer; font-size: 13px; font-weight: 600;
+    color: var(--iron); font-family: 'Inter', sans-serif;
+    margin-top: 16px; text-align: center; line-height: 36px;
+    text-decoration: none;
+  }
+  .ask-btn:hover { background: rgba(196,200,232,0.55); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--walnut);
+    border-top: 1px solid rgba(176,176,203,0.20);
+    padding: 40px 120px 48px;
+  }
+  .footer-top {
+    margin-bottom: 24px;
+  }
+  .footer-brand-name {
+    font-family: 'Playfair Display', serif; font-size: 17px;
+    font-weight: 700; color: var(--carrara); margin-bottom: 12px;
+  }
+  .footer-contact-line {
+    font-size: 12px; color: rgba(241,239,233,0.45);
+  }
+  .footer-divider {
+    height: 1px; background: rgba(176,176,203,0.15);
+    margin-bottom: 24px;
+  }
+  .footer-cols { display: flex; gap: 0; }
+  .footer-col { flex: 1; }
+  .footer-col-title { font-size: 13px; font-weight: 600; color: var(--amber); margin-bottom: 14px; }
+  .footer-links { list-style: none; }
+  .footer-links li {
+    font-size: 12px; color: rgba(241,239,233,0.45);
+    line-height: 2.1; cursor: pointer;
+  }
+  .footer-links li:hover { color: var(--carrara); }
+  .footer-copy {
+    font-size: 11px; color: rgba(241,239,233,0.28);
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<!-- UTILITY RIBBON -->
+<div class="ribbon">
+  <span class="ribbon-info">🕐&nbsp; Mon–Sat 9am–6pm · Sun Closed</span>
+  <span class="ribbon-info">📍&nbsp; 100 Second Street, Troy NY</span>
+  <span class="ribbon-info">📞&nbsp; (518) 274-7071</span>
+  <div class="ribbon-btns">
+    <button class="ribbon-btn amber">Get a Library Card</button>
+    <button class="ribbon-btn ghost">My Account / Login</button>
+    <button class="ribbon-btn ghost">Ask a Librarian</button>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo-wrap">
+    <img src="../tpl_logo.jpg" alt="Troy Public Library Logo">
+</div>
+  <div class="header-name-group">
+    <div class="header-name">Troy Public Library</div>
+    <div class="header-tagline">A welcoming place to read, learn, and explore.</div>
+  </div>
+  <div class="search-bar">
+    <div class="search-scope">Catalog ▾</div>
+    <div class="search-sep"></div>
+    <input class="search-input" type="text" placeholder="Search books, events, services…">
+    <button class="search-btn">Search</button>
+  </div>
+  <div class="header-social">📷 Instagram &nbsp;·&nbsp; ❤️ Donate to TPL</div>
+</header>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-item" href="index.html">Home</a>
+  <div class="nav-item dropdown">Catalog &amp; Collections ▾
+    <div class="dropdown-menu">
+      <a href="catalog.html">Search Catalog ↗</a>
+      <a href="#">New Books</a>
+      <a href="#">TPL Picks</a>
+      <a href="#">Staff Recommendations</a>
+      <a href="#">Digital Collections</a>
+    </div>
+  </div>
+  <div class="nav-item dropdown">Programs &amp; Events ▾
+    <div class="dropdown-menu">
+      <a href="#">All Programs</a>
+      <a href="#">Kids</a>
+      <a href="#">Teens</a>
+      <a href="#">Adults</a>
+      <a href="#">Book Groups</a>
+    </div>
+  </div>
+  <div class="nav-item active dropdown">Services ▾
+    <div class="dropdown-menu">
+      <a href="#">Get a Library Card</a>
+      <a href="#">Museum Passes</a>
+      <a href="#">Printing &amp; Copying</a>
+      <a href="#">Interlibrary Loan</a>
+      <a href="#">Accessibility Services</a>
+    </div>
+  </div>
+  <div class="nav-item dropdown">About ▾
+    <div class="dropdown-menu">
+      <a href="#">About the Library</a>
+      <a href="#">Hours &amp; Locations</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Employment</a>
+    </div>
+  </div>
+  <div class="nav-item">News &amp; Updates</div>
+  <div class="nav-item">Support TPL</div>
+</nav>
+
+<!-- PAGE BANNER -->
+<div class="page-banner">
+  <h1>Get a Library Card</h1>
+  <p>Free for all New York State residents. Takes just a few minutes.</p>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="index.html">Home</a>&nbsp; ›&nbsp;
+  <a href="#">Services</a>&nbsp; ›&nbsp;
+  Get a Library Card
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="main-layout">
+
+  <!-- LEFT COLUMN -->
+  <div class="left-col">
+
+    <!-- APPLY ONLINE CTA -->
+    <div class="apply-cta">
+      <div class="apply-cta-text">
+        <h2>✨&nbsp; Apply for a library card online</h2>
+        <p>Fill out a quick form and pick up your card at the library.</p>
+      </div>
+      <button class="apply-now-btn">Apply Now →</button>
+    </div>
+
+    <!-- GETTING A CARD -->
+    <div class="panel">
+      <h2>Getting a Library Card</h2>
+      <div class="panel-divider"></div>
+
+      <p class="intro-text">Cards will be issued in person to any resident of New York State who can provide two forms of identification, one of which includes your current address.</p>
+
+      <div class="valid-id-label">Valid forms of identification include:</div>
+
+      <div class="id-row">
+        <span class="id-icon">🪪</span>
+        <span class="id-text">Driver's license or state-issued non-driver's ID with your current address</span>
+      </div>
+      <div class="id-row">
+        <span class="id-icon">🏷️</span>
+        <span class="id-text">ID card or badge with your name typed (NOT written) on it</span>
+      </div>
+      <div class="id-row">
+        <span class="id-icon">📬</span>
+        <span class="id-text">Mail with your name and current address, postmarked within the past 30 days</span>
+      </div>
+
+      <div class="panel-divider" style="margin-top:22px;"></div>
+
+      <div class="no-id-label">Don't have these forms of ID?</div>
+      <p class="no-id-text">Check at the Check Out desk to see what else you can use. If necessary, a postcard can be sent to your address for verification.</p>
+    </div>
+
+    <!-- FOR YOUR INFORMATION -->
+    <div class="panel">
+      <h2>For Your Information</h2>
+      <div class="panel-divider"></div>
+
+      <div class="info-row">
+        <span class="info-icon">🔄</span>
+        <div class="info-content">
+          <div class="info-title">One card across 29 libraries</div>
+          <div class="info-body">You may not hold more than one valid library card from any of the 29 libraries in the Upper Hudson Library System. All cards are interchangeable between member libraries.</div>
+        </div>
+      </div>
+      <div class="panel-divider-light"></div>
+
+      <div class="info-row">
+        <span class="info-icon">💳</span>
+        <div class="info-content">
+          <div class="info-title">Replacement cards cost $1.00</div>
+          <div class="info-body">If necessary you can replace your card for $1.00, but you must show a picture ID to do so.</div>
+        </div>
+      </div>
+      <div class="panel-divider-light"></div>
+
+      <div class="info-row">
+        <span class="info-icon">🔒</span>
+        <div class="info-content">
+          <div class="info-title">Lost or stolen card</div>
+          <div class="info-body">Let us know immediately. You are responsible for all materials charged on your card by anyone.</div>
+        </div>
+      </div>
+      <div class="panel-divider-light"></div>
+
+      <div class="info-row">
+        <span class="info-icon">📝</span>
+        <div class="info-content">
+          <div class="info-title">Keep your info up to date</div>
+          <div class="info-body">Inform us of any name, telephone, or address change as soon as it occurs.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UHLS STRIP -->
+    <div class="uhls-strip">
+      <span class="uhls-icon">🗺️</span>
+      <div>
+        <div class="uhls-title">Troy Public Library is part of the Upper Hudson Library System.</div>
+        <div class="uhls-body">Your Troy Public Library card is accepted at most public libraries in Rensselaer and Albany counties.</div>
+      </div>
+    </div>
+
+  </div><!-- /left-col -->
+
+  <!-- RIGHT COLUMN -->
+  <div class="right-col">
+
+    <!-- QUICK SUMMARY -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-title amber">Quick Summary</div>
+      <div class="sidebar-divider"></div>
+      <ul class="summary-list">
+        <li class="summary-item">
+          <span class="summary-dot">✓</span>
+          <span class="summary-text">Free for NY State residents</span>
+        </li>
+        <li class="summary-item">
+          <span class="summary-dot">✓</span>
+          <span class="summary-text">Pick up in person at the library</span>
+        </li>
+        <li class="summary-item">
+          <span class="summary-dot">✓</span>
+          <span class="summary-text">2 forms of ID required</span>
+        </li>
+        <li class="summary-item">
+          <span class="summary-dot">✓</span>
+          <span class="summary-text">Works at 29 UHLS libraries</span>
+        </li>
+        <li class="summary-item">
+          <span class="summary-dot">✓</span>
+          <span class="summary-text">Apply online or in person</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- LIBRARY HOURS -->
+    <div class="sidebar-card light">
+      <div class="sidebar-card-title dark">Library Hours</div>
+      <div class="sidebar-divider light-line"></div>
+      <div class="hours-row">
+        <span class="hours-day">Mon–Thu</span>
+        <span class="hours-time">9am – 7pm</span>
+      </div>
+      <div class="hours-row">
+        <span class="hours-day">Fri–Sat</span>
+        <span class="hours-time">9am – 5pm</span>
+      </div>
+      <div class="hours-row">
+        <span class="hours-day">Sunday</span>
+        <span class="hours-time">Closed</span>
+      </div>
+      <div class="hours-address">📍&nbsp; 100 Second Street, Troy NY</div>
+    </div>
+
+    <!-- NEED HELP / CONTACT -->
+    <div class="sidebar-card light">
+      <div class="sidebar-card-title dark">Need Help?</div>
+      <div class="sidebar-divider light-line"></div>
+      <div class="contact-line">📞&nbsp; (518) 274-7071</div>
+      <div class="contact-line">✉️&nbsp; hello@troylibrary.org</div>
+      <a href="#" class="ask-btn">Ask a Librarian →</a>
+    </div>
+
+  </div><!-- /right-col -->
+
+</div><!-- /main-layout -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand-name">Troy Public Library</div>
+    <div class="footer-contact-line">100 Second Street, Troy, NY 12180 &nbsp;·&nbsp; (518) 274-7071 &nbsp;·&nbsp; hello@troylibrary.org</div>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-cols">
+    <div class="footer-col">
+      <div class="footer-col-title">Explore</div>
+      <ul class="footer-links">
+        <li>Search Catalog</li>
+        <li>New Books</li>
+        <li>TPL Picks</li>
+        <li>Digital Collections</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li>Get a Library Card</li>
+        <li>Museum Passes</li>
+        <li>Printing &amp; Copying</li>
+        <li>ILL</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">About</div>
+      <ul class="footer-links">
+        <li>About the Library</li>
+        <li>Hours &amp; Locations</li>
+        <li>Contact Us</li>
+        <li>Donate</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-copy">© 2025 Troy Public Library &nbsp;·&nbsp; Privacy Policy &nbsp;·&nbsp; Accessibility Statement</div>
+</footer>
+
+</body>
+</html>

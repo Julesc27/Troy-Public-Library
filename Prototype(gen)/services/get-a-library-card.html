@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Get a Library Card — Troy Public Library</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="utility">
+    <div class="container utility-layout">
+      <div class="utility-actions">
+        <a class="btn utility-btn" href="../card.html">
+          <span class="utility-icon" aria-hidden="true">🪪</span>
+          <span>Get a Library Card</span>
+        </a>
+        <a class="btn utility-btn" href="../account.html">
+          <span class="utility-icon" aria-hidden="true">👤</span>
+          <span>My Account / Login</span>
+        </a>
+        <a class="btn utility-btn" href="../ask.html">
+          <span class="utility-icon" aria-hidden="true">💬</span>
+          <span>Ask a Librarian</span>
+        </a>
+      </div>
+
+      <div class="utility-info-vertical">
+        <span><strong>Hours:</strong> 9–6</span>
+        <span>100 Second Street</span>
+        <span>Troy, NY 12180</span>
+        <span>(518) 274-7071</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <div class="brand-row">
+        <div class="brand">
+          <div class="logo">
+            <img src="../assets/images/tpl_logo - Copy.jpg" alt="Troy Public Library logo">
+          </div>
+          <div class="brand-title">
+            <div class="name">Troy Public Library</div>
+          </div>
+        </div>
+
+        <a class="instagram-link" href="https://www.instagram.com/thetroylibrary/" target="_blank" rel="noopener noreferrer">
+          Follow us on Instagram →
+        </a>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <div class="nav-inner">
+          <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="navLinks">Menu</button>
+          <div class="nav-links" id="navLinks" data-nav-links>
+            <a href="../index.html">Home</a>
+            <a href="../catalog.html">Catalog &amp; Collections</a>
+            <a href="../events.html">Programs &amp; Events</a>
+            <a href="services.html" aria-current="page">Services</a>
+            <a href="../news.html">News &amp; Updates</a>
+            <a href="../about.html">About</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="section">
+        <form class="searchbar" data-search-form>
+          <label for="scope">Search scope</label>
+          <select id="scope" data-search-scope aria-label="Search scope">
+            <option value="site">Site</option>
+            <option value="catalog">Catalog</option>
+          </select>
+
+          <label for="q">Search</label>
+          <input id="q" data-search-q type="search" placeholder="Search services, policies, and more…" aria-label="Search query" />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Services</p>
+          <h1>Get a Library Card</h1>
+          <p>Sign up for a Troy Public Library card to borrow materials, use online resources, and access library services.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid cols-2">
+        <article class="card">
+          <h2>Who Can Get a Card?</h2>
+          <p>Library cards are available to local residents and eligible users who want access to Troy Public Library collections and services.</p>
+          <p>Please bring a photo ID and proof of your current address when applying in person.</p>
+        </article>
+
+        <article class="card">
+          <h2>What You’ll Need</h2>
+          <p>Bring identification such as:</p>
+          <ul>
+            <li>Photo ID</li>
+            <li>Proof of current address</li>
+            <li>Parent or guardian information for children, if needed</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid cols-3">
+        <article class="card">
+          <h3>Borrow Books &amp; Media</h3>
+          <p>Use your card to check out books, DVDs, and other library materials.</p>
+        </article>
+
+        <article class="card">
+          <h3>Access Digital Resources</h3>
+          <p>Use your card for online collections, databases, and downloadable content.</p>
+        </article>
+
+        <article class="card">
+          <h3>Manage Your Account</h3>
+          <p>Renew items, place holds, and check due dates through your library account.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid cols-2">
+        <article class="card">
+          <h2>How to Apply</h2>
+          <p>You can visit the library to apply for a card and speak with staff if you have questions about eligibility or required documents.</p>
+          <a class="btn primary" href="../contact.html">Contact the Library</a>
+        </article>
+
+        <article class="card">
+          <h2>Need Help?</h2>
+          <p>If you are unsure what documents to bring or whether you already have an account, library staff can help you get started.</p>
+          <a class="link" href="services.html">Back to Services</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="small">© <span id="year"></span> Troy Public Library (Prototype) • <a href="../privacy.html">Privacy</a></p>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>

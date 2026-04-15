@@ -10,186 +10,197 @@
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <div class="utility">
-    <div class="container">
-      <div class="row">
-        <div class="left">
-          <span class="pill">Hours: <strong>9–5</strong> <span>(example)</span></span>
-          <span class="pill">Need help? <strong>Ask a Librarian</strong></span>
+<div class="utility">
+  <div class="container utility-layout">
+    <div class="utility-actions">
+
+      <a class="btn utility-btn" href="card.html">
+        <span class="utility-icon" aria-hidden="true">🪪</span>
+        <span>Get a Library Card</span>
+      </a>
+
+      <a class="btn utility-btn" href="account.html">
+      <span class="utility-icon" aria-hidden="true">👤</span>
+      <span>My Account / Login</span>
+      </a>
+
+      <a class="btn utility-btn" href="ask.html">
+      <span class="utility-icon" aria-hidden="true">💬</span>
+      <span>Ask a Librarian</span>
+      </a>
+      
+    </div>
+
+    <div class="utility-info-vertical">
+      <span><strong>Hours:</strong> 9–6</span>
+      <span>100 Second Street</span>
+      <span>Troy, NY 12180</span>
+      <span>(518) 274-7071</span>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container">
+    <div class="brand-row">
+      <div class="brand">
+        <div class="logo">
+          <img src="assets/images/tpl_logo - Copy.jpg" alt="Troy Public Library logo">
+      </div>
+
+      <div class="brand-title">
+        <div class="name">Troy Public Library</div>
+      </div>
+    </div>
+
+      <a 
+        class="instagram-link" 
+        href="https://www.instagram.com/thetroylibrary/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        Follow us on Instagram →
+      </a>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <div class="nav-inner">
+        <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="navLinks">Menu</button>
+
+        <div class="nav-links" id="navLinks" data-nav-links>
+          <a href="index.html">Home</a>
+
+          <div class="dropdown" data-dropdown>
+            <button class="nav-btn" data-dropdown-btn aria-expanded="false">Catalog &amp; Collections</button>
+            <div class="dropdown-panel" data-dropdown-panel>
+              <a href="catalog.html">Search the Catalog</a>
+              <a href="digital.html">Digital Collections</a>
+              <a href="new-books.html">New Books</a>
+              <a href="tpl-picks.html">TPL Picks</a>
+              <a href="staff-recommendations.html">Staff Recommendations</a>
+            </div>
+          </div>
+
+          <div class="dropdown" data-dropdown>
+            <button class="nav-btn" data-dropdown-btn aria-current="page">Programs &amp; Events</button>
+            <div class="dropdown-panel" data-dropdown-panel>
+              <a href="events.html">Event Calendar</a>
+            </div>
+          </div>
+
+          <div class="dropdown" data-dropdown>
+            <button class="nav-btn" data-dropdown-btn aria-expanded="false">Services</button>
+            <div class="dropdown-panel" data-dropdown-panel>
+              <a href="services/services.html">View all Services</a>
+              <a href="services/get-a-library-card.html">Get a Library Card</a>
+              <a href="services/remote-printing.html">Printing &amp; Copying</a>
+              <a href="services/interlibrary-loan.html">Interlibrary Loan</a>
+              <a href="services/accessibility.html">Accessibility Services</a>
+              <a href="services/research-databases.html">Research Databases</a>
+              <a href="services/suggest-an-item.html">Suggest an Item</a>
+            </div>
+          </div>
+
+          <a href="news.html">News &amp; Updates</a>
+
+          <div class="dropdown" data-dropdown>
+            <button class="nav-btn" data-dropdown-btn aria-expanded="false">About</button>
+            <div class="dropdown-panel" data-dropdown-panel>
+              <a href="about.html">About the Library</a>
+              <a href="locations.html">Locations &amp; Hours</a>
+              <a href="policies.html">Policies</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
         </div>
-        <div class="right">
-          <a class="btn" href="contact.html">Contact</a>
-          <a class="btn primary" href="support.html">Support TPL</a>
-        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+  <main id="main" class="container">
+<section class="section">
+  <h2>Upcoming Programs & Events</h2>
+ 
+
+  <div class="calendar-embed" aria-label="Library events calendar">
+   
+
+    <div class="card" style="margin-top:16px;">
+      <div class="actions" style="margin-top:16px;">
+        <a class="btn primary" href="https://troyny.librarycalendar.com/events/month" target="_blank" rel="noopener">
+          Open Full Calendar
+        </a>
+        <a class="btn" href="https://troyny.librarycalendar.com/events/upcoming" target="_blank" rel="noopener">
+          View Upcoming Events
+        </a>
       </div>
     </div>
   </div>
+</section>
+    </section>
 
-  <header class="header">
-    <div class="container">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div class="brand-title">
-          <div class="name">Troy Public Library</div>
-          <div class="tag">Programs & Events</div>
-        </div>
-      </div>
-
-      <nav class="nav" aria-label="Primary">
-        <div class="nav-inner">
-          <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="navLinks">Menu</button>
-          <div class="nav-links" id="navLinks" data-nav-links>
-            <a href="index.html">Home</a>
-            <a href="catalog.html">Catalog</a>
-            <a href="events.html" aria-current="page">Programs & Events</a>
-            <a href="services.html">Services</a>
-            <a href="using-the-library.html">Using the Library</a>
-            <a href="news.html">News</a>
-            <a href="contact.html">Contact</a>
-            <a class="btn" href="card.html">Get a Card</a>
-            <a class="btn" href="account.html">Login</a>
-          </div>
-        </div>
-      </nav>
-
-      <div class="section">
-        <form class="searchbar" data-search-form>
-          <label for="q">Search</label>
-          <input id="q" data-search-q type="search" placeholder="Search the catalog or site…" aria-label="Search query" />
-          <select data-search-scope aria-label="Search scope">
-            <option value="catalog">Catalog</option>
-            <option value="site">Site</option>
-          </select>
-          <button type="submit">Search</button>
-        </form>
-      </div>
+    <section class="section">
+  <h2>Upcoming Programs & Events</h2>
+  <div class="grid cols-3">
+    <div class="card">
+      <h3>Family Storytime</h3>
+      <p class="small">Saturday • 10:30 AM • Kids • In-person</p>
+      <p>Stories, songs, and movement for young readers and caregivers.</p>
     </div>
-  </header>
 
-  <main id="main" class="container">
-    <section class="section">
-      <h2>Calendar</h2>
-      <p class="lead">Embedded calendar placeholder (swap in Library Market embed code later).</p>
+    <div class="card">
+      <h3>Book Group: Contemporary Fiction</h3>
+      <p class="small">Tuesday • 6:00 PM • Adults • Virtual</p>
+      <p>A welcoming monthly discussion with easy registration and reminders.</p>
+    </div>
 
-      <div class="calendar-embed" aria-label="Embedded events calendar">
-        <div class="top">
-          <strong>Library Market Calendar</strong>
-          <span class="small">Filter tools below + event cards link to details</span>
-        </div>
-        <iframe title="Library Market calendar embed (placeholder)" src="about:blank"></iframe>
-      </div>
-    </section>
+    <div class="card">
+      <h3>Teen Makerspace Night</h3>
+      <p class="small">Thursday • 4:30 PM • Teens • In-person</p>
+      <p>Hands-on creative tech, art, and games in an open drop-in format.</p>
+    </div>
+  </div>
 
-    <section class="section">
-      <h2>Filter Events</h2>
-
-      <div class="filters" data-event-filters aria-label="Event filters">
-        <label class="small" for="age">Age Group</label>
-        <select id="age" data-filter-age>
-          <option value="all">All Ages</option>
-          <option value="kids">Kids</option>
-          <option value="teens">Teens</option>
-          <option value="adults">Adults</option>
-        </select>
-
-        <label class="small" for="type">Format</label>
-        <select id="type" data-filter-type>
-          <option value="all">All Formats</option>
-          <option value="inperson">In-person</option>
-          <option value="virtual">Virtual</option>
-        </select>
-
-        <label class="small" for="q2">Search</label>
-        <input id="q2" data-filter-q type="search" placeholder="Search events…" />
-      </div>
-
-      <div class="grid cols-2" data-event-list>
-        <div class="card event" id="event-storytime" data-event data-age="kids" data-type="inperson">
-          <div class="title">Family Storytime</div>
-          <div class="meta">
-            <span>Sat • 10:30 AM</span>
-            <span class="tag">Kids</span>
-            <span class="tag">In-person</span>
-          </div>
-          <p>Stories, songs, and movement. Great for first-time families.</p>
-          <div class="actions">
-            <a class="btn primary" href="#">Event details</a>
-            <a class="btn" href="#">Register (if needed)</a>
-          </div>
-        </div>
-
-        <div class="card event" id="event-bookgroup" data-event data-age="adults" data-type="virtual">
-          <div class="title">Book Group: Contemporary Fiction</div>
-          <div class="meta">
-            <span>Tue • 6:00 PM</span>
-            <span class="tag">Adults</span>
-            <span class="tag">Virtual</span>
-          </div>
-          <p>Monthly discussion. Easy registration and reminders.</p>
-          <div class="actions">
-            <a class="btn primary" href="#">Event details</a>
-            <a class="btn" href="#">Register</a>
-          </div>
-        </div>
-
-        <div class="card event" data-event data-age="teens" data-type="inperson">
-          <div class="title">Teen Makerspace Night</div>
-          <div class="meta">
-            <span>Thu • 4:30 PM</span>
-            <span class="tag">Teens</span>
-            <span class="tag">In-person</span>
-          </div>
-          <p>Hands-on creative tech, art, and games — drop in.</p>
-          <div class="actions">
-            <a class="btn primary" href="#">Event details</a>
-          </div>
-        </div>
-
-        <div class="card event" data-event data-age="all" data-type="virtual">
-          <div class="title">Job Search Workshop</div>
-          <div class="meta">
-            <span>Wed • 12:00 PM</span>
-            <span class="tag">All Ages</span>
-            <span class="tag">Virtual</span>
-          </div>
-          <p>Resumes, applications, and interview prep with library resources.</p>
-          <div class="actions">
-            <a class="btn primary" href="#">Event details</a>
-            <a class="btn" href="#">Register</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="book-groups">
-      <h2>Book Groups & Series</h2>
-      <p class="lead">No longer buried — discoverable as a top-level section.</p>
-
-      <div class="grid cols-3">
-        <div class="card">
-          <h3>Contemporary Fiction</h3>
-          <p>Monthly • Virtual • Registration available</p>
-          <a class="link" href="#event-bookgroup">View upcoming →</a>
-        </div>
-        <div class="card">
-          <h3>Local History Circle</h3>
-          <p>Monthly • In-person</p>
-          <a class="link" href="#">View series →</a>
-        </div>
-        <div class="card">
-          <h3>Kids Reading Club</h3>
-          <p>Weekly • In-person</p>
-          <a class="link" href="#">View series →</a>
-        </div>
-      </div>
-    </section>
+  <div class="actions" style="margin-top: 20px;">
+    <a class="btn" href="https://troyny.librarycalendar.com/events/upcoming" target="_blank" rel="noopener">
+      Browse Upcoming Events
+    </a>
+  </div>
+</section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p class="small">© <span id="year"></span> Troy Public Library (Prototype) • <a href="privacy.html">Privacy</a></p>
+<footer class="footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h3>Troy Public Library</h3>
+        <p>
+          100 Second Street<br />
+          Troy, NY 12180<br />
+          (518) 274-7071<br />
+          <a href="mailto:hello@troylibrary.org">hello@troylibrary.org</a>
+        </p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="catalog.html">Catalog</a></p>
+        <p><a href="events.html">Programs &amp; Events</a></p>
+        <p><a href="contact.html">Contact</a></p>
+        <p><a href="newsletter.html">Newsletter</a></p>
+      </div>
+
+      <div>
+        <h3>Policies</h3>
+        <p><a href="privacy.html">Privacy</a></p>
+        <p><a href="policies.html">Library Policies</a></p>
+        <p><a href="code-of-conduct.html">Code of Conduct</a></p>
+      </div>
     </div>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  </footer>
+
+    <p class="small">© <span id="year"></span> Troy Public Library (Prototype)</p>
+  </div>
+</footer>
 </body>
 </html>

@@ -1,0 +1,782 @@
+/* ---------- Global ---------- */
+
+body {
+  margin: 0;
+  font-family: "Garamond", "Bookman Old Style", "Times New Roman", serif;
+  font-weight: bold;
+  background-color: white;
+  color: #222;
+}
+
+h1 {
+  text-align: center;
+  margin: 25px 0 15px 0;
+  font-size: 3rem;
+  font-family: "Garamond", "Bookman Old Style", "Times New Roman", serif;
+  background: #1f2a44;
+  color: white;
+  border-radius: 14px;
+  margin-top: 60px;
+  margin-bottom: 50px;
+  margin-left: 80px;
+  margin-right: 80px;
+  border-radius: 25px;
+}
+
+h2, h3, h4{
+  font-weight: bold;
+}
+
+
+/* ---------- Header ---------- */
+
+.headerSection {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #1f2a44;
+  color: white;
+  padding: 6px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leftSide {
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.leftSide p {
+  margin: 0;
+}
+
+.centerSection {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  text-align: center;
+}
+
+.rightSide {
+  text-align: right;
+  font-size: 16px;
+}
+
+pre{
+  font-family: "Garamond", "Bookman Old Style", "Times New Roman", serif;
+  margin: 0;
+}
+
+/* ---------- Slideshow ---------- */
+
+.Banner-slideshow {
+  position: relative;
+  max-width: 950px;
+  margin: 0 auto;
+  margin-top: 10px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #111;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.fadingSlides {
+  display: none;
+  width: 100%;
+}
+
+/* banner images */
+.fadingSlides img {
+  width: 100%;
+  height: 380px;              
+  object-fit: cover;         
+  display: block;
+}
+
+/* Prev/Next buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 14px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.45);
+  user-select: none;
+  transition: 0.2s;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+  left: 12px;
+}
+
+.next {
+  right: 12px;
+}
+
+/* Dots */
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 14px 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.25s;
+}
+
+.dot:hover {
+  background-color: #666;
+}
+
+.active {
+  background-color: #1f2a44;
+}
+
+/* ---------- Banner ----------*/
+
+.Banner {
+  max-width: 950px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+  border-radius: 16px;
+  overflow: hidden;
+
+  height: 350px;            
+  background: #111;
+
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+.Banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          
+  object-position: center;   
+  display: block;            
+}
+
+
+
+/* ---------- Hotbar ---------- */
+
+.Hotbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  padding: 14px 10px;
+  margin-top: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
+  border-radius: 25px;
+
+  background: #1f2a44;
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.hotbar-item {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* links */
+.hotbar-item a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+/* Hover effect */
+.hotbar-item a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.homepageLogo img{
+  height: 60px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown h3 {
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.arrow {
+  font-size: 0.75em;
+  opacity: 0.7;
+}
+
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1f2a44;
+  border-radius: 8px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.dropdownMenu a {
+  display: block;
+  padding: 10px 16px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.dropdownMenu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown:hover .dropdownMenu {
+  display: block;
+}
+
+/* ---------- Library Services Page ---------- */
+
+.services {
+  max-width: 950px;
+  margin: 35px auto;
+  background: white;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.services h3 {
+  margin: 0 0 14px 0;
+  color: #1f2a44;
+  font-size: 1.7rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.services h3 a {
+  display: block;
+  padding: 18px 16px;
+  text-decoration: none;
+  color: #1f2a44;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+
+/* Hover effect */
+.services h3:hover {
+  transform: translateY(-2px);
+  background: #e0e9fc;
+}
+
+
+
+/* ---------- Library Card Page ---------- */
+
+.libraryCard {
+  max-width: 950px;
+  margin: 35px auto;
+  background: white;
+  border-radius: 16px;
+  padding: 28px 30px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+  line-height: 1.6;
+}
+
+.libraryCardInformation {
+  margin: 0;
+}
+
+/* Title */
+.libraryCard h3.libraryCardInformation {
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+  color: #1f2a44;
+}
+
+/* Paragraph */
+.libraryCard p.libraryCardInformation {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Apply Online link */
+.applyOnline {
+  margin: 0;
+  text-align: center;
+}
+
+.applyOnline a {
+  display: inline-block;
+  background: #1f2a44;
+  color: white;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.applyOnline a:hover {
+  background: #2b3a5f;
+  transform: translateY(-1px);
+}
+
+.childLibraryCard {
+  list-style-type: square;
+}
+
+/* ---------- Homepage Styling ---------*/
+
+/* ---------- Quick Links ---------- */
+
+.QuickLinks {
+  max-width: 950px;
+  margin: 35px auto;
+  padding: 25px 30px;
+
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.QuickLinks .QuickLinkHeader {
+  width: 100%;          
+  text-align: center;
+  margin: 0 0 15px 0;
+  font-size: 1.6rem;
+  color: #1f2a44;
+}
+
+.quickLinkButton {
+  display: inline-block;
+  text-decoration: none;
+  background: #1f2a44;
+  color: white;
+
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.quickLinkButton:hover {
+  background-color: #454e63;
+  transform: translateY(-2px);
+}
+
+/* ---------- Books Section ---------- */
+
+.Books {
+  max-width: 1200px;
+  margin: 35px auto 45px auto;
+  background: white;
+  border-radius: 16px;
+  padding: 25px 40px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.Books h3 {
+  margin: 0 0 18px 0;
+  text-align: center;
+  color: #1f2a44;
+  font-size: 1.4rem;
+}
+
+.bookRow {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.book {
+  width: 240px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.book img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.bookDescription {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 14px 16px 16px 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1f2a44;
+  line-height: 1.4;
+}
+
+/* ---------- Catalog Page ---------- */
+
+.catalog {
+  max-width: 950px;
+  margin: 35px auto 45px auto;
+  background: white;
+  border-radius: 16px;
+  padding: 28px 30px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Keeps the catalog button centered */
+.catalog h3 {
+  margin: 0 0 25px 0;
+  text-align: center;
+}
+
+/* Collection cards layout */
+.digitalCollections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* Individual collection card */
+.Collection {
+  background: #f7f7f7;
+  border-radius: 16px;
+  padding: 20px 18px;
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.06);
+  transition: 0.2s;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.Collection:hover {
+  transform: translateY(-2px);
+  background: #eef1f7;
+}
+
+.Collection h3 {
+  margin: 0 0 10px 0;
+  text-align: left;
+  color: #1f2a44;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.explanation {
+  margin: 0;
+  color: #333;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+/* ---------- Contact Us Page ---------- */
+
+.staffEmails,
+.employment,
+.LibraryBoard {
+  max-width: 950px;
+  margin: 35px auto;
+  background: white;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.staffEmails h4 {
+  margin: 0 0 14px 0;
+  color: #1f2a44;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+/* Email list */
+.email-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.email-list li {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Employment section */
+.employmentList {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.employment h4 {
+  margin: 0 0 14px 0;
+  color: #1f2a44;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.employmentList li {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Library Board section */
+.LibraryBoard h3 {
+  margin: 0;
+  text-align: center;
+  color: #1f2a44;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+/* ---- Footer ---- */
+
+.siteFooter {
+  width: 100%;
+  box-sizing: border-box;
+  background: #1f2a44;
+  color: white;
+  padding: 30px 20px;
+  margin-top: 50px;
+}
+
+.footerContent {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footerMap iframe {
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+  border: 0;
+  border-radius: 12px;
+}
+
+.Socials {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.Socials h3 {
+  margin: 0;
+}
+
+.SocialsLinks {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 1px 10px;
+}
+
+.SocialsLinks a {
+  text-decoration: none;
+  color: white;
+}
+
+.footerInfo {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ---------- About Us Page ---------- */
+
+.history,
+.libraryPolicies,
+.mission,
+.generalInfo {
+  max-width: 950px;
+  margin: 35px auto;
+  background: white;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Section titles */
+.history h4,
+.libraryPolicies h4,
+.mission h4,
+.generalInfo h4 {
+  margin: 0 0 14px 0;
+  color: #1f2a44;
+  font-size: 1.7rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* Mission Paragraph */
+.mission p {
+  font-size: 1.25rem;      
+  max-width: 650px;        
+  margin: 0 auto;         
+  line-height: 1.7;
+  color: #333;
+}
+
+/* ---------- Policy Dropdowns ---------- */
+
+.PolicyDropDown {
+  margin-bottom: 12px;
+}
+
+.dropDownButton {
+  width: 100%;
+  background: #f7f7f7;
+  border: none;
+  padding: 16px;
+  text-align: left;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1f2a44;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dropDownButton:hover {
+  background: #e0e9fc;
+}
+
+.dropDownContent {
+  display: none;
+  padding: 14px 16px;
+  background: #ffffff;
+  border-left: 3px solid #1f2a44;
+  margin-top: 6px;
+  border-radius: 0 0 10px 10px;
+  line-height: 1.6;
+}
+
+/* ---------- Mobile Responsive (ALL pages) ---------- */
+
+@media (max-width: 900px) {
+
+  /* Global spacing */
+  body {
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    margin: 18px 0 12px 0;
+  }
+
+  /* Hotbar */
+  .Hotbar {
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 18px;
+  }
+
+  .hotbar-item {
+    font-size: 1rem;
+  }
+
+  /* Banner */
+  .Banner {
+    height: 240px;
+  }
+
+  .Banner-slideshow {
+    max-width: 100%;
+  }
+
+  .fadingSlides img {
+    height: 240px;
+  }
+
+  /* Calendar section */
+  .Calendar {
+    padding: 18px;
+  }
+
+  .Calendar iframe {
+    width: 100%;
+    height: 420px;
+  }
+
+  /* Services page grid */
+  .services {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  /* Catalog page collections */
+  .digitalCollections {
+    grid-template-columns: 1fr;
+  }
+
+  /* Books section */
+  .Books {
+    padding: 20px;
+  }
+
+  .book {
+    width: 170px;
+  }
+
+  .book img {
+    height: 240px;
+  }
+
+  /* Library Card page */
+  .libraryCard {
+    padding: 20px;
+  }
+
+  /* Contact Us page sections */
+  .staffEmails,
+  .employment,
+  .LibraryBoard,
+  .catalog,
+  .googleMap {
+    padding: 20px;
+  }
+
+  /* Map */
+  .googleMap iframe {
+    height: 320px;
+  }
+}

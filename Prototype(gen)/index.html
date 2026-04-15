@@ -7,309 +7,394 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
   <script defer src="assets/js/main.js"></script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <div class="utility" role="banner">
-    <div class="container">
-      <div class="row">
-        <div class="left">
-          <span class="pill" aria-label="Today's hours">
-            Hours: <strong>9–5</strong> <span>(example)</span>
-          </span>
-          <span class="pill">
-            55 2nd St, Troy, NY • <strong>(518) 274-7071</strong>
-          </span>
-        </div>
-        <div class="right" aria-label="Quick actions">
-          <a class="btn primary" href="support.html">Support TPL</a>
-          <a class="icon-btn" href="https://instagram.com" aria-label="Instagram (placeholder)">⌁</a>
-          <a class="icon-btn" href="contact.html" aria-label="Contact">?</a>
+
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="utility">
+  <div class="container utility-layout">
+    <div class="utility-actions">
+
+      <a class="btn utility-btn" href="card.html">
+        <span class="utility-icon" aria-hidden="true">🪪</span>
+        <span>Get a Library Card</span>
+      </a>
+
+      <a class="btn utility-btn" href="account.html">
+      <span class="utility-icon" aria-hidden="true">👤</span>
+      <span>My Account / Login</span>
+      </a>
+
+      <a class="btn utility-btn" href="ask.html">
+      <span class="utility-icon" aria-hidden="true">💬</span>
+      <span>Ask a Librarian</span>
+      </a>
+
+    </div>
+
+    <div class="utility-info-vertical">
+      <span><strong>Hours:</strong> 9–6</span>
+      <span>100 Second Street</span>
+      <span>Troy, NY 12180</span>
+      <span>(518) 274-7071</span>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container">
+    <div class="brand-row">
+      <div class="brand">
+        <div class="logo">
+          <img src="assets/images/tpl_logo - Copy.jpg" alt="Troy Public Library logo">
+      </div>
+
+      <div class="brand-title">
+        <div class="name">Troy Public Library</div>
+        <!--<div class="tag">A welcoming place to read, learn, and explore.</div>-->
+      </div>
+    </div>
+
+      <a 
+        class="instagram-link" 
+        href="https://www.instagram.com/thetroylibrary/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        Follow us on Instagram →
+      </a>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <div class="nav-inner">
+        <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="navLinks">Menu</button>
+
+        <div class="nav-links" id="navLinks" data-nav-links>
+          <a href="index.html" aria-current="page">Home</a>
+
+          <div class="dropdown" data-dropdown>
+            <button class="nav-btn" data-dropdown-btn aria-expanded="false">Catalog &amp; Collections</button>
+            <div class="dropdown-panel" data-dropdown-panel>
+              <a href="catalog.html">Search the Catalog</a>
+              <a href="digital.html">Digital Collections</a>
+              <a href="new-books.html">New Books</a>
+              <a href="tpl-picks.html">TPL Picks</a>
+              <a href="staff-recommendations.html">Staff Recommendations</a>
+            </div>
+          </div>
+
+          <div class="dropdown" data-dropdown>
+            <button class="nav-btn" data-dropdown-btn aria-expanded="false">Programs &amp; Events</button>
+            <div class="dropdown-panel" data-dropdown-panel>
+              <a href="events.html">Event Calendar</a>
+            </div>
+          </div>
+
+          <div class="dropdown" data-dropdown>
+            <button class="nav-btn" data-dropdown-btn aria-expanded="false">Services</button>
+            <div class="dropdown-panel" data-dropdown-panel>
+              <a href="services/services.html">View all Services</a>
+              <a href="services/get-a-library-card.html">Get a Library Card</a>
+              <a href="services/remote-printing.html">Printing &amp; Copying</a>
+              <a href="services/interlibrary-loan.html">Interlibrary Loan</a>
+              <a href="services/accessibility.html">Accessibility Services</a>
+              <a href="services/research-databases.html">Research Databases</a>
+              <a href="services/suggest-an-item.html">Suggest an Item</a>
+            </div>
+          </div>
+
+          <a href="news.html">News &amp; Updates</a>
+
+          <div class="dropdown" data-dropdown>
+            <button class="nav-btn" data-dropdown-btn aria-expanded="false">About</button>
+            <div class="dropdown-panel" data-dropdown-panel>
+              <a href="about.html">About the Library</a>
+              <a href="locations.html">Locations &amp; Hours</a>
+              <a href="policies.html">Policies</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
         </div>
       </div>
+    </nav>
+
+    <div class="section">
+      <form class="searchbar" data-search-form>
+        <label for="scope">Search scope</label>
+        <select id="scope" data-search-scope aria-label="Search scope">
+          <option value="catalog">Catalog</option>
+          <option value="site">Website</option>
+        </select>
+
+        <label for="q">Search</label>
+        <input id="q" data-search-q type="search" placeholder="Search the catalog or this site…" aria-label="Search query" />
+
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container">
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>A welcoming digital front door for Troy.</h1>
+
+        <div class="quick-tasks">
+          <a class="cta" href="catalog.html">Search Catalog</a>
+          <a class="cta" href="events.html">Upcoming Events</a>
+          <a class="cta" href="services.html">Library Services</a>
+        </div>
+
+        <div class="featured-strip">
+          <strong>Featured today:</strong>
+          <span>Storytimes, staff picks, and current library news all in one place.</span>
+        </div>
+
+        <div class="newsletter-signup">
+          <label for="newsletter-email">Get library updates by email</label>
+          <div class="newsletter-row">
+            <input id="newsletter-email" type="email" placeholder="Email address" />
+            <button type="button" class="btn primary">Subscribe</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel" data-carousel>
+        <div class="frame hero-photo">
+         <img id="slideshow" src="assets/images/slideshowpic1.jpg" alt="Troy Public Library building">
+        </div>
+
+        <div class="controls">
+          <button type="button" data-carousel-prev>Previous</button>
+          <button type="button" data-carousel-next>Next</button>
+         </div>
+      </div>
+  </section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <h2>Collections Spotlight</h2>
     </div>
   </div>
 
-  <header class="header">
-    <div class="container">
-      <div class="brand" aria-label="Site identity">
-        <div class="logo" aria-hidden="true"></div>
-        <div class="brand-title">
-          <div class="name">Troy Public Library</div>
-          <div class="tag">A welcoming place to learn, connect, and explore.</div>
-        </div>
+  <div class="grid cols-3 collections-grid">
+
+    <!-- New Books -->
+    <article class="card collection-card">
+      <div class="collection-content">
+        <h3>New Books</h3>
+        <p>Fresh arrivals across fiction, nonfiction, and children’s titles.</p>
+        <a class="link" href="catalog.html">Browse New Books</a>
       </div>
+    </article>
 
-      <nav class="nav" aria-label="Primary">
-        <div class="nav-inner">
-          <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="navLinks">
-            Menu
-          </button>
+    <!-- Staff List -->
+    <article class="card collection-card">
+      <div class="collection-content">
+        <h3>Curated Staff List</h3>
+        <p>A themed recommendation list chosen by library staff.</p>
+        <a class="link" href="catalog.html">Explore This List</a>
+      </div>
+    </article>
 
-          <div class="nav-links" id="navLinks" data-nav-links>
-            <a href="index.html" aria-current="page">Home</a>
-
-            <div class="dropdown" data-dropdown>
-              <button class="nav-btn" data-dropdown-btn aria-expanded="false" aria-haspopup="true">
-                Catalog & Collections ▾
-              </button>
-              <div class="dropdown-panel" data-dropdown-panel role="menu">
-                <a href="catalog.html">Library Catalog (Koha)</a>
-                <a href="catalog.html#new">New Books</a>
-                <a href="catalog.html#tplpicks">TPL Picks</a>
-                <a href="catalog.html#staffrecs">Staff Recommendations</a>
-                <a href="catalog.html#digital">Digital Collections</a>
-              </div>
-            </div>
-
-            <a href="events.html">Programs & Events</a>
-
-            <div class="dropdown" data-dropdown>
-              <button class="nav-btn" data-dropdown-btn aria-expanded="false" aria-haspopup="true">
-                Services ▾
-              </button>
-              <div class="dropdown-panel" data-dropdown-panel role="menu">
-                <a href="services.html">All Services</a>
-                <a href="services.html#printing">Printing (Remote & In-Library)</a>
-                <a href="services.html#passes">Museum Passes</a>
-                <a href="services.html#ill">Interlibrary Loan</a>
-                <a href="services.html#accessibility">Accessibility Services</a>
-                <a href="services.html#learning">Job Seekers & Test Prep</a>
-                <a href="services.html#homebound">Homebound Delivery</a>
-              </div>
-            </div>
-
-            <a href="using-the-library.html">Using the Library</a>
-            <a href="news.html">News & Updates</a>
-            <a href="contact.html">Contact</a>
-
-            <div class="dropdown" data-dropdown>
-              <button class="nav-btn" data-dropdown-btn aria-expanded="false" aria-haspopup="true">
-                About ▾
-              </button>
-              <div class="dropdown-panel" data-dropdown-panel role="menu">
-                <a href="about.html">About TPL</a>
-                <a href="about.html#history">Building & History</a>
-                <a href="about.html#staff">Staff & Board</a>
-                <a href="about.html#employment">Employment</a>
-                <a href="accessibility.html">Accessibility Statement</a>
-                <a href="privacy.html">Privacy</a>
-              </div>
-            </div>
-
-            <a class="btn" href="card.html">Get a Library Card</a>
-            <a class="btn" href="account.html">My Account / Login</a>
-          </div>
+    <!-- Item of the Week -->
+    <article class="card collection-card featured-card">
+      <div class="collection-content">
+        <h3>Item of the Week</h3>
+        <h4 class="featured-title">The Night Circus</h4>    
+        <p>
+          A single featured title gives visitors something immediate to lock onto
+          without having to click first.
+        </p>
+        <div class="tagrow">
+          <span class="tag">Staff favorite</span>
+          <span class="tag">Fiction</span>
         </div>
-      </nav>
+        <a class="link featured-link" href="catalog.html">View in Catalog</a>
+      </div>
+    </article>
 
-      <div class="section" aria-label="Global search">
-        <form class="searchbar" data-search-form>
-          <label for="q">Search</label>
-          <input id="q" data-search-q type="search" placeholder="Search the catalog or this site…" aria-label="Search query" />
-          <select data-search-scope aria-label="Search scope">
-            <option value="catalog">Catalog</option>
-            <option value="site">Site</option>
-          </select>
-          <button type="submit">Search</button>
-        </form>
+  </div>
+</section>
+
+
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>Digital Collections</h2>
       </div>
     </div>
-  </header>
 
-  <main id="main" class="container">
-    <section class="hero" aria-label="Welcome">
-      <div class="hero-inner">
-        <div>
-          <h1>Explore the Library.</h1>
-          <p>
-            A clean, accessible homepage that makes it easy to search the catalog, find events, and discover services —
-            with a calm “museum” feel that highlights the building and collections.
-          </p>
+    <div class="grid cols-3">
+      <article class="card">
+        <h3>Libby</h3>
+        <p>Borrow eBooks and audiobooks on your phone, tablet, or e-reader.</p>
+        <a class="link" href="#">Open Libby</a>
+      </article>
 
-          <div class="quick-tasks" aria-label="Quick tasks">
-            <a class="cta" href="card.html">Get a Library Card</a>
-            <a class="cta" href="events.html">View the Calendar</a>
-            <a class="cta" href="services.html#printing">Remote Printing</a>
-            <a class="cta" href="contact.html">Ask a Librarian</a>
-          </div>
+      <article class="card">
+        <h3>Kanopy</h3>
+        <p>Watch films and documentaries online with your library card.</p>
+        <a class="link" href="#">Open Kanopy</a>
+      </article>
 
-          <div class="section" style="margin-top:16px;">
-            <p class="lead"><strong>Featured today:</strong> New Books, Staff Picks, and upcoming programs — all in one place.</p>
-          </div>
-        </div>
-
-        <div class="carousel" data-carousel aria-label="Featured stories carousel">
-          <div class="frame" aria-hidden="true">
-            <div class="caption" data-carousel-caption></div>
-          </div>
-          <div class="controls">
-            <button type="button" data-carousel-prev aria-label="Previous slide">← Previous</button>
-            <button type="button" data-carousel-next aria-label="Next slide">Next →</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Collections spotlight">
-      <h2>Collections Spotlight</h2>
-      <p class="lead">Homepage-level access to New Books, TPL Picks, and Staff Recommendations.</p>
-
-      <div class="grid cols-3">
-        <div class="card">
-          <h3>New Books</h3>
-          <p>Fresh arrivals across fiction, nonfiction, and kids — updated regularly.</p>
-          <a class="link" href="catalog.html#new">Browse New Books →</a>
-        </div>
-
-        <div class="card">
-          <h3>TPL Picks</h3>
-          <p>Curated lists for every mood: quick reads, local history, award winners, and more.</p>
-          <a class="link" href="catalog.html#tplpicks">Explore TPL Picks →</a>
-        </div>
-
-        <div class="card">
-          <h3>Staff Recommendations</h3>
-          <p>Visual staff picks — ideal for discovery and browsing.</p>
-          <a class="link" href="catalog.html#staffrecs">See Staff Recs →</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Digital collections">
-      <h2>Digital Collections</h2>
-      <p class="lead">Clear explanations + direct links (replace placeholders with your real URLs later).</p>
-
-      <div class="grid cols-3">
-        <div class="card">
-          <h3>Libby</h3>
-          <p>Borrow eBooks and audiobooks on your phone, tablet, or e-reader.</p>
-          <a class="link" href="catalog.html#digital">Get started with Libby →</a>
-        </div>
-        <div class="card">
-          <h3>Hoopla</h3>
-          <p>Stream and download movies, music, and more — no waiting lists (varies by title).</p>
-          <a class="link" href="catalog.html#digital">Explore Hoopla →</a>
-        </div>
-        <div class="card">
-          <h3>Kanopy</h3>
-          <p>Thoughtful film and documentaries for learning, enrichment, and fun.</p>
-          <a class="link" href="catalog.html#digital">Watch on Kanopy →</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Programs and events preview">
-      <h2>Programs & Events</h2>
-      <p class="lead">Filter by age group and format. Events link to details + registration when needed.</p>
-
-      <div class="grid cols-2">
-        <div class="card event">
-          <div class="title">Family Storytime</div>
-          <div class="meta">
-            <span>Sat • 10:30 AM</span>
-            <span class="tag">Kids</span>
-            <span class="tag">In-person</span>
-          </div>
-          <p>Stories, songs, and movement for young children and caregivers.</p>
-          <div class="actions">
-            <a class="btn primary" href="events.html#event-storytime">View details</a>
-            <a class="btn" href="events.html">See full calendar</a>
-          </div>
-        </div>
-
-        <div class="card event">
-          <div class="title">Book Group: Contemporary Fiction</div>
-          <div class="meta">
-            <span>Tue • 6:00 PM</span>
-            <span class="tag">Adults</span>
-            <span class="tag">Virtual</span>
-          </div>
-          <p>Monthly discussion with easy registration and reminders.</p>
-          <div class="actions">
-            <a class="btn primary" href="events.html#event-bookgroup">View details</a>
-            <a class="btn" href="events.html#book-groups">Browse book groups</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-label="News and updates">
-      <h2>News & Updates</h2>
-      <p class="lead">A real, central place for announcements (director updates, closures, renovations).</p>
-
-      <div class="grid cols-3">
-        <div class="card">
-          <h3>Service Announcement</h3>
-          <p>Example: Printing system updates this week + what to expect.</p>
-          <a class="link" href="news.html">Read more →</a>
-        </div>
-        <div class="card">
-          <h3>From the Director</h3>
-          <p>Example: Monthly note with goals, progress, and community highlights.</p>
-          <a class="link" href="news.html">Read more →</a>
-        </div>
-        <div class="card">
-          <h3>Monthly Newsletter</h3>
-          <p>Embedded preview + signup (not a buried PDF link).</p>
-          <a class="link" href="news.html#newsletter">View newsletter →</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Instagram integration">
-      <h2>From Instagram</h2>
-      <p class="lead">Prototype placeholder for an embedded feed.</p>
-      <div class="card">
-        <p><strong>Instagram feed placeholder</strong></p>
-        <p>Later: embed via a widget or show curated posts with alt text and captions.</p>
-        <a class="link" href="https://instagram.com">Visit Instagram →</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="cols">
-        <div>
-          <div class="brand" style="margin-bottom:10px;">
-            <div class="logo" aria-hidden="true"></div>
-            <div class="brand-title">
-              <div class="name">Troy Public Library</div>
-              <div class="tag">Prototype information architecture</div>
-            </div>
-          </div>
-          <p class="small">55 2nd St, Troy, NY • (518) 274-7071 • Example hours shown</p>
-        </div>
-
-        <div>
-          <strong>Quick Links</strong>
-          <div class="small" style="margin-top:8px; display:grid; gap:6px;">
-            <a href="card.html">Get a Library Card</a>
-            <a href="account.html">My Account / Login</a>
-            <a href="events.html">Programs & Events</a>
-            <a href="services.html">Services</a>
-            <a href="support.html">Support TPL</a>
-          </div>
-        </div>
-
-        <div>
-          <strong>Policies</strong>
-          <div class="small" style="margin-top:8px; display:grid; gap:6px;">
-            <a href="privacy.html">Privacy Notice</a>
-            <a href="accessibility.html">Accessibility</a>
-            <a href="using-the-library.html#borrowing">Borrowing & Loan Periods</a>
-          </div>
-        </div>
-      </div>
-
-      <p class="small" style="margin-top:16px;">
-        © <span id="year"></span> Troy Public Library (Prototype). All rights reserved.
-      </p>
+      <article class="card">
+        <h3>Comics Plus</h3>
+        <p>Read graphic novels and comics online from anywhere.</p>
+        <a class="link" href="#">Open Comics Plus</a>
+      </article>
     </div>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </footer>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>Programs &amp; Events</h2>
+      </div>
+      <a class="btn primary" href="events.html">Open Full Calendar</a>
+    </div>
+
+    <div class="grid cols-3">
+      <article class="card event">
+        <div class="meta">
+          <span>Today</span>
+          <span>10:30 AM</span>
+          <span>Kids</span>
+        </div>
+        <div class="title">Storytime Learn &amp; Play</div>
+        <p>Songs, books, and movement for young children and caregivers.</p>
+        <div class="actions">
+          <a class="btn" href="#">Details</a>
+          <a class="btn primary" href="#">Register</a>
+        </div>
+      </article>
+
+      <article class="card event">
+        <div class="meta">
+          <span>Today</span>
+          <span>6:00 PM</span>
+          <span>Adults</span>
+        </div>
+        <div class="title">Book Group: Contemporary Fiction</div>
+        <p>Monthly discussion with reminders and easy registration.</p>
+        <div class="actions">
+          <a class="btn" href="#">Details</a>
+          <a class="btn primary" href="#">Register</a>
+        </div>
+      </article>
+
+      <article class="card event">
+        <div class="meta">
+          <span>Tomorrow</span>
+          <span>4:00 PM</span>
+          <span>Teens</span>
+        </div>
+        <div class="title">Teen Game Night</div>
+        <p>Drop in after school for games, snacks, and community.</p>
+        <div class="actions">
+          <a class="btn" href="#">Details</a>
+          <a class="btn primary" href="#">Register</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>News &amp; Updates</h2>
+      </div>
+    </div>
+
+    <div class="grid cols-3">
+      <article class="card">
+        <h3>Service Announcement</h3>
+        <a class="link" href="news.html">Read More</a>
+      </article>
+
+      <article class="card">
+        <h3>From the Director</h3>
+        <a class="link" href="news.html">Read More</a>
+      </article>
+
+      <article class="card">
+        <h3>Monthly Newsletter</h3>
+        <a class="link" href="newsletter.html">View Newsletter</a>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h3>Troy Public Library</h3>
+        <p>
+          100 Second Street<br />
+          Troy, NY 12180<br />
+          (518) 274-7071<br />
+          <a href="mailto:hello@troylibrary.org">hello@troylibrary.org</a>
+        </p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="catalog.html">Catalog</a></p>
+        <p><a href="events.html">Programs &amp; Events</a></p>
+        <p><a href="contact.html">Contact</a></p>
+        <p><a href="newsletter.html">Newsletter</a></p>
+      </div>
+
+      <div>
+        <h3>Policies</h3>
+        <p><a href="privacy.html">Privacy</a></p>
+        <p><a href="policies.html">Library Policies</a></p>
+        <p><a href="code-of-conduct.html">Code of Conduct</a></p>
+      </div>
+    </div>
+
+    <p class="small">© <span id="year"></span> Troy Public Library (Prototype)</p>
+  </div>
+</footer>
+<script>
+  const images = [
+    "assets/images/slideshowpic1.jpg",
+    "assets/images/slideshowpic2.webp",
+    "assets/images/slideshowpic3.jpg"
+  ];
+
+  let current = 0;
+
+  const slideshow = document.getElementById("slideshow");
+  const prevBtn = document.querySelector("[data-carousel-prev]");
+  const nextBtn = document.querySelector("[data-carousel-next]");
+
+  function showImage(index) {
+    slideshow.style.opacity = 0;
+
+    setTimeout(() => {
+      slideshow.src = images[index];
+      slideshow.style.opacity = 1;
+    }, 200);
+  }
+
+  nextBtn.addEventListener("click", () => {
+    current = (current + 1) % images.length;
+    showImage(current);
+  });
+
+  prevBtn.addEventListener("click", () => {
+    current = (current - 1 + images.length) % images.length;
+    showImage(current);
+  });
+</script>
 </body>
 </html>

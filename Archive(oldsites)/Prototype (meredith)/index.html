@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Troy Public Library — Version 2</title>
+        <link rel = "stylesheet" href = "./resources/tplStyle.css">
+        <script defer src="./resources/tpl.js"></script>
+    </head>
+
+    <body>
+      <div class="headerSection">
+
+        <div class="leftSide">
+          <div class="headerContact">
+            <p>hello@troylibrary.org</p>
+            <p><pre>100 Second Street  Troy, NY 12180</pre></p>
+            <p>518-274-7071</p>
+          </div>
+        </div>
+      
+        <div class="centerSection">
+          <div id="libraryHours"></div>
+        </div>
+      
+        <div class="rightSide">
+          <div class="Socials">
+            <div class="SocialsLinks">
+              <p><a>Instagram</a></p>
+              <p><a>Youtube</a></p>
+              <p><a>Facebook</a></p>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+
+        <h1 class = "WelcomeBanner">Welcome to the Troy Public Library!</h1>
+
+        <div class = "Banner-slideshow">
+
+            <div class = "fadingSlides">
+                <img src="./resources/banner-image-placeholder.jpg">
+            </div>
+
+            <div class = "fadingSlides">
+                <img src="./resources/tempEvent.png">
+            </div>
+
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+
+        </div>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+        </div>
+
+        <div class="Hotbar">
+          <a class="homepageLogo" href="./index.html"><img src="../tpl_logo.jpg"></a>
+        
+          <div class="hotbar-item dropdown">
+            <h3><a href="./libraryServices.html">Library Services</a> <span class="arrow">▾</span></h3>
+            <div class="dropdownMenu">
+              <a href="./get-library-card.html">Get a Library Card</a>
+              <a href="./libraryServices.html#hours">Hours & Holiday Closures</a>
+              <a href="./libraryServices.html#printing">Printing Services</a>
+              <a href="./libraryServices.html#museum-passes">Museum Passes</a>
+              <a href="./libraryServices.html#interlibrary">Interlibrary Loan</a>
+              <a href="./libraryServices.html#accessibility">Accessibility Services</a>
+              <a href="./libraryServices.html#job-seekers">Jobs & Test Prep</a>
+              <a href="./libraryServices.html#homebound">Homebound Delivery</a>
+            </div>
+          </div>
+        
+          <h3 class="hotbar-item"><a href="https://troyny.librarycalendar.com/events/month">Events Calendar</a></h3>
+        
+          <h3 class="hotbar-item"><a href="./catalog.html">Explore the Catalog</a></h3>
+        
+          <div class="hotbar-item dropdown">
+            <h3><a href="./contactus.html">Contact Us</a> <span class="arrow">▾</span></h3>
+            <div class="dropdownMenu">
+              <a href="./aboutus.html">About Us</a>
+              <a href="./contactus.html#feedback">Send Feedback</a>
+            </div>
+          </div>
+        
+        </div>
+
+        <div class = "QuickLinks">
+
+          <h2 class = "QuickLinkHeader"> Quick Access Links</h2>
+
+            <h2><a href = "./get-library-card.html" class = "quickLinkButton">Get a Library Card</a></h2>
+
+            <h2> <a href = "#" class = "quickLinkButton"> Check out our Newsletter </a> </h2>
+
+            <h2> <a href = "https://troy-uhls.na5.iiivega.com/" class = "quickLinkButton"> Catalog </a> </h2>
+
+        </div>
+
+        <div class="Books">
+
+            <h3>New Books</h3>
+          
+            <div class="bookRow">
+              <div class="book">
+                <img src="./resources/bookTPL.jpg">
+                <p class="bookDescription">
+                  Exit Strategy: A Reacher Novel by Lee Child and Andrew Child
+                </p>
+              </div>
+          
+              <div class="book">
+                <img src="./resources/bookTPL.jpg">
+                <p class="bookDescription">Book Title #2</p>
+              </div>
+          
+              <div class="book">
+                <img src="./resources/bookTPL.jpg">
+                <p class="bookDescription">Book Title #3</p>
+              </div>
+            </div>
+          
+          </div>
+
+          <div class="Books">
+
+            <h3>Staff Picks & Book of the Month</h3>
+          
+            <div class="bookRow">
+              <div class="book">
+                <img src="./resources/bookTPL.jpg">
+                <p class="bookDescription">
+                  Exit Strategy: A Reacher Novel
+                </p>
+                <p class="bookDescription">
+                  Lee Child and Andrew Child
+                </p>
+              </div>
+          
+              <div class="book">
+                <img src="./resources/bookTPL.jpg">
+                <p class="bookDescription">Book Title #2</p>
+              </div>
+          
+              <div class="book">
+                <img src="./resources/bookTPL.jpg">
+                <p class="bookDescription">Book Title #3</p>
+              </div>
+            </div>
+          
+          </div>
+          
+          <footer class="siteFooter">
+            <div class="footerContent">
+          
+              <div class="footerMap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23446.817914539348!2d-73.73024042568359!3d42.728018099999986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89de0f06f622d373%3A0x43f180c30be3ddfe!2sTroy%20Public%20Library!5e0!3m2!1sen!2sus!4v1771352799160!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+
+              <div class = "Socials">
+
+                  <div class = "SocialsLinks">
+
+                    <p> <a> Instagram </a> </p>
+                    <p> <a> Youtube </a> </p>
+                    <p> <a> Facebook </a> </p>
+                    <p> <a> Newsletter </a> </p>
+
+                  </div>
+
+              </div>
+          
+              <div class="footerInfo">
+                <p><strong>Email:</strong> hello@troylibrary.org</p>
+                <p><strong>Phone:</strong> (518) 274-7071</p>
+                <p><strong>Address:</strong> 100 Second Street  Troy, NY 12180</p>
+              </div>
+          
+            </div>
+          </footer>
+
+    </body>
+
+</html>
