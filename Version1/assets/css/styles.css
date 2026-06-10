@@ -1049,8 +1049,8 @@ select {
 }
 
 .social-icon img {
-  width: 14px;
-  height: 14px;
+  width: 3px;
+  height: 3px;
   object-fit: contain;
   transition: transform 0.2s ease;
 }
