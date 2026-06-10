@@ -83,6 +83,32 @@ select {
 }
 
 /* =========================
+   Social media icons
+   ========================= */
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.social-icon {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+
+/* =========================
    TOP BAR
    ========================= */
 
@@ -1048,14 +1074,4 @@ select {
   }
 }
 
-.social-icon img {
-  width: 3px;
-  height: 3px;
-  object-fit: contain;
-  transition: transform 0.2s ease;
-}
-
-.social-icon img:hover {
-  transform: scale(1.1);
-}
 }
