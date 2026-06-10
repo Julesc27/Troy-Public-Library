@@ -88,26 +88,27 @@ select {
 
 .social-icons {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 12px;
   margin-left: auto;
 }
-
 .social-icon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .social-icon img {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
-
-
+.social-icon img[src*="ig"] {
+  transform: scale(1.5);
+}
 /* =========================
    TOP BAR
    ========================= */
@@ -116,7 +117,7 @@ select {
   background: #1f2940;
   color: #f8f5ef;
   border-bottom: 1px solid rgba(255,255,255,.08);
-  padding: 10px 0 14px;
+  padding: 22px 0 18px;
 }
 
 .utility-top {
@@ -145,9 +146,7 @@ select {
   text-decoration: underline;
 }
 
-.utility {
-  padding: 20px 0 10px;
-}
+
 
 .utility-actions {
   display: flex;
@@ -185,24 +184,19 @@ select {
   gap: 32px;
 }
 
-.utility-info-vertical {
+.utility-branches {
+  display: flex;
+  gap: 32px;
+  color: white;
+  text-align: right;
+}
+
+.utility-branch {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  text-align: right;
-  gap: 4px;
-  color: white;
+  gap: 3px;
+  font-size: 13px;
   line-height: 1.2;
-  font-size: 13px; 
-}
-
-.utility-info-vertical a {
-  color: white;
-  text-decoration: none;
-}
-
-.utility-info-vertical a:hover {
-  text-decoration: underline;
 }
 
 
