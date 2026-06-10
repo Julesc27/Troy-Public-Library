@@ -94,16 +94,16 @@ select {
 }
 
 .social-icon {
-  width: 34px;
-  height: 34px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .social-icon img {
-  width: 28px;
-  height: 28px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
 }
 
