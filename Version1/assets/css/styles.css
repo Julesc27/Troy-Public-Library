@@ -224,8 +224,8 @@ select {
 }
 
 .logo {
-  width: 90px;   /* increased from ~60px */
-  height: 60px;
+  width: 120px;   /* increased from ~60px */
+  height: 90px;
   border-radius: 12px;
   overflow: hidden;
   display: flex;
@@ -241,7 +241,7 @@ select {
 
 .brand-title .name {
   font-family: var(--serif);
-  font-size: 32px;
+  font-size: 45px;
   line-height: 1.05;
 }
 
@@ -261,6 +261,68 @@ select {
   text-decoration: underline;
 }
 
+/* =========================
+   Ask librarian
+   ========================= */
+
+
+.utility-dropdown {
+  position: relative;
+}
+
+.utility-drop-btn {
+  cursor: pointer;
+}
+
+.utility-dropdown-panel {
+  position: absolute;
+  top: 115%;
+  left: 0;
+  min-width: 240px;
+
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px;
+
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+
+  box-shadow: var(--shadow);
+  z-index: 50;
+}
+
+.utility-dropdown:hover .utility-dropdown-panel {
+  display: flex;
+}
+
+.utility-dropdown-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.utility-dropdown-section strong {
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.utility-dropdown-section a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.utility-dropdown-section a:hover {
+  text-decoration: underline;
+}
+
+.utility-dropdown-section strong {
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 700;
+}
 /* =========================
    NAVIGATION
    ========================= */
